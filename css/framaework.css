@@ -1,0 +1,997 @@
+/***           ***
+**     SASS     **
+* CSS FRAMAEWORK *
+**      BY      **
+***   LOBAE    ***/
+/* GOOGLE FONT: Lato */
+@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic");
+/* GOOGLE FONT: Roboto */
+@import url("http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic");
+/* GOOGLE FONT: Roboto Sans Mono */
+@import url("http://fonts.googleapis.com/css?family=Droid+Sans+Mono");
+/* --OLD--
+$mobile-screen    : 40em;         // 640px
+$medium-screen    : 40.063em;     // 641px
+$standard-screen  : 60em;         // 959px
+$large-screen     : 64.063em;	  // 1025px
+$xlarge-screen    : 90.063em;	  // 1441px
+  --OLD--
+*/
+/**
+ * 0.0 Reset
+ * ----------------------------------------------------------------------------
+ */
+html,
+body {
+  height: 100%;
+  font-size: 100%; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: #ffffff;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  font-size: 1rem;
+  position: relative;
+  cursor: auto; }
+
+a:hover {
+  cursor: pointer; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle; }
+
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important; }
+
+/* Visibility */
+.hide {
+  display: none !important;
+  visibility: hidden; }
+
+.show {
+  display: block !important;
+  visibility: visible; }
+
+.invisible {
+  visibility: hidden; }
+
+.no-opacity {
+  opacity: 0; }
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+textarea {
+  height: auto;
+  min-height: 50px; }
+
+/* Typography gaps resets */
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * 0.0 Float
+ * ----------------------------------------------------------------------------
+ */
+/* You can change the float behavior of an element by adding .left or .right to an HTML element.
+   To clear floats, add the class .cl to the parent element. */
+.left {
+  float: left !important; }
+
+.right {
+  float: right !important; }
+
+.cl:before,
+.cl:after {
+  content: " ";
+  display: table; }
+
+.cl:after {
+  clear: both; }
+
+/**
+ * 0.0 Typography
+ * ----------------------------------------------------------------------------
+ */
+.txt-left {
+  text-align: left !important; }
+
+.txt-right {
+  text-align: right !important; }
+
+.txt-center {
+  text-align: center !important; }
+
+.txt-justify {
+  text-align: justify !important; }
+
+/* Default Link Styles */
+a {
+  color: #3498db;
+  text-decoration: none;
+  line-height: inherit; }
+
+a:hover,
+a:focus {
+  color: #2980b9; }
+
+a img {
+  border: none; }
+
+/* Default paragraph styles */
+p {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility; }
+
+p.lead {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6; }
+
+p aside {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 1.35;
+  font-style: italic; }
+
+/* Default header styles */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4; }
+
+h1 {
+  font-size: 30px;
+  font-size: 1.875rem; }
+
+h2 {
+  font-size: 22px;
+  font-size: 1.375rem; }
+
+h3 {
+  font-size: 16px;
+  font-size: 1rem; }
+
+h4 {
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+h5 {
+  font-size: 12px;
+  font-size: 0.75rem; }
+
+h6 {
+  font-size: 10px;
+  font-size: 0.625rem; }
+
+.subheader {
+  line-height: 14;
+  color: #7f8c8d;
+  font-weight: normal;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem; }
+
+hr {
+  border: solid #cccccc;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.25rem 0 1.1875rem;
+  height: 0; }
+
+/* Helpful Typography Defaults */
+em,
+i {
+  font-style: italic;
+  line-height: inherit; }
+
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit; }
+
+small {
+  font-size: 60%;
+  line-height: inherit; }
+
+code {
+  font-family: "Droid Sans Mono", Courier, monospace;
+  font-weight: normal;
+  color: #000000;
+  background-color: #f6f6f6;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eeeeee;
+  padding: 0.125rem 0.3125rem 0.0625rem; }
+
+/* Lists */
+ul,
+ol,
+dl {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  list-style-position: outside;
+  font-family: inherit; }
+
+ul {
+  margin-left: 3.5rem; }
+  ul.no-bullet {
+    margin-left: 0; }
+    ul.no-bullet li ul, ul.no-bullet li ol {
+      margin-left: 1.25rem;
+      margin-bottom: 0;
+      list-style: none; }
+
+/* Inline List */
+.inline-li {
+  margin: 0 auto;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  list-style: none; }
+  .inline-li > li {
+    list-style: none;
+    margin-left: 1.375rem;
+    display: inline-block; }
+    .inline-li > li > * {
+      display: block; }
+  .inline-li.center-li {
+    text-align: center; }
+  .inline-li.left-li {
+    text-align: left; }
+  .inline-li.right-li {
+    text-align: right; }
+
+/* Unordered Lists */
+ul li ul,
+ul li ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0; }
+
+ul.square li ul,
+ul.circle li ul,
+ul.disc li ul {
+  list-style: inherit; }
+
+ul.square {
+  list-style-type: square;
+  margin-left: 1.1rem; }
+
+ul.circle {
+  list-style-type: circle;
+  margin-left: 1.1rem; }
+
+ul.disc {
+  list-style-type: disc;
+  margin-left: 1.1rem; }
+
+ul.none {
+  list-style: none; }
+
+/* Ordered Lists */
+ol {
+  margin-left: 3.5rem; }
+
+ol li ul,
+ol li ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0; }
+
+/* Blockquotes */
+blockquote {
+  margin: 1.25rem 0;
+  padding: 0.5625rem 1.25rem 0 1.1875rem;
+  border-left: 1px solid #cccccc; }
+
+blockquote cite {
+  display: block;
+  font-size: 12px;
+  font-size: 0.75rem;
+  color: #555555; }
+
+blockquote cite:before {
+  content: "\2014 \0020"; }
+
+blockquote cite a,
+blockquote cite a:visited {
+  color: #555555; }
+
+blockquote,
+blockquote p {
+  line-height: 1.6;
+  color: #555555; }
+
+/** TYPOGRAPHY MEDIA QUERIES **/
+@media screen and (min-width: 640px) {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.4; }
+  h1 {
+    font-size: 32px;
+    font-size: 2rem; }
+  h2 {
+    font-size: 24px;
+    font-size: 1.5rem; }
+  h3 {
+    font-size: 18px;
+    font-size: 1.125rem; }
+  h4 {
+    font-size: 16px;
+    font-size: 1rem; }
+  h5 {
+    font-size: 14px;
+    font-size: 0.875rem; }
+  h6 {
+    font-size: 12px;
+    font-size: 0.75rem; } }
+
+/*
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+*/
+.print-only {
+  display: none !important; }
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999999;
+    page-break-inside: avoid; }
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  @page {
+    margin: 0.5cm; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; }
+  .hide-on-print {
+    display: none !important; }
+  .print-only {
+    display: block !important; } }
+
+/**
+ * 0.0 BUTTONS
+ * ----------------------------------------------------------------------------
+ */
+/* Default button [BLUE] */
+button,
+.button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  border-style: none;
+  cursor: pointer;
+  font-family: "Lato", Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0 0 1.25rem;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  padding-top: 1rem;
+  padding-right: 2rem;
+  padding-bottom: 1.0625rem;
+  padding-left: 2rem;
+  font-size: 16px;
+  font-size: 1rem;
+  background-color: #3498db;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+
+button:hover,
+button:active,
+button:focus,
+.button:hover,
+.button:active
+.button:focus,
+input[type="button"]:hover,
+input[type="button"]:active,
+input[type="button"]:focus,
+input[type="submit"]:hover,
+input[type="submit"]:active,
+input[type="submit"]:focus,
+input[type="reset"]:hover,
+input[type="reset"]:active,
+input[type="reset"]:focus {
+  background-color: #2980b9;
+  color: #ffffff;
+  box-shadow: none;
+  outline: 0; }
+
+/* Secondary button [LIGHT GREY] */
+button.secondary,
+.button.secondary {
+  background-color: #eeeeee;
+  color: #000000; }
+
+button.secondary:hover,
+button.secondary:focus,
+.button.secondary:hover,
+.button.secondary:focus {
+  background-color: #cccccc;
+  color: #000000; }
+
+/* Success button [GREEN] */
+button.success,
+.button.success {
+  background-color: #2ecc71;
+  color: #ffffff; }
+
+button.success:hover,
+button.success:focus,
+.button.success:hover,
+.button.success:focus {
+  background-color: #27ae60;
+  color: #ffffff; }
+
+/* Alert button [RED] */
+button.alert,
+.button.alert {
+  background-color: #e74c3c;
+  color: #ffffff; }
+
+button.alert:hover,
+button.alert:focus,
+.button.alert:hover,
+.button.alert:focus {
+  background-color: #c0392b;
+  color: #ffffff; }
+
+/* Warning button [ORANGE] */
+button.warning,
+.button.warning {
+  background-color: #e67e22;
+  color: #ffffff; }
+
+button.warning:hover,
+button.warning:focus,
+.button.warning:hover,
+.button.warning:focus {
+  background-color: #d35400;
+  color: #ffffff; }
+
+/** BUTTON SIZING **/
+button.large,
+.button.large {
+  padding-top: 1.125rem;
+  padding-right: 2.25rem;
+  padding-bottom: 1.1875rem;
+  padding-left: 2.25rem;
+  font-size: 18px;
+  font-size: 1.125rem; }
+
+button.small,
+.button.small {
+  padding-top: 0.875rem;
+  padding-right: 1.75rem;
+  padding-bottom: 0.9375rem;
+  padding-left: 1.75rem;
+  font-size: 16px;
+  font-size: 1rem; }
+
+button.tiny,
+.button.tiny {
+  padding-top: 0.625rem;
+  padding-right: 1.25rem;
+  padding-bottom: 0.6875rem;
+  padding-left: 1.25rem;
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+button.expand,
+.button.expand {
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%; }
+
+/** BUTTON RADIUS **/
+button.radius,
+.button.radius {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  border-radius: 3px; }
+
+button.round,
+.button.round {
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  -ms-border-radius: 1000px;
+  border-radius: 1000px; }
+
+/** BUTTONS MEDIA QUERIES **/
+@media screen and (min-width: 640px) {
+  button,
+  .button {
+    display: inline-block; } }
+
+/**
+ * 0.0 GRID SYSTEM
+ * ----------------------------------------------------------------------------
+ */
+/* ROW */
+.row {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0; }
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table; }
+
+.row:after {
+  clear: both; }
+
+.row .row {
+  margin-left: -0.9375em;
+  margin-right: -0.9375em;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none; }
+
+.row .row:before,
+.row .row:after {
+  content: " ";
+  display: table; }
+
+.row .row:after {
+  clear: both; }
+
+.column {
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left; }
+
+@media only screen {
+  .column {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    float: left; }
+  .mobile-1 {
+    width: 8.33333%; }
+  .mobile-2 {
+    width: 16.66667%; }
+  .mobile-3 {
+    width: 25%; }
+  .mobile-4 {
+    width: 33.33333%; }
+  .mobile-5 {
+    width: 41.66667%; }
+  .mobile-6 {
+    width: 50%; }
+  .mobile-7 {
+    width: 58.33333%; }
+  .mobile-8 {
+    width: 66.66667%; }
+  .mobile-9 {
+    width: 75%; }
+  .mobile-10 {
+    width: 83.33333%; }
+  .mobile-11 {
+    width: 91.66667%; }
+  .mobile-12 {
+    width: 100%; } }
+
+@media screen and (min-width: 640px) {
+  .column {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    float: left; }
+  .tab-1 {
+    width: 8.33333%; }
+  .tab-2 {
+    width: 16.66667%; }
+  .tab-3 {
+    width: 25%; }
+  .tab-4 {
+    width: 33.33333%; }
+  .tab-5 {
+    width: 41.66667%; }
+  .tab-6 {
+    width: 50%; }
+  .tab-7 {
+    width: 58.33333%; }
+  .tab-8 {
+    width: 66.66667%; }
+  .tab-9 {
+    width: 75%; }
+  .tab-10 {
+    width: 83.33333%; }
+  .tab-11 {
+    width: 91.66667%; }
+  .tab-12 {
+    width: 100%; } }
+
+@media screen and (min-width: 1024px) {
+  .column {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    float: left; }
+  .desktop-1 {
+    width: 8.33333%; }
+  .desktop-2 {
+    width: 16.66667%; }
+  .desktop-3 {
+    width: 25%; }
+  .desktop-4 {
+    width: 33.33333%; }
+  .desktop-5 {
+    width: 41.66667%; }
+  .desktop-6 {
+    width: 50%; }
+  .desktop-7 {
+    width: 58.33333%; }
+  .desktop-8 {
+    width: 66.66667%; }
+  .desktop-9 {
+    width: 75%; }
+  .desktop-10 {
+    width: 83.33333%; }
+  .desktop-11 {
+    width: 91.66667%; }
+  .desktop-12 {
+    width: 100%; } }
+
+.flex {
+  display: flex; }
+
+/**
+ * 0.0 FORMS
+ * ----------------------------------------------------------------------------
+ */
+/* Standard Forms */
+form {
+  margin: 0 0 1rem; }
+
+/* Using forms within rows, we need to set some defaults */
+form .row .row {
+  margin: 0 -0.5rem; }
+  form .row .row .column {
+    padding: 0 0.5rem; }
+  form .row .row.collapse {
+    margin: 0; }
+    form .row .row.collapse .column {
+      padding: 0; }
+    form .row .row.collapse input {
+      -webkit-border-radius: 0;
+      -moz-border-radius: 0;
+      -ms-border-radius: 0;
+      border-radius: 0; }
+
+form .row input.column,
+form .row textarea.column {
+  padding-left: 0.5rem; }
+
+/* Label Styles */
+label {
+  font-size: 16px;
+  font-size: 1rem;
+  color: #555555;
+  cursor: pointer;
+  display: block;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 0; }
+  label.right {
+    float: none !important;
+    text-align: right; }
+  label.inline {
+    margin: 0 0 1rem 0;
+    padding: 0.5625rem 0; }
+  label.small {
+    text-transform: capitalize; }
+
+/* Attach elements to the beginning or end of an input */
+.prefix,
+.postfix {
+  display: block;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-style: solid;
+  border-width: 1px;
+  overflow: visible;
+  font-size: 16px;
+  font-size: 1rem;
+  min-height: 2.3125rem;
+  line-height: 2.3125rem; }
+
+/* Adjust padding, alignment and radius if pre/post element is a button */
+.postfix.button,
+.prefix.button {
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+  text-align: center;
+  border: none; }
+  .postfix.button.radius,
+  .prefix.button.radius {
+    border-radius: 0;
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px; }
+  .postfix.button.round,
+  .prefix.button.round {
+    border-radius: 0;
+    -webkit-border-bottom-left-radius: 1000px;
+    -webkit-border-top-left-radius: 1000px;
+    border-bottom-left-radius: 1000px;
+    border-top-left-radius: 1000px; }
+
+/* Separate prefix and postfix styles when on span or label so buttons keep their own */
+span.prefix, label.prefix {
+  background: #f6f6f6;
+  border-right: none;
+  color: #555555;
+  border-color: #cccccc; }
+
+span.postfix, label.postfix {
+  background: #f6f6f6;
+  border-left: none;
+  color: #555555;
+  border-color: #cccccc; }
+
+/* We use this to get basic styling on all basic form elements */
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+textarea {
+  -webkit-appearance: none;
+  border-radius: 0;
+  background-color: #ffffff;
+  font-family: inherit;
+  font-weight: 300;
+  border: solid 1px #cccccc;
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  font-size: 16px;
+  font-size: 1rem;
+  margin: 0 0 1rem 0;
+  padding: 2rem;
+  min-height: 2.3125rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: all 0.15s linear; }
+  input[type="text"]:focus,
+  input[type="password"]:focus,
+  input[type="date"]:focus,
+  input[type="datetime"]:focus,
+  input[type="datetime-local"]:focus,
+  input[type="month"]:focus,
+  input[type="week"]:focus,
+  input[type="email"]:focus,
+  input[type="number"]:focus,
+  input[type="search"]:focus,
+  input[type="tel"]:focus,
+  input[type="time"]:focus,
+  input[type="url"]:focus,
+  input[type="color"]:focus,
+  textarea:focus {
+    background: #f6f6f6;
+    border-color: #999999;
+    outline: none; }
+  input[type="text"]:disabled,
+  input[type="password"]:disabled,
+  input[type="date"]:disabled,
+  input[type="datetime"]:disabled,
+  input[type="datetime-local"]:disabled,
+  input[type="month"]:disabled,
+  input[type="week"]:disabled,
+  input[type="email"]:disabled,
+  input[type="number"]:disabled,
+  input[type="search"]:disabled,
+  input[type="tel"]:disabled,
+  input[type="time"]:disabled,
+  input[type="url"]:disabled,
+  input[type="color"]:disabled,
+  textarea:disabled {
+    background-color: #eeeeee;
+    cursor: default; }
+  input[type="text"].radius,
+  input[type="password"].radius,
+  input[type="date"].radius,
+  input[type="datetime"].radius,
+  input[type="datetime-local"].radius,
+  input[type="month"].radius,
+  input[type="week"].radius,
+  input[type="email"].radius,
+  input[type="number"].radius,
+  input[type="search"].radius,
+  input[type="tel"].radius,
+  input[type="time"].radius,
+  input[type="url"].radius,
+  input[type="color"].radius,
+  textarea.radius {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px; }
+
+/* Respect enforced amount of rows for textarea */
+textarea[rows] {
+  height: auto; }
+
+/* Not allow resize out of parent */
+textarea {
+  max-width: 100%; }
+
+/* Add height value for select elements to match text input height */
+select {
+  -webkit-appearance: none !important;
+  border-radius: 0;
+  background-color: #f6f6f6;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
+  background-position: 100% center;
+  background-repeat: no-repeat;
+  border: 1px solid #cccccc;
+  padding: 0.5rem;
+  font-size: 16px;
+  font-size: 1rem;
+  font-family: "Lato", Arial, sans-serif;
+  color: rgba(0, 0, 0, 0.75);
+  line-height: normal;
+  border-radius: 0;
+  min-height: 2.3125rem; }
+  select::-ms-expand {
+    display: none; }
+  select.radius {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px; }
+  select:hover {
+    background-color: #f6f6f6;
+    border-color: #999999; }
+  select:disabled {
+    background-color: #eeeeee;
+    cursor: default; }
+
+/* Adjust margin for form elements below */
+input[type="file"],
+input[type="checkbox"],
+input[type="radio"],
+select {
+  margin: 0 0 1rem 0; }
+
+input[type="checkbox"] + label,
+input[type="radio"] + label {
+  display: inline-block;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0;
+  vertical-align: baseline; }
+
+/* Normalize file input width */
+input[type="file"] {
+  width: 100%; }
+
+/* HTML5 Number spinners settings */
+/* We add basic fieldset styling */
+fieldset {
+  border: 1px solid #eeeeee;
+  padding: 1.25rem;
+  margin: 1.125rem 0; }
+  fieldset legend {
+    font-weight: bold;
+    background: #ffffff;
+    padding: 0 0.1875rem;
+    margin: 0;
+    margin-left: -0.1875rem; }
