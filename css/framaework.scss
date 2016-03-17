@@ -1,8 +1,11 @@
-/***           ***
-**     SASS     **
-* CSS FRAMAEWORK *
-**      BY      **
-***   LOBAE    ***/
+/*
+Framaework CSS
+A SASS framework made by Lobae
+Version    : 2.0
+Author     : Matteo Chiti
+Agency Site: http://www.lobae.com
+Author Site: http://www.matteochiti.it
+*/
 
 @import 'font';
 @import 'colors';
@@ -10,29 +13,29 @@
 
 // 0.0 SASS Mixins
 @mixin clearfix {
-	zoom: 1;
-	&:before {
-		content: ''; display: block;
-	}
-	&:after {
-		content: "";
-		display: table;
-		clear: both;
-	}
+  zoom: 1;
+  &:before {
+    content: ''; display: block;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 }
 
 @mixin radius($radius: 3px) {
-	-webkit-border-radius: $radius;
-	-moz-border-radius:    $radius;
-	-ms-border-radius:     $radius;
-	border-radius:         $radius;
+  -webkit-border-radius: $radius;
+  -moz-border-radius:    $radius;
+  -ms-border-radius:     $radius;
+  border-radius:         $radius;
 }
 
 @mixin transition($target: all, $sec: 0.2s) {
-	transition:         $target $sec ease-in-out;
-	-webkit-transition: $target $sec ease-in-out;
-	-moz-transition:    $target $sec ease-in-out;
-	-o-transition:      $target $sec ease-in-out;
+  transition:         $target $sec ease-in-out;
+  -webkit-transition: $target $sec ease-in-out;
+  -moz-transition:    $target $sec ease-in-out;
+  -o-transition:      $target $sec ease-in-out;
 }
 
 
@@ -43,43 +46,43 @@
 
 html,
 body {
-	height: 100%;
-	font-size: 100%;
+  height: 100%;
+  font-size: 100%;
 }
 
 *,
 *:before,
 *:after {
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-	background: $white;
-	color: $black;
-	padding: 0;
-	margin: 0;
-	font: {
-		family: $sans-serif;
-		weight: normal;
-		style: normal;
-	}
-	@include font-size();
-	position: relative;
-	cursor: auto;
+  background: $white;
+  color: $black;
+  padding: 0;
+  margin: 0;
+  font: {
+    family: $sans-serif;
+    weight: normal;
+    style: normal;
+  }
+  @include font-size();
+  position: relative;
+  cursor: auto;
 }
 
 a:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 img {
-	max-width: 100%;
-	height: auto;
-	-ms-interpolation-mode: bicubic;
-	display: inline-block;
-	vertical-align: middle;
+  max-width: 100%;
+  height: auto;
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle;
 }
 
 #map_canvas img,
@@ -88,36 +91,36 @@ img {
 .map_canvas img,
 .map_canvas embed,
 .map_canvas object {
-	max-width: none !important;
+  max-width: none !important;
 }
 
 /* Visibility */
 .hide {
-	display: none !important;
-	visibility: hidden;
+  display: none !important;
+  visibility: hidden;
 }
 
 .show {
-	display: block !important;
-	visibility: visible;
+  display: block !important;
+  visibility: visible;
 }
 
 .invisible {
-	visibility: hidden;
+  visibility: hidden;
 }
 
 .no-opacity {
-	opacity: 0;
+  opacity: 0;
 }
 
 .antialiased {
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 textarea {
-	height: auto;
-	min-height: 50px;
+  height: auto;
+  min-height: 50px;
 }
 
 /* Typography gaps resets */
@@ -140,8 +143,8 @@ p,
 blockquote,
 th,
 td {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /**
@@ -153,20 +156,20 @@ td {
    To clear floats, add the class .cl to the parent element. */
 
 .left {
-	float: left !important;
+  float: left !important;
 }
 
 .right {
-	float: right !important;
+  float: right !important;
 }
 
 .cl:before,
 .cl:after {
-	content: " ";
-	display: table;
+  content: " ";
+  display: table;
 }
 .cl:after {
-	clear: both;
+  clear: both;
 }
 
 /**
@@ -175,70 +178,70 @@ td {
  */
 
 .txt-left {
-	text-align: left !important;
+  text-align: left;
 }
 
 .txt-right {
-	text-align: right !important;
+  text-align: right;
 }
 
 .txt-center {
-	text-align: center !important;
+  text-align: center;
 }
 
 .txt-justify {
-	text-align: justify !important;
+  text-align: justify;
 }
 
 /* Default Link Styles */
 a {
-	color: $peter-river;
-	text-decoration: none;
-	line-height: inherit;
+  color: $peter-river;
+  text-decoration: none;
+  line-height: inherit;
 }
 a:hover,
 a:focus {
-	color: $belize-hole;
+  color: $belize-hole;
 }
 a img {
-	border: none;
+  border: none;
 }
 
 /* Default paragraph styles */
 p {
-	font: {
-		family: inherit;
-		weight: normal;
-	}
-	@include font-size();
-	line-height: 1.6;
-	margin-bottom: 1.25rem;
-	text-rendering: optimizeLegibility;
+  font: {
+    family: inherit;
+    weight: normal;
+  }
+  @include font-size();
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility;
 }
 
 p.lead {
-	@include font-size();
-	line-height: 1.6;
+  @include font-size();
+  line-height: 1.6;
 }
 
 p aside {
-	@include font-size(12);
-	line-height: 1.35;
-	font-style: italic;
+  @include font-size(12);
+  line-height: 1.35;
+  font-style: italic;
 }
 
 /* Default header styles */
 h1, h2, h3, h4, h5, h6 {
-	font: {
-		family: $sans-serif;
-		weight: normal;
-		style: normal;
-	}
-	color: $black;
-	text-rendering: optimizeLegibility;
-	margin-top: 0.2rem;
-	margin-bottom: 0.5rem;
-	line-height: 1.4;
+  font: {
+    family: $sans-serif;
+    weight: normal;
+    style: normal;
+  }
+  color: $black;
+  text-rendering: optimizeLegibility;
+  margin-top: 0.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
 }
 
 h1 { @include font-size(30); }
@@ -253,131 +256,123 @@ h5 { @include font-size(12); }
 
 h6 { @include font-size(10); }
 
-.subheader {
-	line-height: 14;
-	color: $asbestos;
-	font-weight: normal;
-	margin-top: 0.2rem;
-	margin-bottom: 0.5rem;
-}
-
 hr {
-	border: solid $grey_c;
-	border-width: 1px 0 0;
-	clear: both;
-	margin: 1.25rem 0 1.1875rem;
-	height: 0;
+  border: solid $grey_c;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1.25rem 0 1.1875rem;
+  height: 0;
 }
 
 /* Helpful Typography Defaults */
 em,
 i {
-	font-style: italic;
-	line-height: inherit;
+  font-style: italic;
+  line-height: inherit;
 }
 
 strong,
 b {
-	  font-weight: bold;
-	  line-height: inherit;
+  font-weight: bold;
+  line-height: inherit;
 }
 
 small {
-	font-size: 60%;
-	line-height: inherit;
+  font-size: 60%;
+  line-height: inherit;
 }
 
 code {
-	font-family: $monospace;
-	font-weight: normal;
-	color: $black;
-	background-color: $dark_white;
-	border-width: 1px;
-	border-style: solid;
-	border-color: $grey_e;
-	padding: 0.125rem 0.3125rem 0.0625rem;
+  font-family: $monospace;
+  font-weight: normal;
+  color: $black;
+  background-color: $dark_white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $grey_e;
+  padding: 0.125rem 0.3125rem 0.0625rem;
 }
 
 /* Lists */
 ul,
 ol,
 dl {
-	@include font-size();
-	line-height: 1.6;
-	margin-bottom: 1.25rem;
-	list-style-position: outside;
-	font-family: inherit;
+  @include font-size();
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  list-style-position: outside;
+  font-family: inherit;
 }
 
 ul {
-	margin-left: 3.5rem;
-	&.no-bullet {
-		margin-left: 0;
-		li {
-			ul, ol {
-				margin-left: 1.25rem;
-				margin-bottom: 0;
-				list-style: none;
-			}
-		}
-	}
+  margin-left: 3.5rem;
+  &.no-bullet {
+    margin-left: 0;
+    li {
+      ul, ol {
+        margin-left: 1.25rem;
+        margin-bottom: 0;
+        list-style: none;
+      }
+    }
+  }
 }
 
 /* Inline List */
 .inline-li {
-	margin: 0 auto;
-	margin-left: 0;
-	margin-right: 0;
-	padding: 0;
-	list-style: none;
-	& > li {
-		list-style: none;
-		margin-left: 1.375rem;
-		display: inline-block;
-		& > * {
-			display: block;
-		}
-	}
-	&.center-li {
-		text-align: center;
-	}
-	&.left-li {
-		text-align: left;
-	}
-	&.right-li {
-		text-align: right;
-	}
+  margin: 0 auto;
+  margin-left: 0;
+  margin-right: 0;
+  padding: 0;
+  list-style: none;
+  & > li {
+    list-style: none;
+    margin-left: 1.375rem;
+    display: inline-block;
+    & > * {
+      display: block;
+    }
+  }
+  &.center-li {
+    text-align: center;
+  }
+  &.left-li {
+    text-align: left;
+  }
+  &.right-li {
+    text-align: right;
+  }
 }
 
 /* Unordered Lists */
 ul li ul,
 ul li ol {
-	margin-left: 1.25rem;
-	margin-bottom: 0;
+  margin-left: 1.25rem;
+  margin-bottom: 0;
 }
 
 ul.square li ul,
 ul.circle li ul,
 ul.disc li ul {
-	list-style: inherit;
+  list-style: inherit;
 }
 
 ul.square {
-	list-style-type: square;
-	margin-left: 1.1rem;
+  list-style-type: square;
+  margin-left: 1.1rem;
 }
 
 ul.circle {
-	list-style-type: circle;
-	margin-left: 1.1rem;
+  list-style-type: circle;
+  margin-left: 1.1rem;
 }
 
 ul.disc {
-	list-style-type: disc;
-	margin-left: 1.1rem;
+  list-style-type: disc;
+  margin-left: 1.1rem;
 }
 ul.none {
-	list-style: none;
+  list-style: none;
 }
 
 /* Ordered Lists */
@@ -386,60 +381,60 @@ ol {
 }
 ol li ul,
 ol li ol {
-	margin-left: 1.25rem;
-	margin-bottom: 0;
+  margin-left: 1.25rem;
+  margin-bottom: 0;
 }
 
 /* Blockquotes */
 blockquote {
-	margin: 1.25rem 0;
-	padding: 0.5625rem 1.25rem 0 1.1875rem;
-	border-left: 1px solid $grey_c;
+  margin: 1.25rem 0;
+  padding: 0.5625rem 1.25rem 0 1.1875rem;
+  border-left: 1px solid $grey_c;
 }
 
 blockquote cite {
-	display: block;
-	@include font-size(12);
-	color: $grey_5;
+  display: block;
+  @include font-size(12);
+  color: $grey_5;
 }
 
 blockquote cite:before {
-	content: "\2014 \0020";
+  content: "\2014 \0020";
 }
 
 blockquote cite a,
 blockquote cite a:visited {
-	color: $grey_5;
+  color: $grey_5;
 }
 
 blockquote,
 blockquote p {
-	line-height: 1.6;
-	color: $grey_5;
+  line-height: 1.6;
+  color: $grey_5;
 }
 
 /** TYPOGRAPHY MEDIA QUERIES **/
 @include breakpoint(mobile) {
-	h1,
-	h2,
-	h3,
-	h4,
-	h5,
-	h6 {
-		line-height: 1.4;
-	}
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    line-height: 1.4;
+  }
 
-	h1 { @include font-size(32); }
+  h1 { @include font-size(32); }
 
-	h2 { @include font-size(24); }
+  h2 { @include font-size(24); }
 
-	h3 { @include font-size(18); }
+  h3 { @include font-size(18); }
 
-	h4 { @include font-size(16); }
+  h4 { @include font-size(16); }
 
-	h5 { @include font-size(14); }
+  h5 { @include font-size(14); }
 
-	h6 { @include font-size(12); }
+  h6 { @include font-size(12); }
 }
 
 /*
@@ -449,78 +444,78 @@ blockquote p {
  * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
 */
 .print-only {
-	display: none !important;
+  display: none !important;
 }
 
 @media print {
-	* {
-		background: transparent !important;
-		color: $black  !important;
-		box-shadow: none !important;
-		text-shadow: none !important;
-	}
+  * {
+    background: transparent !important;
+    color: $black  !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
 
-	a,
-	a:visited {
-		text-decoration: underline;
-	}
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
 
-	a[href]:after {
-		content: " (" attr(href) ")";
-	}
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
 
-	abbr[title]:after {
-		content: " (" attr(title) ")";
-	}
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
 
-	.ir a:after,
-	a[href^="javascript:"]:after,
-	a[href^="#"]:after {
-		content: "";
-	}
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
 
-	pre,
-	blockquote {
-		border: 1px solid $grey_9;
-		page-break-inside: avoid;
-	}
+  pre,
+  blockquote {
+    border: 1px solid $grey_9;
+    page-break-inside: avoid;
+  }
 
-	thead {
-		display: table-header-group;
-	}
+  thead {
+    display: table-header-group;
+  }
 
-	tr,
-	img {
-		page-break-inside: avoid;
-	}
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
 
-	img {
-		max-width: 100% !important;
-	}
+  img {
+    max-width: 100% !important;
+  }
 
-	@page {
-		margin: 0.5cm;
-	}
+  @page {
+    margin: 0.5cm;
+  }
 
-	p,
-	h2,
-	h3 {
-		orphans: 3;
-		widows: 3;
-	}
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
 
-	h2,
-	h3 {
-		page-break-after: avoid;
-	}
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
 
-	.hide-on-print {
-		display: none !important;
-	}
+  .hide-on-print {
+    display: none !important;
+  }
 
-	.print-only {
-		display: block !important;
-	}
+  .print-only {
+    display: block !important;
+  }
 }
 /**
  * 0.0 BUTTONS
@@ -534,29 +529,26 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"]
  {
-	border-style: none;
-	cursor: pointer;
-	font-family: $sans-serif;
-	font-weight: normal;
-	line-height: normal;
-	margin: 0 0 1.25rem;
-	position: relative;
-	text-decoration: none;
-	text-align: center;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	display: inline-block;
-	padding-top: 1rem;
-	padding-right: 2rem;
-	padding-bottom: 1.0625rem;
-	padding-left: 2rem;
-	@include font-size();
-	background-color: $peter-river;
-	color: $white;
-	@include transition;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
+  border-style: none;
+  cursor: pointer;
+  font-family: $sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  padding: 1rem 2rem;
+  @include font-size();
+  background-color: $peter-river;
+  color: $white;
+  @include transition;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 button:hover,
@@ -574,125 +566,125 @@ input[type="submit"]:focus,
 input[type="reset"]:hover,
 input[type="reset"]:active,
 input[type="reset"]:focus {
-	background-color: $belize-hole;
-	color: $white;
-	box-shadow: none;
-	outline: 0;
+  background-color: $belize-hole;
+  color: $white;
+  box-shadow: none;
+  outline: 0;
 }
 
 /* Secondary button [LIGHT GREY] */
 button.secondary,
 .button.secondary {
-	background-color: $grey_e;
-	color: $black;
+  background-color: $grey_e;
+  color: $black;
 }
 
 button.secondary:hover,
 button.secondary:focus,
 .button.secondary:hover,
 .button.secondary:focus {
-	background-color: $grey_c;
-	color: $black;
+  background-color: $grey_c;
+  color: $black;
 }
 
 /* Success button [GREEN] */
 button.success,
 .button.success {
-	background-color: $emerald;
-	color: $white;
+  background-color: $emerald;
+  color: $white;
 }
 
 button.success:hover,
 button.success:focus,
 .button.success:hover,
 .button.success:focus {
-	background-color: $nephritis;
-	color: $white;
+  background-color: $nephritis;
+  color: $white;
 }
 
 /* Alert button [RED] */
 button.alert,
 .button.alert {
-	background-color: $alizarin;
-	color: $white;
+  background-color: $alizarin;
+  color: $white;
 }
 
 button.alert:hover,
 button.alert:focus,
 .button.alert:hover,
 .button.alert:focus {
-	background-color: $pomegranate;
-	color: $white;
+  background-color: $pomegranate;
+  color: $white;
 }
 
 /* Warning button [ORANGE] */
 button.warning,
 .button.warning {
-	background-color: $carrot;
-	color: $white;
+  background-color: $carrot;
+  color: $white;
 }
 
 button.warning:hover,
 button.warning:focus,
 .button.warning:hover,
 .button.warning:focus {
-	background-color: $pumpkin;
-	color: $white;
+  background-color: $pumpkin;
+  color: $white;
 }
 
 /** BUTTON SIZING **/
 button.large,
 .button.large {
-    padding-top: 1.125rem;
-    padding-right: 2.25rem;
-    padding-bottom: 1.1875rem;
-    padding-left: 2.25rem;
-    @include font-size(18);
+  padding-top: 1.125rem;
+  padding-right: 2.25rem;
+  padding-bottom: 1.1875rem;
+  padding-left: 2.25rem;
+  @include font-size(18);
 }
 
 button.small,
 .button.small {
-	padding-top: 0.875rem;
-	padding-right: 1.75rem;
-	padding-bottom: 0.9375rem;
-	padding-left: 1.75rem;
-	@include font-size();
+  padding-top: 0.875rem;
+  padding-right: 1.75rem;
+  padding-bottom: 0.9375rem;
+  padding-left: 1.75rem;
+  @include font-size();
 }
 
 button.tiny,
 .button.tiny {
-	padding-top: 0.625rem;
-	padding-right: 1.25rem;
-	padding-bottom: 0.6875rem;
-	padding-left: 1.25rem;
-	@include font-size(14);
+  padding-top: 0.625rem;
+  padding-right: 1.25rem;
+  padding-bottom: 0.6875rem;
+  padding-left: 1.25rem;
+  @include font-size(14);
 }
 
 button.expand,
 .button.expand {
-	padding-right: 0;
-	padding-left: 0;
-	width: 100%;
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
 }
 
 /** BUTTON RADIUS **/
 button.radius,
 .button.radius {
-	@include radius();
+  @include radius();
 }
 
 button.round,
 .button.round {
-	@include radius(1000px);
+  @include radius(1000px);
 }
 
 /** BUTTONS MEDIA QUERIES **/
 @include breakpoint(mobile) {
-	
-	button,
-	.button {
-		display: inline-block;
-	}
+
+  button,
+  .button {
+    display: inline-block;
+  }
 
 }
 
@@ -703,56 +695,52 @@ button.round,
 
 /* ROW */
 .row {
-	width: 100%;
-	margin-left: auto;
-	margin-right: auto;
-	margin-top: 0;
-	margin-bottom: 0;
-	//max-width: 62.5em;
+  width: 100%;
+  margin: 0 auto;
 }
 .row:before,
 .row:after {
-	content: " ";
-	display: table;
+  content: " ";
+  display: table;
 }
 .row:after {
-	clear: both;
+  clear: both;
 }
 
 .row .row {
-	//width: auto;
-	margin-left: -0.9375em;
-	margin-right: -0.9375em;
-	margin-top: 0;
-	margin-bottom: 0;
-	max-width: none;
+  //width: auto;
+  margin-left: -0.9375em;
+  margin-right: -0.9375em;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
 }
 
 .row .row:before,
 .row .row:after {
-	content: " ";
-	display: table;
+  content: " ";
+  display: table;
 }
 
 .row .row:after {
-	clear: both;
+  clear: both;
 }
 
 .column {
-	padding-left: 0.9375em;
-	padding-right: 0.9375em;
-	width: 100%;
-	float: left;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left;
 }
 
 @media only screen {
 
-	.column {
-		position: relative;
-		padding-left: 0;
-		padding-right: 0;
-		float: left;
-	}
+  .column {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    float: left;
+  }
 
   .mobile-1 {
     width: 8.33333%; }
@@ -838,12 +826,12 @@ button.round,
 }
 
 @include breakpoint(tab) {
-	.column {
-		position: relative;
-		padding-left: 0.9375em;
-		padding-right: 0.9375em;
-		float: left;
-	}
+  .column {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    float: left;
+  }
 
   .desktop-1 {
     width: 8.33333%; }
@@ -883,7 +871,7 @@ button.round,
 }
 
 .flex {
-	display: flex;
+  display: flex;
 }
 
 /**
@@ -893,113 +881,113 @@ button.round,
 
 /* Standard Forms */
 form {
-	margin: 0 0 1rem;
+  margin: 0 0 1rem;
 }
 
 /* Using forms within rows, we need to set some defaults */
 form .row .row {
-	margin: 0 -0.5rem;
-	.column {
-		padding: 0 0.5rem;
-	}
-	&.collapse {
-		margin: 0;
-		.column {
-			padding: 0;
-		}
-		input {
-			@include radius(0);
-		}
-	}
+  margin: 0 -0.5rem;
+  .column {
+    padding: 0 0.5rem;
+  }
+  &.collapse {
+    margin: 0;
+    .column {
+      padding: 0;
+    }
+    input {
+      @include radius(0);
+    }
+  }
 }
 
 form .row {
-	input.column,
-	textarea.column {
-		padding-left: 0.5rem;
-	}
+  input.column,
+  textarea.column {
+    padding-left: 0.5rem;
+  }
 }
 
 /* Label Styles */
 label {
-	@include font-size();
-	color: $grey_5;
-	cursor: pointer;
-	display: block;
-	font-weight: normal;
-	line-height: 1.5;
-	margin-bottom: 0;
-	&.right {
-		float: none !important;
-		text-align: right;
-	}
-	&.inline {
-		margin: 0 0 1rem 0;
-		padding: 0.5625rem 0;
-	}
-	&.small {
-		text-transform: capitalize;
-	}
+  @include font-size();
+  color: $grey_5;
+  cursor: pointer;
+  display: block;
+  font-weight: normal;
+  line-height: 1.5;
+  margin-bottom: 0;
+  &.right {
+    float: none !important;
+    text-align: right;
+  }
+  &.inline {
+    margin: 0 0 1rem 0;
+    padding: 0.5625rem 0;
+  }
+  &.small {
+    text-transform: capitalize;
+  }
 }
 
 /* Attach elements to the beginning or end of an input */
 .prefix,
 .postfix {
-	display: block;
-	position: relative;
-	z-index: 2;
-	text-align: center;
-	width: 100%;
-	padding-top: 0;
-	padding-bottom: 0;
-	border-style: solid;
-	border-width: 1px;
-	overflow: visible;
-	@include font-size();
-	min-height: 2.3125rem;
-	line-height: 2.3125rem;
+  display: block;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-style: solid;
+  border-width: 1px;
+  overflow: visible;
+  @include font-size();
+  min-height: 2.3125rem;
+  line-height: 2.3125rem;
 }
 
 /* Adjust padding, alignment and radius if pre/post element is a button */
 .postfix.button,
 .prefix.button {
-	padding: {
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	}
-	text-align: center;
-	border: none;
-	&.radius {
-		border-radius: 0;
-		-webkit-border-bottom-left-radius: 3px;
-		-webkit-border-top-left-radius: 3px;
-		border-bottom-left-radius: 3px;
-		border-top-left-radius: 3px;
-	}
-	&.round {
-		border-radius: 0;
-		-webkit-border-bottom-left-radius: 1000px;
-		-webkit-border-top-left-radius: 1000px;
-		border-bottom-left-radius: 1000px;
-		border-top-left-radius: 1000px;
-	}
+  padding: {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+  text-align: center;
+  border: none;
+  &.radius {
+    border-radius: 0;
+    -webkit-border-bottom-left-radius: 3px;
+    -webkit-border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+  }
+  &.round {
+    border-radius: 0;
+    -webkit-border-bottom-left-radius: 1000px;
+    -webkit-border-top-left-radius: 1000px;
+    border-bottom-left-radius: 1000px;
+    border-top-left-radius: 1000px;
+  }
 }
 
 /* Separate prefix and postfix styles when on span or label so buttons keep their own */
 span.prefix, label.prefix {
-	background: $dark_white;
-	border-right: none;
-	color: $grey_5;
-	border-color: $grey_c;
+  background: $dark_white;
+  border-right: none;
+  color: $grey_5;
+  border-color: $grey_c;
 }
 
 span.postfix, label.postfix {
-	background: $dark_white;
-	border-left: none;
-	color: $grey_5;
-	border-color: $grey_c;
+  background: $dark_white;
+  border-left: none;
+  color: $grey_5;
+  border-color: $grey_c;
 }
 
 /* We use this to get basic styling on all basic form elements */
@@ -1018,77 +1006,77 @@ input[type="time"],
 input[type="url"],
 input[type="color"],
 textarea {
-	-webkit-appearance: none;
-	border-radius: 0;
-	background-color: $white;
-	font-family: inherit;
-	font-weight: 300;
-	border: solid 1px $grey_c;
-	color: rgba(0, 0, 0, 0.75);
-	display: block;
-	@include font-size();
-	margin: 0 0 1rem 0;
-	padding: 2rem;
-	min-height: 2.3125rem;
-	width: 100%;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	box-sizing: border-box;
-	transition: all 0.15s linear;
-	&:focus {
-		background: $dark_white;
-		border-color: $grey_9;
-		outline: none;
-	}
-	&:disabled {
-		background-color: $grey_e;
-		cursor: default;
-	}
-	&.radius {
-		@include radius();
-	}
+  -webkit-appearance: none;
+  border-radius: 0;
+  background-color: $white;
+  font-family: inherit;
+  font-weight: 300;
+  border: solid 1px $grey_c;
+  color: rgba(0, 0, 0, 0.75);
+  display: block;
+  @include font-size();
+  margin: 0 0 1rem 0;
+  padding: 2rem;
+  min-height: 2.3125rem;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  transition: all 0.15s linear;
+  &:focus {
+    background: $dark_white;
+    border-color: $grey_9;
+    outline: none;
+  }
+  &:disabled {
+    background-color: $grey_e;
+    cursor: default;
+  }
+  &.radius {
+    @include radius();
+  }
 }
 
 /* Respect enforced amount of rows for textarea */
 textarea[rows] {
-	height: auto;
+  height: auto;
 }
 
 /* Not allow resize out of parent */
 textarea {
-	max-width: 100%;
+  max-width: 100%;
 }
 
 /* Add height value for select elements to match text input height */
 select {
-	-webkit-appearance: none !important;
-	border-radius: 0;
-	background-color: $dark_white;
-	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
-	background-position: 100% center;
-	background-repeat: no-repeat;
-	border: 1px solid $grey_c;
-	padding: 0.5rem;
-	@include font-size();
-	font-family: $sans-serif;
-	color: rgba(0, 0, 0, 0.75);
-	line-height: normal;
-	border-radius: 0;
-	min-height: 2.3125rem;
-	&::-ms-expand {
-		display: none;
-	}
-	&.radius {
-		@include radius();
-	}
-	&:hover {
-		background-color: $dark_white;
-		border-color: $grey_9
-	}
-	&:disabled {
-		background-color: $grey_e;
-		cursor: default;
-	}
+  -webkit-appearance: none !important;
+  border-radius: 0;
+  background-color: $dark_white;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
+  background-position: 100% center;
+  background-repeat: no-repeat;
+  border: 1px solid $grey_c;
+  padding: 0.5rem;
+  @include font-size();
+  font-family: $sans-serif;
+  color: rgba(0, 0, 0, 0.75);
+  line-height: normal;
+  border-radius: 0;
+  min-height: 2.3125rem;
+  &::-ms-expand {
+    display: none;
+  }
+  &.radius {
+    @include radius();
+  }
+  &:hover {
+    background-color: $dark_white;
+    border-color: $grey_9
+  }
+  &:disabled {
+    background-color: $grey_e;
+    cursor: default;
+  }
 }
 
 /* Adjust margin for form elements below */
@@ -1096,34 +1084,34 @@ input[type="file"],
 input[type="checkbox"],
 input[type="radio"],
 select {
-	margin: 0 0 1rem 0;
+  margin: 0 0 1rem 0;
 }
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
-	display: inline-block;
-	margin-left: 0.5rem;
-	margin-right: 1rem;
-	margin-bottom: 0;
-	vertical-align: baseline;
+  display: inline-block;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
+  margin-bottom: 0;
+  vertical-align: baseline;
 }
 
 /* Normalize file input width */
 input[type="file"] {
-	width: 100%;
+  width: 100%;
 }
 
 /* HTML5 Number spinners settings */
 /* We add basic fieldset styling */
 fieldset {
-	border: 1px solid $grey_e;
-	padding: 1.25rem;
-	margin: 1.125rem 0;
-	legend {
-		font-weight: bold;
-		background: $white;
-		padding: 0 0.1875rem;
-		margin: 0;
-		margin-left: -0.1875rem;
-	}
+  border: 1px solid $grey_e;
+  padding: 1.25rem;
+  margin: 1.125rem 0;
+  legend {
+    font-weight: bold;
+    background: $white;
+    padding: 0 0.1875rem;
+    margin: 0;
+    margin-left: -0.1875rem;
+  }
 }

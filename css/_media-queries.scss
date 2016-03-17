@@ -3,25 +3,16 @@ $mobile    : 640px;
 $tab       : 1024px;
 $wall      : 1500px;
 
-/* --OLD--
-$mobile-screen    : 40em;         // 640px
-$medium-screen    : 40.063em;     // 641px
-$standard-screen  : 60em;         // 959px
-$large-screen     : 64.063em;	  // 1025px
-$xlarge-screen    : 90.063em;	  // 1441px
-  --OLD--
-*/
 
 // Breackpoint Mixins
-
 @mixin breakpoint($point) {
-	@if $point == wall {
-		@media screen and (min-width: $wall) { @content ; }
-	}
-	@else if $point == tab {
-		@media screen and (min-width: $tab) { @content ; }
-	}
-	@else if $point == mobile {
-		@media screen and (min-width: $mobile) { @content ; }
-	}
+  @if $point == wall {
+    @media screen and (min-width: $wall) { @content ; }
+  }
+  @else if $point == tab {
+    @media screen and (min-width: $tab) { @content ; }
+  }
+  @else if $point == mobile {
+    @media screen and (min-width: $mobile) { @content ; }
+  }
 }

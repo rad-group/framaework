@@ -1,22 +1,17 @@
-/***           ***
-**     SASS     **
-* CSS FRAMAEWORK *
-**      BY      **
-***   LOBAE    ***/
+/*
+Framaework CSS
+A SASS framework made by Lobae
+Version    : 2.0
+Author     : Matteo Chiti
+Agency Site: http://www.lobae.com
+Author Site: http://www.matteochiti.it
+*/
 /* GOOGLE FONT: Lato */
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic");
 /* GOOGLE FONT: Roboto */
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic");
 /* GOOGLE FONT: Roboto Sans Mono */
 @import url("http://fonts.googleapis.com/css?family=Droid+Sans+Mono");
-/* --OLD--
-$mobile-screen    : 40em;         // 640px
-$medium-screen    : 40.063em;     // 641px
-$standard-screen  : 60em;         // 959px
-$large-screen     : 64.063em;	  // 1025px
-$xlarge-screen    : 90.063em;	  // 1441px
-  --OLD--
-*/
 /**
  * 0.0 Reset
  * ----------------------------------------------------------------------------
@@ -135,16 +130,16 @@ td {
  * ----------------------------------------------------------------------------
  */
 .txt-left {
-  text-align: left !important; }
+  text-align: left; }
 
 .txt-right {
-  text-align: right !important; }
+  text-align: right; }
 
 .txt-center {
-  text-align: center !important; }
+  text-align: center; }
 
 .txt-justify {
-  text-align: justify !important; }
+  text-align: justify; }
 
 /* Default Link Styles */
 a {
@@ -214,13 +209,6 @@ h5 {
 h6 {
   font-size: 10px;
   font-size: 0.625rem; }
-
-.subheader {
-  line-height: 14;
-  color: #7f8c8d;
-  font-weight: normal;
-  margin-top: 0.2rem;
-  margin-bottom: 0.5rem; }
 
 hr {
   border: solid #cccccc;
@@ -362,25 +350,30 @@ blockquote p {
   h5,
   h6 {
     line-height: 1.4; }
+
   h1 {
     font-size: 32px;
     font-size: 2rem; }
+
   h2 {
     font-size: 24px;
     font-size: 1.5rem; }
+
   h3 {
     font-size: 18px;
     font-size: 1.125rem; }
+
   h4 {
     font-size: 16px;
     font-size: 1rem; }
+
   h5 {
     font-size: 14px;
     font-size: 0.875rem; }
+
   h6 {
     font-size: 12px;
     font-size: 0.75rem; } }
-
 /*
  * Print styles.
  *
@@ -396,28 +389,37 @@ blockquote p {
     color: #000000 !important;
     box-shadow: none !important;
     text-shadow: none !important; }
+
   a,
   a:visited {
     text-decoration: underline; }
+
   a[href]:after {
     content: " (" attr(href) ")"; }
+
   abbr[title]:after {
     content: " (" attr(title) ")"; }
+
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: ""; }
+
   pre,
   blockquote {
     border: 1px solid #999999;
     page-break-inside: avoid; }
+
   thead {
     display: table-header-group; }
+
   tr,
   img {
     page-break-inside: avoid; }
+
   img {
     max-width: 100% !important; }
+
   @page {
     margin: 0.5cm; }
   p,
@@ -425,14 +427,16 @@ blockquote p {
   h3 {
     orphans: 3;
     widows: 3; }
+
   h2,
   h3 {
     page-break-after: avoid; }
+
   .hide-on-print {
     display: none !important; }
+
   .print-only {
     display: block !important; } }
-
 /**
  * 0.0 BUTTONS
  * ----------------------------------------------------------------------------
@@ -448,17 +452,14 @@ input[type="reset"] {
   font-family: "Lato", Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
-  margin: 0 0 1.25rem;
+  margin: 0;
   position: relative;
   text-decoration: none;
   text-align: center;
   -webkit-appearance: none;
   -moz-appearance: none;
   display: inline-block;
-  padding-top: 1rem;
-  padding-right: 2rem;
-  padding-bottom: 1.0625rem;
-  padding-left: 2rem;
+  padding: 1rem 2rem;
   font-size: 16px;
   font-size: 1rem;
   background-color: #3498db;
@@ -597,7 +598,6 @@ button.round,
   button,
   .button {
     display: inline-block; } }
-
 /**
  * 0.0 GRID SYSTEM
  * ----------------------------------------------------------------------------
@@ -605,10 +605,7 @@ button.round,
 /* ROW */
 .row {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 0;
-  margin-bottom: 0; }
+  margin: 0 auto; }
 
 .row:before,
 .row:after {
@@ -645,93 +642,126 @@ button.round,
     padding-left: 0;
     padding-right: 0;
     float: left; }
+
   .mobile-1 {
     width: 8.33333%; }
+
   .mobile-2 {
     width: 16.66667%; }
+
   .mobile-3 {
     width: 25%; }
+
   .mobile-4 {
     width: 33.33333%; }
+
   .mobile-5 {
     width: 41.66667%; }
+
   .mobile-6 {
     width: 50%; }
+
   .mobile-7 {
     width: 58.33333%; }
+
   .mobile-8 {
     width: 66.66667%; }
+
   .mobile-9 {
     width: 75%; }
+
   .mobile-10 {
     width: 83.33333%; }
+
   .mobile-11 {
     width: 91.66667%; }
+
   .mobile-12 {
     width: 100%; } }
-
 @media screen and (min-width: 640px) {
   .column {
     position: relative;
     padding-left: 0.9375em;
     padding-right: 0.9375em;
     float: left; }
+
   .tab-1 {
     width: 8.33333%; }
+
   .tab-2 {
     width: 16.66667%; }
+
   .tab-3 {
     width: 25%; }
+
   .tab-4 {
     width: 33.33333%; }
+
   .tab-5 {
     width: 41.66667%; }
+
   .tab-6 {
     width: 50%; }
+
   .tab-7 {
     width: 58.33333%; }
+
   .tab-8 {
     width: 66.66667%; }
+
   .tab-9 {
     width: 75%; }
+
   .tab-10 {
     width: 83.33333%; }
+
   .tab-11 {
     width: 91.66667%; }
+
   .tab-12 {
     width: 100%; } }
-
 @media screen and (min-width: 1024px) {
   .column {
     position: relative;
     padding-left: 0.9375em;
     padding-right: 0.9375em;
     float: left; }
+
   .desktop-1 {
     width: 8.33333%; }
+
   .desktop-2 {
     width: 16.66667%; }
+
   .desktop-3 {
     width: 25%; }
+
   .desktop-4 {
     width: 33.33333%; }
+
   .desktop-5 {
     width: 41.66667%; }
+
   .desktop-6 {
     width: 50%; }
+
   .desktop-7 {
     width: 58.33333%; }
+
   .desktop-8 {
     width: 66.66667%; }
+
   .desktop-9 {
     width: 75%; }
+
   .desktop-10 {
     width: 83.33333%; }
+
   .desktop-11 {
     width: 91.66667%; }
+
   .desktop-12 {
     width: 100%; } }
-
 .flex {
   display: flex; }
 
@@ -995,3 +1025,5 @@ fieldset {
     padding: 0 0.1875rem;
     margin: 0;
     margin-left: -0.1875rem; }
+
+/*# sourceMappingURL=framaework.css.map */
