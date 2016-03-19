@@ -16,10 +16,18 @@ Author Site: http://www.matteochiti.it
  * 0.0 Reset
  * ----------------------------------------------------------------------------
  */
-html,
-body {
+html {
+  width: 100%;
   height: 100%;
-  font-size: 100%; }
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0; }
 
 *,
 *:before,
@@ -33,7 +41,7 @@ body {
   color: #000000;
   padding: 0;
   margin: 0;
-  font-family: "Lato", Arial, sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
@@ -41,12 +49,20 @@ body {
   position: relative;
   cursor: auto; }
 
+a {
+  background-color: transparent; }
+
 a:hover {
   cursor: pointer; }
+
+a:active,
+a:hover {
+  outline: 0; }
 
 img {
   max-width: 100%;
   height: auto;
+  border: 0;
   -ms-interpolation-mode: bicubic;
   display: inline-block;
   vertical-align: middle; }
@@ -105,25 +121,13 @@ td {
   margin: 0;
   padding: 0; }
 
-/**
- * 0.0 Float
- * ----------------------------------------------------------------------------
- */
-/* You can change the float behavior of an element by adding .left or .right to an HTML element.
-   To clear floats, add the class .cl to the parent element. */
-.left {
-  float: left !important; }
-
-.right {
-  float: right !important; }
-
-.cl:before,
-.cl:after {
-  content: " ";
-  display: table; }
-
-.cl:after {
-  clear: both; }
+hr {
+  display: block;
+  border: solid #cccccc;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1rem 0;
+  height: 0; }
 
 /**
  * 0.0 Typography
@@ -160,7 +164,7 @@ p {
   font-weight: normal;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1.4;
   margin-bottom: 1.25rem;
   text-rendering: optimizeLegibility; }
 
@@ -176,19 +180,23 @@ p aside {
   font-style: italic; }
 
 /* Default header styles */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "Lato", Arial, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #000000;
   text-rendering: optimizeLegibility;
-  margin-top: 0.2rem;
-  margin-bottom: 0.5rem;
   line-height: 1.4; }
 
+/** HEADER TITLES MEDIA QUERIES **/
 h1 {
-  font-size: 30px;
-  font-size: 1.875rem; }
+  font-size: 28px;
+  font-size: 1.75rem; }
 
 h2 {
   font-size: 22px;
@@ -210,13 +218,54 @@ h6 {
   font-size: 10px;
   font-size: 0.625rem; }
 
-hr {
-  border: solid #cccccc;
-  border-width: 1px 0 0;
-  clear: both;
-  margin: 1.25rem 0 1.1875rem;
-  height: 0; }
+@media screen and (min-width: 640px) {
+  h1 {
+    font-size: 30px;
+    font-size: 1.875rem; }
 
+  h2 {
+    font-size: 24px;
+    font-size: 1.5rem; }
+
+  h3 {
+    font-size: 18px;
+    font-size: 1.125rem; }
+
+  h4 {
+    font-size: 16px;
+    font-size: 1rem; }
+
+  h5 {
+    font-size: 14px;
+    font-size: 0.875rem; }
+
+  h6 {
+    font-size: 12px;
+    font-size: 0.75rem; } }
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 32px;
+    font-size: 2rem; }
+
+  h2 {
+    font-size: 26px;
+    font-size: 1.625rem; }
+
+  h3 {
+    font-size: 20px;
+    font-size: 1.25rem; }
+
+  h4 {
+    font-size: 18px;
+    font-size: 1.125rem; }
+
+  h5 {
+    font-size: 14px;
+    font-size: 0.875rem; }
+
+  h6 {
+    font-size: 12px;
+    font-size: 0.75rem; } }
 /* Helpful Typography Defaults */
 em,
 i {
@@ -254,7 +303,7 @@ dl {
   font-family: inherit; }
 
 ul {
-  margin-left: 3.5rem; }
+  margin-left: 2.1875rem; }
   ul.no-bullet {
     margin-left: 0; }
     ul.no-bullet li ul, ul.no-bullet li ol {
@@ -264,9 +313,7 @@ ul {
 
 /* Inline List */
 .inline-li {
-  margin: 0 auto;
-  margin-left: 0;
-  margin-right: 0;
+  margin: 0;
   padding: 0;
   list-style: none; }
   .inline-li > li {
@@ -341,39 +388,6 @@ blockquote p {
   line-height: 1.6;
   color: #555555; }
 
-/** TYPOGRAPHY MEDIA QUERIES **/
-@media screen and (min-width: 640px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    line-height: 1.4; }
-
-  h1 {
-    font-size: 32px;
-    font-size: 2rem; }
-
-  h2 {
-    font-size: 24px;
-    font-size: 1.5rem; }
-
-  h3 {
-    font-size: 18px;
-    font-size: 1.125rem; }
-
-  h4 {
-    font-size: 16px;
-    font-size: 1rem; }
-
-  h5 {
-    font-size: 14px;
-    font-size: 0.875rem; }
-
-  h6 {
-    font-size: 12px;
-    font-size: 0.75rem; } }
 /*
  * Print styles.
  *
@@ -438,6 +452,454 @@ blockquote p {
   .print-only {
     display: block !important; } }
 /**
+ * 0.0 GRID SYSTEM
+ * ----------------------------------------------------------------------------
+ */
+/* ROW */
+.row {
+  width: 100%;
+  margin: 0 auto; }
+
+.row:before,
+.row:after {
+  content: " ";
+  display: table; }
+
+.row:after {
+  clear: both; }
+
+.row .row {
+  margin-left: -0.9375em;
+  margin-right: -0.9375em;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none; }
+
+.row .row:before,
+.row .row:after {
+  content: " ";
+  display: table; }
+
+.row .row:after {
+  clear: both; }
+
+.row__column {
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 100%;
+  float: left; }
+
+@media only screen {
+  .row__column {
+    position: relative;
+    padding-left: 0;
+    padding-right: 0;
+    float: left; }
+
+  .mobile-1 {
+    width: 8.33333%; }
+
+  .mobile-push-1 {
+    position: relative;
+    left: 8.33333%; }
+
+  .mobile-pull-1 {
+    position: relative;
+    left: -8.33333%; }
+
+  .mobile-2 {
+    width: 16.66667%; }
+
+  .mobile-push-2 {
+    position: relative;
+    left: 16.66667%; }
+
+  .mobile-pull-2 {
+    position: relative;
+    left: -16.66667%; }
+
+  .mobile-3 {
+    width: 25%; }
+
+  .mobile-push-3 {
+    position: relative;
+    left: 25%; }
+
+  .mobile-pull-3 {
+    position: relative;
+    left: -25%; }
+
+  .mobile-4 {
+    width: 33.33333%; }
+
+  .mobile-push-4 {
+    position: relative;
+    left: 33.33333%; }
+
+  .mobile-pull-4 {
+    position: relative;
+    left: -33.33333%; }
+
+  .mobile-5 {
+    width: 41.66667%; }
+
+  .mobile-push-5 {
+    position: relative;
+    left: 41.66667%; }
+
+  .mobile-pull-5 {
+    position: relative;
+    left: -41.66667%; }
+
+  .mobile-6 {
+    width: 50%; }
+
+  .mobile-push-6 {
+    position: relative;
+    left: 50%; }
+
+  .mobile-pull-6 {
+    position: relative;
+    left: -50%; }
+
+  .mobile-7 {
+    width: 58.33333%; }
+
+  .mobile-push-7 {
+    position: relative;
+    left: 58.33333%; }
+
+  .mobile-pull-7 {
+    position: relative;
+    left: -58.33333%; }
+
+  .mobile-8 {
+    width: 66.66667%; }
+
+  .mobile-push-8 {
+    position: relative;
+    left: 66.66667%; }
+
+  .mobile-pull-8 {
+    position: relative;
+    left: -66.66667%; }
+
+  .mobile-9 {
+    width: 75%; }
+
+  .mobile-push-9 {
+    position: relative;
+    left: 75%; }
+
+  .mobile-pull-9 {
+    position: relative;
+    left: -75%; }
+
+  .mobile-10 {
+    width: 83.33333%; }
+
+  .mobile-push-10 {
+    position: relative;
+    left: 83.33333%; }
+
+  .mobile-pull-10 {
+    position: relative;
+    left: -83.33333%; }
+
+  .mobile-11 {
+    width: 91.66667%; }
+
+  .mobile-push-11 {
+    position: relative;
+    left: 91.66667%; }
+
+  .mobile-pull-11 {
+    position: relative;
+    left: -91.66667%; }
+
+  .mobile-12 {
+    width: 100%; } }
+@media screen and (min-width: 640px) {
+  .row__column {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    float: left; }
+
+  .tab-1 {
+    width: 8.33333%; }
+
+  .tab-push-1 {
+    position: relative;
+    left: 8.33333%; }
+
+  .tab-pull-1 {
+    position: relative;
+    left: -8.33333%; }
+
+  .tab-2 {
+    width: 16.66667%; }
+
+  .tab-push-2 {
+    position: relative;
+    left: 16.66667%; }
+
+  .tab-pull-2 {
+    position: relative;
+    left: -16.66667%; }
+
+  .tab-3 {
+    width: 25%; }
+
+  .tab-push-3 {
+    position: relative;
+    left: 25%; }
+
+  .tab-pull-3 {
+    position: relative;
+    left: -25%; }
+
+  .tab-4 {
+    width: 33.33333%; }
+
+  .tab-push-4 {
+    position: relative;
+    left: 33.33333%; }
+
+  .tab-pull-4 {
+    position: relative;
+    left: -33.33333%; }
+
+  .tab-5 {
+    width: 41.66667%; }
+
+  .tab-push-5 {
+    position: relative;
+    left: 41.66667%; }
+
+  .tab-pull-5 {
+    position: relative;
+    left: -41.66667%; }
+
+  .tab-6 {
+    width: 50%; }
+
+  .tab-push-6 {
+    position: relative;
+    left: 50%; }
+
+  .tab-pull-6 {
+    position: relative;
+    left: -50%; }
+
+  .tab-7 {
+    width: 58.33333%; }
+
+  .tab-push-7 {
+    position: relative;
+    left: 58.33333%; }
+
+  .tab-pull-7 {
+    position: relative;
+    left: -58.33333%; }
+
+  .tab-8 {
+    width: 66.66667%; }
+
+  .tab-push-8 {
+    position: relative;
+    left: 66.66667%; }
+
+  .tab-pull-8 {
+    position: relative;
+    left: -66.66667%; }
+
+  .tab-9 {
+    width: 75%; }
+
+  .tab-push-9 {
+    position: relative;
+    left: 75%; }
+
+  .tab-pull-9 {
+    position: relative;
+    left: -75%; }
+
+  .tab-10 {
+    width: 83.33333%; }
+
+  .tab-push-10 {
+    position: relative;
+    left: 83.33333%; }
+
+  .tab-pull-10 {
+    position: relative;
+    left: -83.33333%; }
+
+  .tab-11 {
+    width: 91.66667%; }
+
+  .tab-push-11 {
+    position: relative;
+    left: 91.66667%; }
+
+  .tab-pull-11 {
+    position: relative;
+    left: -91.66667%; }
+
+  .tab-12 {
+    width: 100%; } }
+@media screen and (min-width: 1024px) {
+  .row__column {
+    position: relative;
+    padding-left: 0.9375em;
+    padding-right: 0.9375em;
+    float: left; }
+
+  .desk-1 {
+    width: 8.33333%; }
+
+  .desk-push-1 {
+    position: relative;
+    left: 8.33333%; }
+
+  .desk-pull-1 {
+    position: relative;
+    left: -8.33333%; }
+
+  .desk-2 {
+    width: 16.66667%; }
+
+  .desk-push-2 {
+    position: relative;
+    left: 16.66667%; }
+
+  .desk-pull-2 {
+    position: relative;
+    left: -16.66667%; }
+
+  .desk-3 {
+    width: 25%; }
+
+  .desk-push-3 {
+    position: relative;
+    left: 25%; }
+
+  .desk-pull-3 {
+    position: relative;
+    left: -25%; }
+
+  .desk-4 {
+    width: 33.33333%; }
+
+  .desk-push-4 {
+    position: relative;
+    left: 33.33333%; }
+
+  .desk-pull-4 {
+    position: relative;
+    left: -33.33333%; }
+
+  .desk-5 {
+    width: 41.66667%; }
+
+  .desk-push-5 {
+    position: relative;
+    left: 41.66667%; }
+
+  .desk-pull-5 {
+    position: relative;
+    left: -41.66667%; }
+
+  .desk-6 {
+    width: 50%; }
+
+  .desk-push-6 {
+    position: relative;
+    left: 50%; }
+
+  .desk-pull-6 {
+    position: relative;
+    left: -50%; }
+
+  .desk-7 {
+    width: 58.33333%; }
+
+  .desk-push-7 {
+    position: relative;
+    left: 58.33333%; }
+
+  .desk-pull-7 {
+    position: relative;
+    left: -58.33333%; }
+
+  .desk-8 {
+    width: 66.66667%; }
+
+  .desk-push-8 {
+    position: relative;
+    left: 66.66667%; }
+
+  .desk-pull-8 {
+    position: relative;
+    left: -66.66667%; }
+
+  .desk-9 {
+    width: 75%; }
+
+  .desk-push-9 {
+    position: relative;
+    left: 75%; }
+
+  .desk-pull-9 {
+    position: relative;
+    left: -75%; }
+
+  .desk-10 {
+    width: 83.33333%; }
+
+  .desk-push-10 {
+    position: relative;
+    left: 83.33333%; }
+
+  .desk-pull-10 {
+    position: relative;
+    left: -83.33333%; }
+
+  .desk-11 {
+    width: 91.66667%; }
+
+  .desk-push-11 {
+    position: relative;
+    left: 91.66667%; }
+
+  .desk-pull-11 {
+    position: relative;
+    left: -91.66667%; }
+
+  .desk-12 {
+    width: 100%; } }
+/**
+ * 0.0 Float
+ * ----------------------------------------------------------------------------
+ */
+/* You can change the float behavior of an element by adding .left or .right to an HTML element.
+   To clear floats, add the class .cl to the parent element. */
+.left {
+  float: left !important; }
+
+.right {
+  float: right !important; }
+
+.cl:before,
+.cl:after {
+  content: " ";
+  display: table; }
+
+.cl:after {
+  clear: both; }
+
+/**
  * 0.0 BUTTONS
  * ----------------------------------------------------------------------------
  */
@@ -449,7 +911,7 @@ input[type="submit"],
 input[type="reset"] {
   border-style: none;
   cursor: pointer;
-  font-family: "Lato", Arial, sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0;
@@ -598,170 +1060,6 @@ button.round,
   button,
   .button {
     display: inline-block; } }
-/**
- * 0.0 GRID SYSTEM
- * ----------------------------------------------------------------------------
- */
-/* ROW */
-.row {
-  width: 100%;
-  margin: 0 auto; }
-
-.row:before,
-.row:after {
-  content: " ";
-  display: table; }
-
-.row:after {
-  clear: both; }
-
-.row .row {
-  margin-left: -0.9375em;
-  margin-right: -0.9375em;
-  margin-top: 0;
-  margin-bottom: 0;
-  max-width: none; }
-
-.row .row:before,
-.row .row:after {
-  content: " ";
-  display: table; }
-
-.row .row:after {
-  clear: both; }
-
-.column {
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
-  width: 100%;
-  float: left; }
-
-@media only screen {
-  .column {
-    position: relative;
-    padding-left: 0;
-    padding-right: 0;
-    float: left; }
-
-  .mobile-1 {
-    width: 8.33333%; }
-
-  .mobile-2 {
-    width: 16.66667%; }
-
-  .mobile-3 {
-    width: 25%; }
-
-  .mobile-4 {
-    width: 33.33333%; }
-
-  .mobile-5 {
-    width: 41.66667%; }
-
-  .mobile-6 {
-    width: 50%; }
-
-  .mobile-7 {
-    width: 58.33333%; }
-
-  .mobile-8 {
-    width: 66.66667%; }
-
-  .mobile-9 {
-    width: 75%; }
-
-  .mobile-10 {
-    width: 83.33333%; }
-
-  .mobile-11 {
-    width: 91.66667%; }
-
-  .mobile-12 {
-    width: 100%; } }
-@media screen and (min-width: 640px) {
-  .column {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    float: left; }
-
-  .tab-1 {
-    width: 8.33333%; }
-
-  .tab-2 {
-    width: 16.66667%; }
-
-  .tab-3 {
-    width: 25%; }
-
-  .tab-4 {
-    width: 33.33333%; }
-
-  .tab-5 {
-    width: 41.66667%; }
-
-  .tab-6 {
-    width: 50%; }
-
-  .tab-7 {
-    width: 58.33333%; }
-
-  .tab-8 {
-    width: 66.66667%; }
-
-  .tab-9 {
-    width: 75%; }
-
-  .tab-10 {
-    width: 83.33333%; }
-
-  .tab-11 {
-    width: 91.66667%; }
-
-  .tab-12 {
-    width: 100%; } }
-@media screen and (min-width: 1024px) {
-  .column {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    float: left; }
-
-  .desktop-1 {
-    width: 8.33333%; }
-
-  .desktop-2 {
-    width: 16.66667%; }
-
-  .desktop-3 {
-    width: 25%; }
-
-  .desktop-4 {
-    width: 33.33333%; }
-
-  .desktop-5 {
-    width: 41.66667%; }
-
-  .desktop-6 {
-    width: 50%; }
-
-  .desktop-7 {
-    width: 58.33333%; }
-
-  .desktop-8 {
-    width: 66.66667%; }
-
-  .desktop-9 {
-    width: 75%; }
-
-  .desktop-10 {
-    width: 83.33333%; }
-
-  .desktop-11 {
-    width: 91.66667%; }
-
-  .desktop-12 {
-    width: 100%; } }
 .flex {
   display: flex; }
 
@@ -975,7 +1273,7 @@ select {
   padding: 0.5rem;
   font-size: 16px;
   font-size: 1rem;
-  font-family: "Lato", Arial, sans-serif;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
   color: rgba(0, 0, 0, 0.75);
   line-height: normal;
   border-radius: 0;

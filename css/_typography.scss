@@ -1,0 +1,347 @@
+/**
+ * 0.0 Typography
+ * ----------------------------------------------------------------------------
+ */
+
+.txt-left {
+  text-align: left;
+}
+
+.txt-right {
+  text-align: right;
+}
+
+.txt-center {
+  text-align: center;
+}
+
+.txt-justify {
+  text-align: justify;
+}
+
+/* Default Link Styles */
+a {
+  color: $primary-color;
+  text-decoration: none;
+  line-height: inherit;
+}
+a:hover,
+a:focus {
+  color: $secondary-color;
+}
+a img {
+  border: none;
+}
+
+/* Default paragraph styles */
+p {
+  font: {
+    family: inherit;
+    weight: normal;
+  }
+  @include font-size();
+  line-height: 1.4;
+  margin-bottom: 1.25rem;
+  text-rendering: optimizeLegibility;
+}
+
+p.lead {
+  @include font-size();
+  line-height: 1.6;
+}
+
+p aside {
+  @include font-size(12);
+  line-height: 1.35;
+  font-style: italic;
+}
+
+/* Default header styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: {
+    family: $sans-serif;
+    weight: normal;
+    style: normal;
+  }
+  color: $black;
+  text-rendering: optimizeLegibility;
+  line-height: 1.4;
+}
+
+/** HEADER TITLES MEDIA QUERIES **/
+h1 { @include font-size(28); }
+
+h2 { @include font-size(22); }
+
+h3 { @include font-size(16); }
+
+h4 { @include font-size(14); }
+
+h5 { @include font-size(12); }
+
+h6 { @include font-size(10); }
+
+@include breakpoint(mobile) {
+
+  h1 { @include font-size(30); }
+
+  h2 { @include font-size(24); }
+
+  h3 { @include font-size(18); }
+
+  h4 { @include font-size(16); }
+
+  h5 { @include font-size(14); }
+
+  h6 { @include font-size(12); }
+
+}
+
+@include breakpoint(tab) {
+
+  h1 { @include font-size(32); }
+
+  h2 { @include font-size(26); }
+
+  h3 { @include font-size(20); }
+
+  h4 { @include font-size(18); }
+
+  h5 { @include font-size(14); }
+
+  h6 { @include font-size(12); }
+
+}
+
+/* Helpful Typography Defaults */
+em,
+i {
+  font-style: italic;
+  line-height: inherit;
+}
+
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit;
+}
+
+small {
+  font-size: 60%;
+  line-height: inherit;
+}
+
+code {
+  font-family: $monospace;
+  font-weight: normal;
+  color: $black;
+  background-color: $dark_white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $grey_e;
+  padding: 0.125rem 0.3125rem 0.0625rem;
+}
+
+/* Lists */
+ul,
+ol,
+dl {
+  @include font-size();
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  list-style-position: outside;
+  font-family: inherit;
+}
+
+ul {
+  margin-left: 2.1875rem;
+  &.no-bullet {
+    margin-left: 0;
+    li {
+      ul, ol {
+        margin-left: 1.25rem;
+        margin-bottom: 0;
+        list-style: none;
+      }
+    }
+  }
+}
+
+/* Inline List */
+.inline-li {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  & > li {
+    list-style: none;
+    margin-left: 1.375rem;
+    display: inline-block;
+    & > * {
+      display: block;
+    }
+  }
+  &.center-li {
+    text-align: center;
+  }
+  &.left-li {
+    text-align: left;
+  }
+  &.right-li {
+    text-align: right;
+  }
+}
+
+/* Unordered Lists */
+ul li ul,
+ul li ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+ul.square li ul,
+ul.circle li ul,
+ul.disc li ul {
+  list-style: inherit;
+}
+
+ul.square {
+  list-style-type: square;
+  margin-left: 1.1rem;
+}
+
+ul.circle {
+  list-style-type: circle;
+  margin-left: 1.1rem;
+}
+
+ul.disc {
+  list-style-type: disc;
+  margin-left: 1.1rem;
+}
+ul.none {
+  list-style: none;
+}
+
+/* Ordered Lists */
+ol {
+  margin-left: 3.5rem;
+}
+ol li ul,
+ol li ol {
+  margin-left: 1.25rem;
+  margin-bottom: 0;
+}
+
+/* Blockquotes */
+blockquote {
+  margin: 1.25rem 0;
+  padding: 0.5625rem 1.25rem 0 1.1875rem;
+  border-left: 1px solid $grey_c;
+}
+
+blockquote cite {
+  display: block;
+  @include font-size(12);
+  color: $grey_5;
+}
+
+blockquote cite:before {
+  content: "\2014 \0020";
+}
+
+blockquote cite a,
+blockquote cite a:visited {
+  color: $grey_5;
+}
+
+blockquote,
+blockquote p {
+  line-height: 1.6;
+  color: $grey_5;
+}
+
+/*
+ * Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com)
+*/
+.print-only {
+  display: none !important;
+}
+
+@media print {
+  * {
+    background: transparent !important;
+    color: $black  !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: "";
+  }
+
+  pre,
+  blockquote {
+    border: 1px solid $grey_9;
+    page-break-inside: avoid;
+  }
+
+  thead {
+    display: table-header-group;
+  }
+
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  @page {
+    margin: 0.5cm;
+  }
+
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  .hide-on-print {
+    display: none !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+}

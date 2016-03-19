@@ -1,0 +1,135 @@
+/**
+ * 0.0 Reset
+ * ----------------------------------------------------------------------------
+ */
+html {
+  width: 100%;
+  height: 100%;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: $white;
+  color: $black;
+  padding: 0;
+  margin: 0;
+  font: {
+    family: $sans-serif;
+    weight: normal;
+    style: normal;
+  }
+  @include font-size();
+  position: relative;
+  cursor: auto;
+}
+
+// Links
+a {
+  background-color: transparent;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important;
+}
+
+/* Visibility */
+.hide {
+  display: none !important;
+  visibility: hidden;
+}
+
+.show {
+  display: block !important;
+  visibility: visible;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.no-opacity {
+  opacity: 0;
+}
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+textarea {
+  height: auto;
+  min-height: 50px;
+}
+
+/* Typography gaps resets */
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  display: block;
+  border: solid $grey_c;
+  border-width: 1px 0 0;
+  clear: both;
+  margin: 1rem 0;
+  height: 0;
+}
