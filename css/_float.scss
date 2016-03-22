@@ -1,0 +1,37 @@
+/**
+ * 0.0 Float
+ * ----------------------------------------------------------------------------
+ */
+
+/* You can change the float behavior of an element by adding .left or .right to an HTML element.
+   To clear floats, add the class .cl to the parent element. */
+
+.left {
+  float: left !important;
+}
+
+.right {
+  float: right !important;
+}
+
+.cl:before,
+.cl:after {
+  content: " ";
+  display: table;
+}
+.cl:after {
+  clear: both;
+}
+
+/* Clear mixin */
+@mixin clearfix {
+  zoom: 1;
+  &:before {
+    content: ''; display: block;
+  }
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
