@@ -30,14 +30,14 @@ body {
   color: $black;
   padding: 0;
   margin: 0;
+  position: relative;
+  cursor: auto;
   font: {
     family: $sans-serif;
     weight: normal;
     style: normal;
   }
   @include font-size();
-  position: relative;
-  cursor: auto;
 }
 
 // Links
@@ -130,6 +130,6 @@ hr {
   border: solid $grey_c;
   border-width: 1px 0 0;
   clear: both;
-  margin: 1rem 0;
+  @include marginY();
   height: 0;
 }

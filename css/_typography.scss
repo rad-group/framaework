@@ -40,20 +40,9 @@ p {
     weight: normal;
   }
   @include font-size();
-  line-height: 1.4;
-  margin-bottom: 1.25rem;
+  @include line-height();
+  @include margin-bottom(2);
   text-rendering: optimizeLegibility;
-}
-
-p.lead {
-  @include font-size();
-  line-height: 1.6;
-}
-
-p aside {
-  @include font-size(12);
-  line-height: 1.35;
-  font-style: italic;
 }
 
 /* Default header styles */
@@ -70,7 +59,7 @@ h6 {
   }
   color: $black;
   text-rendering: optimizeLegibility;
-  line-height: 1.4;
+  @include line-height();
 }
 
 /** HEADER TITLES MEDIA QUERIES **/
@@ -86,7 +75,7 @@ h5 { @include font-size(12); }
 
 h6 { @include font-size(10); }
 
-@include breakpoint(mobile) {
+@include breakpoint(tab) {
 
   h1 { @include font-size(30); }
 
@@ -102,7 +91,7 @@ h6 { @include font-size(10); }
 
 }
 
-@include breakpoint(tab) {
+@include breakpoint(desk) {
 
   h1 { @include font-size(32); }
 
@@ -152,8 +141,8 @@ ul,
 ol,
 dl {
   @include font-size();
-  line-height: 1.6;
-  margin-bottom: 1.25rem;
+  @include line-height(1.6);
+  @include margin-bottom(2);
   list-style-position: outside;
   font-family: inherit;
 }

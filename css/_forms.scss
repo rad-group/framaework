@@ -5,7 +5,7 @@
 
 /* Standard Forms */
 form {
-  margin: 0 0 1rem;
+  @include margin-bottom();
 }
 
 /* Using forms within rows, we need to set some defaults */
@@ -84,18 +84,10 @@ label {
   text-align: center;
   border: none;
   &.radius {
-    border-radius: 0;
-    -webkit-border-bottom-left-radius: 3px;
-    -webkit-border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px;
+    @include radius();
   }
   &.round {
-    border-radius: 0;
-    -webkit-border-bottom-left-radius: 1000px;
-    -webkit-border-top-left-radius: 1000px;
-    border-bottom-left-radius: 1000px;
-    border-top-left-radius: 1000px;
+    @include radius(1000px);
   }
 }
 
@@ -141,7 +133,7 @@ textarea {
   color: rgba(0, 0, 0, 0.75);
   display: block;
   @include font-size();
-  margin: 0 0 1rem 0;
+  @include margin-bottom();
   padding: 0.5rem;
   min-height: 2.3125rem;
   width: 100%;
@@ -176,7 +168,6 @@ textarea {
 /* Add height value for select elements to match text input height */
 select {
   -webkit-appearance: none !important;
-  border-radius: 0;
   background-color: $dark_white;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
   background-position: 100% center;
@@ -210,7 +201,7 @@ input[type="file"],
 input[type="checkbox"],
 input[type="radio"],
 select {
-  margin: 0 0 1rem 0;
+  @include margin-bottom();
 }
 
 input[type="checkbox"] + label,

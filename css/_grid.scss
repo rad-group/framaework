@@ -177,7 +177,7 @@
 
 }
 
-@include breakpoint(mobile) {
+@include breakpoint(tab) {
   .row__column {
     position: relative;
     padding-left: 0.9375em;
@@ -277,7 +277,7 @@
     width: 100%; }
 }
 
-@include breakpoint(tab) {
+@include breakpoint(desk) {
   .row__column {
     position: relative;
     padding-left: 0.9375em;

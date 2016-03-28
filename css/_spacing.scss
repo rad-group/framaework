@@ -1,0 +1,38 @@
+$space-unit: 12;
+$space-amounts: ( 1, 2, 3, 5, 8 );
+
+// MARGIN
+@mixin marginY($value: 1) {
+  margin-top: $space-unit * $value + px;
+  margin-top: ($space-unit * $value) / 16 + rem;
+  margin-bottom: $space-unit * $value + px;
+  margin-bottom: ($space-unit * $value) / 16 + rem;
+}
+
+@mixin margin-top($value: 1) {
+  margin-top: $space-unit * $value + px;
+  margin-top: ($space-unit * $value) / 16 + rem;
+}
+
+@mixin margin-bottom($value: 1) {
+  margin-bottom: $space-unit * $value + px;
+  margin-bottom: ($space-unit * $value) / 16 + rem;
+}
+
+// PADDING
+@mixin paddingY($value: 1) {
+  padding-top: $space-unit * $value + px;
+  padding-top: ($space-unit * $value) / 16 + rem;
+  padding-bottom: $space-unit * $value + px;
+  padding-bottom: ($space-unit * $value) / 16 + rem;
+}
+
+@mixin padding-top($value: 1) {
+  padding-top: $space-unit * $value + px;
+  padding-top: ($space-unit * $value) / 16 + rem;
+}
+
+@mixin padding-bottom($value: 1) {
+  padding-bottom: $space-unit * $value + px;
+  padding-bottom: ($space-unit * $value) / 16 + rem;
+}

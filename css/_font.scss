@@ -12,6 +12,10 @@
   font-size: ($sizeValue / 16) + rem;
 }
 
+@mixin line-height($lineValue: 1.4) {
+ line-height: $lineValue;
+}
+
 // Font Family inizializations
 $sans-serif       : 'Lato', Helvetica, Arial, sans-serif;
 $serif            : 'Georgia', 'Times New Roman', serif;

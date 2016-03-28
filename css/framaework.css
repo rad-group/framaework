@@ -41,13 +41,13 @@ body {
   color: #000000;
   padding: 0;
   margin: 0;
+  position: relative;
+  cursor: auto;
   font-family: "Lato", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
-  font-size: 1rem;
-  position: relative;
-  cursor: auto; }
+  font-size: 1rem; }
 
 a {
   background-color: transparent; }
@@ -126,7 +126,10 @@ hr {
   border: solid #cccccc;
   border-width: 1px 0 0;
   clear: both;
-  margin: 1rem 0;
+  margin-top: 12px;
+  margin-top: 0.75rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
   height: 0; }
 
 /**
@@ -165,19 +168,9 @@ p {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.4;
-  margin-bottom: 1.25rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   text-rendering: optimizeLegibility; }
-
-p.lead {
-  font-size: 16px;
-  font-size: 1rem;
-  line-height: 1.6; }
-
-p aside {
-  font-size: 12px;
-  font-size: 0.75rem;
-  line-height: 1.35;
-  font-style: italic; }
 
 /* Default header styles */
 h1,
@@ -298,7 +291,8 @@ dl {
   font-size: 16px;
   font-size: 1rem;
   line-height: 1.6;
-  margin-bottom: 1.25rem;
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem;
   list-style-position: outside;
   font-family: inherit; }
 
@@ -1047,16 +1041,30 @@ input[type="reset"]:focus {
 
   .desk-12 {
     width: 100%; } }
-.grid-container, .grid-container--small, .grid-container--large {
+.grid-container, .grid-container--small, .grid-container--large, .grid-container--responsive {
   width: 100%;
   margin: 0 auto;
-  max-width: 1024px; }
+  max-width: 1024px;
+  padding-left: 10px;
+  padding-right: 10px; }
+  @media screen and (min-width: 640px) {
+    .grid-container, .grid-container--small, .grid-container--large, .grid-container--responsive {
+      padding: 0; } }
 
 .grid-container--small {
   max-width: 800px; }
 
 .grid-container--large {
-  max-width: 1200px; }
+  max-width: 1220px; }
+
+.grid-container--responsive {
+  max-width: 800px; }
+  @media screen and (min-width: 1024px) {
+    .grid-container--responsive {
+      max-width: 1024px; } }
+  @media screen and (min-width: 1324px) {
+    .grid-container--responsive {
+      max-width: 1220px; } }
 
 /**
  * 0.0 FORMS
@@ -1064,7 +1072,8 @@ input[type="reset"]:focus {
  */
 /* Standard Forms */
 form {
-  margin: 0 0 1rem; }
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem; }
 
 /* Using forms within rows, we need to set some defaults */
 form .row .row {
@@ -1153,11 +1162,10 @@ label {
   .prefix.radius.button--expand,
   .prefix.radius.button--radius,
   .prefix.radius.button--round {
-    border-radius: 0;
-    -webkit-border-bottom-left-radius: 3px;
-    -webkit-border-top-left-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-top-left-radius: 3px; }
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    border-radius: 3px; }
   .postfix.button.round, .postfix.round.button--secondary, .postfix.round.button--success, .postfix.round.button--alert, .postfix.round.button--warning, .postfix.round.button--large, .postfix.round.button--small, .postfix.round.button--tiny, .postfix.round.button--expand, .postfix.round.button--radius, .postfix.round.button--round,
   .prefix.button.round,
   .prefix.round.button--secondary,
@@ -1170,11 +1178,10 @@ label {
   .prefix.round.button--expand,
   .prefix.round.button--radius,
   .prefix.round.button--round {
-    border-radius: 0;
-    -webkit-border-bottom-left-radius: 1000px;
-    -webkit-border-top-left-radius: 1000px;
-    border-bottom-left-radius: 1000px;
-    border-top-left-radius: 1000px; }
+    -webkit-border-radius: 1000px;
+    -moz-border-radius: 1000px;
+    -ms-border-radius: 1000px;
+    border-radius: 1000px; }
 
 /* Separate prefix and postfix styles when on span or label so buttons keep their own */
 .prefix,
@@ -1217,7 +1224,8 @@ textarea {
   display: block;
   font-size: 16px;
   font-size: 1rem;
-  margin: 0 0 1rem 0;
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
   padding: 0.5rem;
   min-height: 2.3125rem;
   width: 100%;
@@ -1291,7 +1299,6 @@ textarea {
 /* Add height value for select elements to match text input height */
 select {
   -webkit-appearance: none !important;
-  border-radius: 0;
   background-color: #f6f6f6;
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
   background-position: 100% center;
@@ -1324,7 +1331,8 @@ input[type="file"],
 input[type="checkbox"],
 input[type="radio"],
 select {
-  margin: 0 0 1rem 0; }
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem; }
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {
