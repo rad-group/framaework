@@ -3,23 +3,46 @@
  * ----------------------------------------------------------------------------
  */
 
+/*
+There are three types of gutter:
+  .row: Normal gutter: 1em (16px);
+  .row--half: half gutter: 0.5em (8px);
+  .row--stuck: without gutter;
+*/
+
 /* ROW */
-.row {
+.row,
+.row--half,
+.row--stuck {
   width: 100%;
   margin: 0 auto;
 }
 .row:before,
-.row:after {
+.row:after,
+.row--half:before,
+.row--half:after,
+.row--stuck:before,
+.row--stuck:after {
   content: " ";
   display: table;
 }
-.row:after {
+.row:after,
+.row--half:after,
+.row--stuck:after {
   clear: both;
 }
 
 .row .row {
-  margin-left: -0.9375em;
-  margin-right: -0.9375em;
+  margin-left: -1em;
+  margin-right: -1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+}
+
+.row--stuck .row {
+  margin-left: 0;
+  margin-right: 0;
   margin-top: 0;
   margin-bottom: 0;
   max-width: none;
@@ -36,18 +59,48 @@
 }
 
 .row__column {
-  padding-left: 0.9375em;
-  padding-right: 0.9375em;
+  padding-left: 1em;
+  padding-right: 1em;
   width: 100%;
   float: left;
+}
+
+.row--half {
+  .row__column {
+    float: left;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+  }
+  .row,
+  .row--half {
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: none;
+  }
+}
+
+.row--stuck {
+  .row__column {
+    float: left;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .row,
+  .row--stuck {
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    max-width: none;
+  }
 }
 
 @media only screen {
 
   .row__column {
     position: relative;
-    padding-left: 0;
-    padding-right: 0;
     float: left;
   }
 
@@ -178,10 +231,11 @@
 }
 
 @include breakpoint(tab) {
+
   .row__column {
     position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
+    padding-left: 1em;
+    padding-right: 1em;
     float: left;
    }
 
@@ -275,13 +329,15 @@
     left: -91.66667%; }
   .tab-12 {
     width: 100%; }
+
 }
 
 @include breakpoint(desk) {
+
   .row__column {
     position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
+    padding-left: 1em;
+    padding-right: 1em;
     float: left;
   }
 
@@ -375,4 +431,5 @@
     left: -91.66667%; }
   .desk-12 {
     width: 100%; }
+
 }

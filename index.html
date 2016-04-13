@@ -6,7 +6,13 @@
     <meta charset="utf-8">
     <link href="css/framaework.css" rel="stylesheet" type="text/css">
   </head>
-
+  <style>
+    .row__column > div {
+      background-color: #f6f6f6;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+  </style>
   <body>
     <div class="grid-container--responsive">
       <h1>H1 Title</h1>
@@ -21,13 +27,39 @@
       <h1>Grid Test</h1>
 
       <div class="row">
-        <div class="row__column desk-3 tab-6 mobile-3">desktop-3 Column</div>
-        <div class="row__column desk-3 tab-6 mobile-3">desktop-3 Column</div>
-        <div class="row__column desk-3 tab-6 mobile-3">desktop-3 Column</div>
-        <div class="row__column desk-3 tab-6 mobile-3">desktop-3 Column</div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
       </div>
 
       <div class="row">
+        <div class="row__column mobile-push-3 tab-push-5 desk-push-8 mobile-3">desktop-3 Column</div>
+      </div>
+
+      <hr>
+
+      <div class="row--half">
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+      </div>
+
+      <div class="row--half">
+        <div class="row__column mobile-push-3 tab-push-5 desk-push-8 mobile-3">desktop-3 Column</div>
+      </div>
+
+      <hr>
+
+      <div class="row--stuck">
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+      </div>
+
+      <div class="row--stuck">
         <div class="row__column mobile-push-3 tab-push-5 desk-push-8 mobile-3">desktop-3 Column</div>
       </div>
 
