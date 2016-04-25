@@ -72,25 +72,6 @@ img {
   max-width: none !important;
 }
 
-/* Visibility */
-.hide {
-  display: none !important;
-  visibility: hidden;
-}
-
-.show {
-  display: block !important;
-  visibility: visible;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.no-opacity {
-  opacity: 0;
-}
-
 .antialiased {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

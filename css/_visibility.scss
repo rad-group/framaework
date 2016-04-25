@@ -1,0 +1,39 @@
+// Hidden only on mobile view
+// Visible on tab and desk views
+.hidden--on-eq-mobile,
+.visible--on-tab {
+  @include breakpoint(eq_mobile) {
+    display: none;
+  }
+}
+
+// Hidden only on tab and desk views
+// Visible ononly in mobile view
+.hidden--on-tab,
+.visible--on-eq-mobile {
+  @include breakpoint(tab) {
+    display: none;
+  }
+}
+
+// Hidden only on tab view
+.hidden--on-eq-tab {
+  @include breakpoint(eq_tab) {
+    display: none;
+  }
+}
+
+// Hidden only on desk view
+.hidden--on-desk {
+  @include breakpoint(desk) {
+    display: none;
+  }
+}
+
+// Visible only on desk view
+.visible--on-desk {
+    display: none;
+  @include breakpoint(desk) {
+    display: block;
+  }
+}

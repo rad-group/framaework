@@ -6,12 +6,36 @@ Author     : Matteo Chiti
 Agency Site: http://www.lobae.com
 Author Site: http://www.matteochiti.it
 */
-/* GOOGLE FONT: Lato */
 @import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic");
-/* GOOGLE FONT: Roboto */
 @import url("http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic");
-/* GOOGLE FONT: Roboto Sans Mono */
 @import url("http://fonts.googleapis.com/css?family=Droid+Sans+Mono");
+@media screen and (max-width: 640px) {
+  .hidden--on-eq-mobile,
+  .visible--on-tab {
+    display: none; } }
+
+@media screen and (min-width: 640px) {
+  .hidden--on-tab,
+  .visible--on-eq-mobile {
+    display: none; } }
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+  .hidden--on-eq-tab {
+    display: none; } }
+
+@media screen and (min-width: 1024px) {
+  .hidden--on-desk {
+    display: none; } }
+
+.visible--on-desk {
+  display: none; }
+  @media screen and (min-width: 1024px) {
+    .visible--on-desk {
+      display: block; } }
+
+/* GOOGLE FONT: Lato */
+/* GOOGLE FONT: Roboto */
+/* GOOGLE FONT: Roboto Sans Mono */
 /**
  * 0.0 Reset
  * ----------------------------------------------------------------------------
@@ -74,21 +98,6 @@ img {
 .map_canvas embed,
 .map_canvas object {
   max-width: none !important; }
-
-/* Visibility */
-.hide {
-  display: none !important;
-  visibility: hidden; }
-
-.show {
-  display: block !important;
-  visibility: visible; }
-
-.invisible {
-  visibility: hidden; }
-
-.no-opacity {
-  opacity: 0; }
 
 .antialiased {
   -webkit-font-smoothing: antialiased;
