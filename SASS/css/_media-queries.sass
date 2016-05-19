@@ -1,0 +1,22 @@
+// Media Query
+$tab: 640px
+$desk: 1024px
+$wall: 1324px
+
+// Breackpoint Mixins
+=breakpoint($point)
+  @if $point == wall
+    @media screen and (min-width: $wall)
+      @content
+  @else if $point == desk
+    @media screen and (min-width: $desk)
+      @content
+  @else if $point == eq_tab
+    @media screen and (min-width: $tab) and (max-width: $desk)
+      @content
+  @else if $point == tab
+    @media screen and (min-width: $tab)
+      @content
+  @else if $point == eq_mobile
+    @media screen and (max-width: $tab)
+      @content

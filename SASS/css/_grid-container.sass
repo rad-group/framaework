@@ -1,0 +1,36 @@
+//Variable
+$grid-width-small: 800px
+$grid-width: 1024px
+$grid-width-large: 1220px
+
+.grid-container
+  width: 100%
+  margin: 0 auto
+  max-width: $grid-width
+  padding-left: 10px
+  padding-right: 10px
+
+  +breakpoint(tab)
+    padding: 0
+
+.grid-container--small
+  @extend .grid-container
+
+  max-width: $grid-width-small
+
+.grid-container--large
+  @extend .grid-container
+
+  max-width: $grid-width-large
+
+.grid-container--responsive
+  @extend .grid-container
+
+  max-width: $grid-width-small
+
+  +breakpoint(desk)
+    max-width: $grid-width
+
+
+  +breakpoint(wall)
+    max-width: $grid-width-large

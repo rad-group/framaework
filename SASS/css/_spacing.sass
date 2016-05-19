@@ -1,0 +1,32 @@
+$space-unit: 12
+$space-amounts: 1, 2, 3, 5, 8
+
+// MARGIN
+=marginY($value: 1)
+  margin-top: $space-unit * $value + px
+  margin-top: $space-unit * $value / 16 + rem
+  margin-bottom: $space-unit * $value + px
+  margin-bottom: $space-unit * $value / 16 + rem
+
+=margin-top($value: 1)
+  margin-top: $space-unit * $value + px
+  margin-top: $space-unit * $value / 16 + rem
+
+=margin-bottom($value: 1)
+  margin-bottom: $space-unit * $value + px
+  margin-bottom: $space-unit * $value / 16 + rem
+
+// PADDING
+=paddingY($value: 1)
+  padding-top: $space-unit * $value + px
+  padding-top: $space-unit * $value / 16 + rem
+  padding-bottom: $space-unit * $value + px
+  padding-bottom: $space-unit * $value / 16 + rem
+
+=padding-top($value: 1)
+  padding-top: $space-unit * $value + px
+  padding-top: $space-unit * $value / 16 + rem
+
+=padding-bottom($value: 1)
+  padding-bottom: $space-unit * $value + px
+  padding-bottom: $space-unit * $value / 16 + rem

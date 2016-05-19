@@ -1,0 +1,223 @@
+/**
+ * 0.0 FORMS
+ * ----------------------------------------------------------------------------
+
+/* Standard Forms
+form
+  +margin-bottom
+
+/* Using forms within rows, we need to set some defaults
+form .row .row
+  margin: 0 -0.5rem
+
+  .row__column
+    padding: 0 0.5rem
+
+  &.collapse
+    margin: 0
+
+    .row__column
+      padding: 0
+
+    input
+      +radius(0)
+
+form .row
+  input.row__column,
+  textarea.row__column
+    padding-left: 0.5rem
+
+/* Label Styles
+label
+  +font-size
+
+  color: $grey_5
+  cursor: pointer
+  display: block
+  font-weight: normal
+  line-height: 1.5
+  margin-bottom: 0
+
+  &.right
+    float: none !important
+    text-align: right
+
+  &.inline
+    margin: 0 0 1rem 0
+    padding: 0.5625rem 0
+
+  &.small
+    text-transform: capitalize
+
+/* Attach elements to the beginning or end of an input
+.prefix,
+.postfix
+  display: block
+  position: relative
+  z-index: 2
+  text-align: center
+  width: 100%
+  padding-top: 0
+  padding-bottom: 0
+  border-style: solid
+  border-width: 1px
+  overflow: visible
+
+  +font-size
+
+  min-height: 2.3125rem
+  line-height: 2.125rem
+
+/* Adjust padding, alignment and radius if pre/post element is a button
+.postfix.button,
+.prefix.button
+  padding:
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+  text-align: center
+  border: none
+
+  &.radius
+    +radius
+
+  &.round
+    +radius(1000px)
+
+/* Separate prefix and postfix styles when on span or label so buttons keep their own
+.prefix,
+.prefix
+  background: $dark_white
+  border-right: none
+  color: $grey_5
+  border-color: $grey_c
+
+.postfix,
+.postfix
+  background: $dark_white
+  border-left: none
+  color: $grey_5
+  border-color: $grey_c
+
+/* We use this to get basic styling on all basic form elements
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="color"],
+textarea
+  -webkit-appearance: none
+  border-radius: 0
+  background-color: $white
+  font-family: inherit
+  font-weight: 300
+  border: solid 1px $grey_c
+  color: rgba(0, 0, 0, 0.75)
+  display: block
+
+  +font-size
+
+  +margin-bottom
+
+  padding: 0.5rem
+  min-height: 2.3125rem
+  width: 100%
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  transition: all 0.15s linear
+
+  &:focus
+    background: $dark_white
+    border-color: $grey_9
+    outline: none
+
+  &:disabled
+    background-color: $grey_e
+    cursor: default
+
+  &.radius
+    +radius
+
+/* Respect enforced amount of rows for textarea
+textarea[rows]
+  height: auto
+
+/* Not allow resize out of parent
+textarea
+  max-width: 100%
+
+/* Add height value for select elements to match text input height
+select
+  -webkit-appearance: none !important
+  background-color: $dark_white
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+)
+  background-position: 100% center
+  background-repeat: no-repeat
+  border: 1px solid $grey_c
+  padding: 0.5rem
+
+  +font-size
+
+  font-family: $sans-serif
+  color: rgba(0, 0, 0, 0.75)
+  line-height: normal
+  border-radius: 0
+  min-height: 2.3125rem
+
+  &::-ms-expand
+    display: none
+
+  &.radius
+    +radius
+
+  &:hover
+    background-color: $dark_white
+    border-color: $grey_9
+
+  &:disabled
+    background-color: $grey_e
+    cursor: default
+
+/* Adjust margin for form elements below
+input[type="file"],
+input[type="checkbox"],
+input[type="radio"],
+select
+  +margin-bottom
+
+input[type="checkbox"] + label,
+input[type="radio"] + label
+  display: inline-block
+  margin-left: 0.5rem
+  margin-right: 1rem
+  margin-bottom: 0
+  vertical-align: baseline
+
+/* Normalize file input width
+input[type="file"]
+  width: 100%
+
+/* HTML5 Number spinners settings
+/* We add basic fieldset styling
+fieldset
+  border: 1px solid $grey_e
+  padding: 1.25rem
+  margin: 1.125rem 0
+
+  legend
+    font-weight: bold
+    background: $white
+    padding: 0 0.1875rem
+    margin: 0
+    margin-left: -0.1875rem
