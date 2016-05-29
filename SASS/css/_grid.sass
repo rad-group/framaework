@@ -8,12 +8,40 @@
  *  .row--half: half gutter: 0.5em (8px);
  *  .row--stuck: without gutter;
 
+$row-gap        : 1em
+$row-gap--half  : 0.5em
+$row-gap--stuck : 0
+
 /* ROW
 .row,
 .row--half,
 .row--stuck
   width: 100%
   margin: 0 auto
+  letter-spacing: -0.3em
+
+.row
+  margin-left: - $row-gap
+  margin-right: - $row-gap
+  width: calc( 100% + #{$row-gap} )
+
+.row--half
+  margin-left: - $row-gap--half
+  margin-right: - $row-gap--half
+  width: calc( 100% + #{$row-gap--half} )
+
+.row--stuck
+  margin-left: - $row-gap--stuck
+  margin-right: - $row-gap--stuck
+  width: calc( 100% + #{$row-gap--stuck} )
+
+.columns-middle
+  .row__column
+    vertical-align: middle
+
+.columns-bottom
+  .row__column
+    vertical-align: bottom
 
 .row:before,
 .row:after,
@@ -52,28 +80,26 @@
   clear: both
 
 .row__column
-  padding-left: 1em
-  padding-right: 1em
+  padding-left: $row-gap
+  padding-right: $row-gap
   width: 100%
-  float: left
+  letter-spacing: normal
+  vertical-align: top
 
 .row--half
   .row__column
-    float: left
     padding-left: 0.5em
     padding-right: 0.5em
 
   .row,
-  .row--half
-    margin-left: -0.5em
-    margin-right: -0.5em
+  .row--half,
+  .row--stuck
     margin-top: 0
     margin-bottom: 0
     max-width: none
 
 .row--stuck
   .row__column
-    float: left
     padding-left: 0
     padding-right: 0
 
@@ -88,7 +114,7 @@
 @media only screen
   .row__column
     position: relative
-    float: left
+    display: inline-block
 
   .mobile-1
     width: 8.33333%
@@ -219,7 +245,6 @@
     position: relative
     padding-left: 1em
     padding-right: 1em
-    float: left
 
   .tab-1
     width: 8.33333%
@@ -351,7 +376,6 @@
     position: relative
     padding-left: 1em
     padding-right: 1em
-    float: left
 
   .desk-1
     width: 8.33333%

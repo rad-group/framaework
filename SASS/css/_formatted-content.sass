@@ -1,0 +1,74 @@
+// Use formatted content class (.formatted-content)
+  to apply all text style like margin, bullet list, paragraphs, ecc...
+
+.formatted-content
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hgroup,
+  ul,
+  ol,
+  dd,
+  p,
+  figure,
+  pre,
+  table,
+  fieldset,
+  hr,
+  form
+    +margin-bottom(1)
+    &:last-child
+      margin-bottom: 0
+
+  ul,
+  ol,
+  blockquote
+    padding-left: 30px
+
+  ul li
+    list-style-type: disc
+
+  ol li
+    list-style-type: decimal
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6
+    +margin-top(2)
+
+    &:first-child
+      margin-top: 0
+
+  table
+    width: 100%
+
+  /* Blockquotes
+  blockquote
+    margin: 1.25rem 0
+    padding: 0.5625rem 1.25rem 0 1.1875rem
+    border-left: 1px solid $grey_c
+
+  blockquote cite
+    display: block
+    +font-size(12)
+    color: $grey_5
+
+  blockquote cite a,
+  blockquote cite a:visited
+    color: $grey_5
+
+  blockquote,
+  blockquote p
+    line-height: 1.6
+    color: $grey_5
+
+  @media print
+    blockquote
+      border: 1px solid $grey_9
+      page-break-inside: avoid

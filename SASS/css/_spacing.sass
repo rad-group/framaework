@@ -2,6 +2,10 @@ $space-unit: 12
 $space-amounts: 1, 2, 3, 5, 8
 
 // MARGIN
+=margin($value: 1)
+  margin: $space-unit * $value + px
+  margin: $space-unit * $value / 16 + rem
+
 =marginY($value: 1)
   margin-top: $space-unit * $value + px
   margin-top: $space-unit * $value / 16 + rem
@@ -17,6 +21,10 @@ $space-amounts: 1, 2, 3, 5, 8
   margin-bottom: $space-unit * $value / 16 + rem
 
 // PADDING
+=padding($value: 1)
+  padding: $space-unit * $value + px
+  padding: $space-unit * $value / 16 + rem
+
 =paddingY($value: 1)
   padding-top: $space-unit * $value + px
   padding-top: $space-unit * $value / 16 + rem

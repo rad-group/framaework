@@ -1,0 +1,45 @@
+@mixin header_title($h)
+
+  // START H1
+  @if $h == h1
+    +font-size(28)
+    +breakpoint(tab)
+      +font-size(30)
+    +breakpoint(desk)
+      +font-size(32)
+
+  // START H2
+  @if $h == h2
+    +font-size(22)
+    +breakpoint(tab)
+      +font-size(24)
+    +breakpoint(desk)
+      +font-size(26)
+
+  // START H3
+  @if $h == h3
+    +font-size(16)
+    +breakpoint(tab)
+      +font-size(18)
+    +breakpoint(desk)
+      +font-size(20)
+
+  // START H4
+  @if $h == h4
+    +font-size(14)
+    +breakpoint(tab)
+      +font-size(16)
+    +breakpoint(desk)
+      +font-size(18)
+
+  // START H5
+  @if $h == h5
+    +font-size(12)
+    +breakpoint(tab)
+      +font-size(14)
+
+  // START H6
+  @if $h == h6
+    +font-size(10)
+    +breakpoint(tab)
+      +font-size(12)

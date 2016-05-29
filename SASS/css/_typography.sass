@@ -32,13 +32,8 @@ p
   font:
     family: inherit
     weight: normal
-
   +font-size
-
   +line-height
-
-  +margin-bottom(2)
-
   text-rendering: optimizeLegibility
 
 /* Default header styles
@@ -54,66 +49,26 @@ h6
     style: normal
   color: $black
   text-rendering: optimizeLegibility
-
   +line-height
 
 /** HEADER TITLES MEDIA QUERIES *
 h1
-  +font-size(28)
+  +header_title(h1)
 
 h2
-  +font-size(22)
+  +header_title(h2)
 
 h3
-  +font-size(16)
+  +header_title(h3)
 
 h4
-  +font-size(14)
+  +header_title(h4)
 
 h5
-  +font-size(12)
+  +header_title(h5)
 
 h6
-  +font-size(10)
-
-+breakpoint(tab)
-  h1
-    +font-size(30)
-
-  h2
-    +font-size(24)
-
-  h3
-    +font-size(18)
-
-  h4
-    +font-size(16)
-
-  h5
-    +font-size(14)
-
-  h6
-    +font-size(12)
-
-
-+breakpoint(desk)
-  h1
-    +font-size(32)
-
-  h2
-    +font-size(26)
-
-  h3
-    +font-size(20)
-
-  h4
-    +font-size(18)
-
-  h5
-    +font-size(14)
-
-  h6
-    +font-size(12)
+  +header_title(h6)
 
 
 /* Helpful Typography Defaults
@@ -146,25 +101,14 @@ ul,
 ol,
 dl
   +font-size
-
   +line-height(1.6)
-
-  +margin-bottom(2)
-
   list-style-position: outside
   font-family: inherit
 
 ul
-  margin-left: 2.1875rem
-
-  &.no-bullet
-    margin-left: 0
-
-    li
-      ul, ol
-        margin-left: 1.25rem
-        margin-bottom: 0
-        list-style: none
+  li
+    margin-bottom: 0
+    list-style: none
 
 /* Inline List
 .inline-li
@@ -192,7 +136,6 @@ ul
 /* Unordered Lists
 ul li ul,
 ul li ol
-  margin-left: 1.25rem
   margin-bottom: 0
 
 ul.square li ul,
@@ -202,15 +145,12 @@ ul.disc li ul
 
 ul.square
   list-style-type: square
-  margin-left: 1.1rem
 
 ul.circle
   list-style-type: circle
-  margin-left: 1.1rem
 
 ul.disc
   list-style-type: disc
-  margin-left: 1.1rem
 
 ul.none
   list-style: none
@@ -221,33 +161,7 @@ ol
 
 ol li ul,
 ol li ol
-  margin-left: 1.25rem
   margin-bottom: 0
-
-/* Blockquotes
-blockquote
-  margin: 1.25rem 0
-  padding: 0.5625rem 1.25rem 0 1.1875rem
-  border-left: 1px solid $grey_c
-
-blockquote cite
-  display: block
-
-  +font-size(12)
-
-  color: $grey_5
-
-blockquote cite:before
-  content: "\2014 \0020"
-
-blockquote cite a,
-blockquote cite a:visited
-  color: $grey_5
-
-blockquote,
-blockquote p
-  line-height: 1.6
-  color: $grey_5
 
 /*
  * Print styles.
@@ -279,8 +193,7 @@ blockquote p
   a[href^="#"]:after
     content: ""
 
-  pre,
-  blockquote
+  pre
     border: 1px solid $grey_9
     page-break-inside: avoid
 
