@@ -3,7 +3,6 @@
  * ----------------------------------------------------------------------------
 
 /* Default button [BLUE]
-button,
 .button,
 input[type="button"],
 input[type="submit"],
@@ -20,24 +19,15 @@ input[type="reset"]
   -webkit-appearance: none
   -moz-appearance: none
   display: inline-block
-  padding: 1rem 2rem
-
+  +paddingY(2)
+  +paddingX(3)
   +font-size
-
   background-color: $primary-color
   color: $white
-
-  +transition
-
+  +transition()
   -webkit-appearance: none
   -moz-appearance: none
   appearance: none
-
-button,
-.button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"]
   &:hover,
   &:active,
   &:focus
@@ -49,85 +39,61 @@ input[type="reset"]
 /* Secondary button [LIGHT GREY]
 .button--secondary
   @extend .button
-
-  background-color: $grey_e
-  color: $black
-
+  background-color: $standard-feedback
+  color: $grey_3
   &:hover,
   &:focus
     background-color: $grey_c
-    color: $black
+    color: $grey_3
 
 /* Success button [GREEN]
 .button--success
   @extend .button
-
-  background-color: $emerald
+  background-color: $success-feedback
   color: $white
-
   &:hover,
   &:focus
-    background-color: $nephritis
+    background-color: $success-feedback-dark
     color: $white
 
 /* Alert button [RED]
 .button--alert
   @extend .button
-
-  background-color: $alizarin
+  background-color: $alert-feedback
   color: $white
-
   &:hover,
   &:focus
-    background-color: $pomegranate
+    background-color: $alert-feedback-dark
     color: $white
 
 /* Warning button [ORANGE]
 .button--warning
   @extend .button
-
-  background-color: $carrot
+  background-color: $warning-feedback
   color: $white
-
   &:hover,
   &:focus
-    background-color: $pumpkin
+    background-color: $warning-feedback-dark
     color: $white
 
 /** BUTTON SIZING *
 .button--large
   @extend .button
-
-  padding-top: 1.125rem
-  padding-right: 2.25rem
-  padding-bottom: 1.1875rem
-  padding-left: 2.25rem
-
-  +font-size(18)
+  +paddingX(6)
+  +font-size()
 
 .button--small
   @extend .button
-
-  padding-top: 0.875rem
-  padding-right: 1.75rem
-  padding-bottom: 1rem
-  padding-left: 1.75rem
-
-  +font-size
+  +padding(1.5)
+  +font-size()
 
 .button--tiny
   @extend .button
-
-  padding-top: 0.625rem
-  padding-right: 1.25rem
-  padding-bottom: 0.6875rem
-  padding-left: 1.25rem
-
-  +font-size(14)
+  +padding(1)
+  +font-size()
 
 .button--expand
   @extend .button
-
   padding-right: 0
   padding-left: 0
   width: 100%
@@ -135,10 +101,8 @@ input[type="reset"]
 /** BUTTON RADIUS *
 .button--radius
   @extend .button
-
   +radius
 
 .button--round
   @extend .button
-
   +radius(1000px)

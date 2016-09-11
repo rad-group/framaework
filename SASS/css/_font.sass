@@ -1,10 +1,13 @@
 // Calculate font size in rem and px
-=font-size($sizeValue: 16)
+=font-size($sizeValue: 14)
   font-size: $sizeValue + px
   font-size: $sizeValue / 16 + rem
 
 =line-height($lineValue: 1.5)
   line-height: $lineValue
+
+=letter-spacing($spacingValue: normal)
+  line-height: $spacingValue
 
 // Font Family inizializations
 $sans-serif: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif
