@@ -5,8 +5,6 @@
  *Author     : Matteo Chiti
  *Agency Site: http://www.lobae.com
  *Author Site: http://www.matteochiti.it */
-@import url("http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900,100italic,300italic,400italic,700italic,900italic");
-@import url("http://fonts.googleapis.com/css?family=Droid+Sans+Mono");
 @media screen and (max-width: 640px) {
   .hidden--on-eq-mobile,
   .visible--on-tab {
@@ -31,8 +29,6 @@
     .visible--on-desk {
       display: block; } }
 
-/* GOOGLE FONT: Lato */
-/* GOOGLE FONT: Roboto Sans Mono */
 /**
  * 0.0 Reset
  * ---------------------------------------------------------------------------- */
@@ -63,7 +59,7 @@ body {
   margin: 0;
   position: relative;
   cursor: auto;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-size: 16px;
@@ -171,7 +167,7 @@ p {
   font-weight: normal;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.4;
+  line-height: 1.5;
   text-rendering: optimizeLegibility; }
 
 /* Default header styles */
@@ -181,12 +177,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #000000;
   text-rendering: optimizeLegibility;
-  line-height: 1.4; }
+  line-height: 1.5; }
 
 /** HEADER TITLES MEDIA QUERIES */
 h1 {
@@ -269,7 +265,7 @@ small {
   line-height: inherit; }
 
 code {
-  font-family: "Droid Sans Mono", Courier, monospace;
+  font-family: "Lucida Console", Monaco, monospace;
   font-weight: normal;
   color: #000000;
   background-color: #f6f6f6;
@@ -514,7 +510,7 @@ input[type="submit"],
 input[type="reset"] {
   border-style: none;
   cursor: pointer;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   font-weight: normal;
   line-height: normal;
   margin: 0;
@@ -1558,7 +1554,7 @@ select {
   padding: 0.5rem;
   font-size: 16px;
   font-size: 1rem;
-  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   color: rgba(0, 0, 0, 0.75);
   line-height: normal;
   border-radius: 0;
