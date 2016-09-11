@@ -1,0 +1,37 @@
+//Hero header
+.hero
+  background-color: $primary-color
+  hgroup
+    +padding-top(22)
+    +padding-bottom(6)
+    h1,
+    h2
+      color: $white
+      text-transform: uppercase
+      +letter-spacing(2px)
+    h1
+      font-weight: bold
+    h2
+      font-weight: 200
+
+// Main style
+.main-content
+  +margin-top(6)
+
+// DOC Sections
+.doc-section
+  +margin-bottom(6)
+  hr.grid-container
+    +margin-top(6)
+
+// Examples
+.doc-section__example
+  +padding-top(4)
+  +padding-bottom(2)
+
+.doc-section__example__column-style
+  +padding(2)
+  +marginY(2)
+  background-color: $grey_e
+  color: $grey_5
+  text-align: center

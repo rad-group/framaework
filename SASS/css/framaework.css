@@ -29,600 +29,6 @@
     .visible--on-desk {
       display: block; } }
 
-/**
- * 0.0 Reset
- * ---------------------------------------------------------------------------- */
-html {
-  width: 100%;
-  height: 100%;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%; }
-
-body {
-  width: 100%;
-  min-height: 100%;
-  margin: 0; }
-
-*,
-*:before,
-*:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
-
-body {
-  background: #ffffff;
-  color: #000000;
-  padding: 0;
-  margin: 0;
-  position: relative;
-  cursor: auto;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  line-height: normal;
-  font-size: 14px;
-  font-size: 0.875rem; }
-
-a {
-  background-color: transparent; }
-
-a:hover {
-  cursor: pointer; }
-
-a:active,
-a:hover {
-  outline: 0; }
-
-img {
-  max-width: 100%;
-  height: auto;
-  border: 0;
-  -ms-interpolation-mode: bicubic;
-  display: inline-block;
-  vertical-align: middle; }
-
-#map_canvas img,
-#map_canvas embed,
-#map_canvas object,
-.map_canvas img,
-.map_canvas embed,
-.map_canvas object {
-  max-width: none !important; }
-
-.antialiased {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
-
-textarea {
-  height: auto;
-  min-height: 50px; }
-
-/* Typography gaps resets */
-div,
-dl,
-dt,
-dd,
-ul,
-ol,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-form,
-p,
-blockquote,
-th,
-td {
-  margin: 0;
-  padding: 0; }
-
-hr {
-  display: block;
-  border: solid #cccccc;
-  border-width: 1px 0 0;
-  clear: both;
-  margin-top: 6px;
-  margin-top: 0.375rem;
-  margin-bottom: 6px;
-  margin-bottom: 0.375rem;
-  height: 0; }
-
-/**
- * 0.0 Typography
- * ---------------------------------------------------------------------------- */
-.txt-left {
-  text-align: left; }
-
-.txt-right {
-  text-align: right; }
-
-.txt-center {
-  text-align: center; }
-
-.txt-justify {
-  text-align: justify; }
-
-/* Default Link Styles */
-a {
-  color: #3498db;
-  text-decoration: none;
-  line-height: inherit; }
-
-a:hover,
-a:focus {
-  color: #2980b9; }
-
-a img {
-  border: none; }
-
-/* Default paragraph styles */
-p {
-  font-family: inherit;
-  font-weight: normal;
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  text-rendering: optimizeLegibility; }
-
-/* Default header styles */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: normal;
-  font-style: normal;
-  color: #000000;
-  text-rendering: optimizeLegibility;
-  line-height: 1.5; }
-
-/** HEADER TITLES MEDIA QUERIES */
-h1 {
-  font-size: 24px;
-  font-size: 1.5rem; }
-  @media screen and (min-width: 640px) {
-    h1 {
-      font-size: 26px;
-      font-size: 1.625rem; } }
-  @media screen and (min-width: 1024px) {
-    h1 {
-      font-size: 28px;
-      font-size: 1.75rem; } }
-
-h2 {
-  font-size: 20px;
-  font-size: 1.25rem; }
-  @media screen and (min-width: 640px) {
-    h2 {
-      font-size: 22px;
-      font-size: 1.375rem; } }
-  @media screen and (min-width: 1024px) {
-    h2 {
-      font-size: 24px;
-      font-size: 1.5rem; } }
-
-h3 {
-  font-size: 18px;
-  font-size: 1.125rem; }
-  @media screen and (min-width: 640px) {
-    h3 {
-      font-size: 18px;
-      font-size: 1.125rem; } }
-  @media screen and (min-width: 1024px) {
-    h3 {
-      font-size: 20px;
-      font-size: 1.25rem; } }
-
-h4 {
-  font-size: 18px;
-  font-size: 1.125rem; }
-  @media screen and (min-width: 640px) {
-    h4 {
-      font-size: 18px;
-      font-size: 1.125rem; } }
-  @media screen and (min-width: 1024px) {
-    h4 {
-      font-size: 20px;
-      font-size: 1.25rem; } }
-
-h5 {
-  font-size: 18px;
-  font-size: 1.125rem; }
-  @media screen and (min-width: 640px) {
-    h5 {
-      font-size: 18px;
-      font-size: 1.125rem; } }
-  @media screen and (min-width: 1024px) {
-    h5 {
-      font-size: 20px;
-      font-size: 1.25rem; } }
-
-h6 {
-  font-size: 18px;
-  font-size: 1.125rem; }
-  @media screen and (min-width: 640px) {
-    h6 {
-      font-size: 18px;
-      font-size: 1.125rem; } }
-  @media screen and (min-width: 1024px) {
-    h6 {
-      font-size: 20px;
-      font-size: 1.25rem; } }
-
-/* Helpful Typography Defaults */
-em,
-i {
-  font-style: italic;
-  line-height: inherit; }
-
-strong,
-b {
-  font-weight: bold;
-  line-height: inherit; }
-
-small {
-  font-size: 60%;
-  line-height: inherit; }
-
-code {
-  font-family: "Lucida Console", Monaco, monospace;
-  font-weight: normal;
-  color: #000000;
-  background-color: #f6f6f6;
-  border-width: 1px;
-  border-style: solid;
-  border-color: #eeeeee;
-  padding: 0.125rem 0.3125rem 0.0625rem; }
-
-/* Lists */
-ul,
-ol,
-dl {
-  font-size: 14px;
-  font-size: 0.875rem;
-  line-height: 1.6;
-  list-style-position: outside;
-  font-family: inherit; }
-
-ul li {
-  margin-bottom: 0;
-  list-style: none; }
-
-/* Inline List */
-.inline-li {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-  .inline-li > li {
-    list-style: none;
-    margin-left: 1.375rem;
-    display: inline-block; }
-    .inline-li > li > * {
-      display: block; }
-  .inline-li.center-li {
-    text-align: center; }
-  .inline-li.left-li {
-    text-align: left; }
-  .inline-li.right-li {
-    text-align: right; }
-
-/* Unordered Lists */
-ul li ul,
-ul li ol {
-  margin-bottom: 0; }
-
-ul.square li ul,
-ul.circle li ul,
-ul.disc li ul {
-  list-style: inherit; }
-
-ul.square {
-  list-style-type: square; }
-
-ul.circle {
-  list-style-type: circle; }
-
-ul.disc {
-  list-style-type: disc; }
-
-ul.none {
-  list-style: none; }
-
-/* Ordered Lists */
-ol {
-  margin-left: 3.5rem; }
-
-ol li ul,
-ol li ol {
-  margin-bottom: 0; }
-
-/* Print styles.
- *
- * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
- * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com) */
-.print-only {
-  display: none !important; }
-
-@media print {
-  * {
-    background: transparent !important;
-    color: #000000 !important;
-    box-shadow: none !important;
-    text-shadow: none !important; }
-
-  a,
-  a:visited {
-    text-decoration: underline; }
-
-  a[href]:after {
-    content: " (" attr(href) ")"; }
-
-  abbr[title]:after {
-    content: " (" attr(title) ")"; }
-
-  .ir a:after,
-  a[href^="javascript:"]:after,
-  a[href^="#"]:after {
-    content: ""; }
-
-  pre {
-    border: 1px solid #999999;
-    page-break-inside: avoid; }
-
-  thead {
-    display: table-header-group; }
-
-  tr,
-  img {
-    page-break-inside: avoid; }
-
-  img {
-    max-width: 100% !important; }
-
-  @page {
-    margin: 0.5cm; }
-  p,
-  h2,
-  h3 {
-    orphans: 3;
-    widows: 3; }
-
-  h2,
-  h3 {
-    page-break-after: avoid; }
-
-  .hide-on-print {
-    display: none !important; }
-
-  .print-only {
-    display: block !important; } }
-.formatted-content {
-  /* Blockquotes */ }
-  .formatted-content h1,
-  .formatted-content h2,
-  .formatted-content h3,
-  .formatted-content h4,
-  .formatted-content h5,
-  .formatted-content h6,
-  .formatted-content hgroup,
-  .formatted-content ul,
-  .formatted-content ol,
-  .formatted-content dd,
-  .formatted-content p,
-  .formatted-content figure,
-  .formatted-content pre,
-  .formatted-content table,
-  .formatted-content fieldset,
-  .formatted-content hr,
-  .formatted-content form {
-    margin-bottom: 6px;
-    margin-bottom: 0.375rem; }
-    .formatted-content h1:last-child,
-    .formatted-content h2:last-child,
-    .formatted-content h3:last-child,
-    .formatted-content h4:last-child,
-    .formatted-content h5:last-child,
-    .formatted-content h6:last-child,
-    .formatted-content hgroup:last-child,
-    .formatted-content ul:last-child,
-    .formatted-content ol:last-child,
-    .formatted-content dd:last-child,
-    .formatted-content p:last-child,
-    .formatted-content figure:last-child,
-    .formatted-content pre:last-child,
-    .formatted-content table:last-child,
-    .formatted-content fieldset:last-child,
-    .formatted-content hr:last-child,
-    .formatted-content form:last-child {
-      margin-bottom: 0; }
-  .formatted-content ul,
-  .formatted-content ol,
-  .formatted-content blockquote {
-    padding-left: 30px; }
-  .formatted-content ul li {
-    list-style-type: disc; }
-  .formatted-content ol li {
-    list-style-type: decimal; }
-  .formatted-content h1,
-  .formatted-content h2,
-  .formatted-content h3,
-  .formatted-content h4,
-  .formatted-content h5,
-  .formatted-content h6 {
-    margin-top: 12px;
-    margin-top: 0.75rem; }
-    .formatted-content h1:first-child,
-    .formatted-content h2:first-child,
-    .formatted-content h3:first-child,
-    .formatted-content h4:first-child,
-    .formatted-content h5:first-child,
-    .formatted-content h6:first-child {
-      margin-top: 0; }
-  .formatted-content table {
-    width: 100%; }
-  .formatted-content blockquote {
-    margin: 1.25rem 0;
-    padding: 0.5625rem 1.25rem 0 1.1875rem;
-    border-left: 1px solid #cccccc; }
-  .formatted-content blockquote cite {
-    display: block;
-    font-size: 12px;
-    font-size: 0.75rem;
-    color: #555555; }
-  .formatted-content blockquote cite a,
-  .formatted-content blockquote cite a:visited {
-    color: #555555; }
-  .formatted-content blockquote,
-  .formatted-content blockquote p {
-    line-height: 1.6;
-    color: #555555; }
-  @media print {
-    .formatted-content blockquote {
-      border: 1px solid #999999;
-      page-break-inside: avoid; } }
-
-::selection {
-  background: #3498db;
-  color: #ffffff; }
-
-::-moz-selection {
-  background: #3498db;
-  color: #ffffff; }
-
-/**
- * 0.0 BUTTONS
- * ---------------------------------------------------------------------------- */
-/* Default button [BLUE] */
-.button, .button--secondary, .button--success, .button--alert, .button--warning, .button--large, .button--small, .button--tiny, .button--expand, .button--radius, .button--round,
-input[type="button"],
-input[type="submit"],
-input[type="reset"] {
-  border-style: none;
-  cursor: pointer;
-  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
-  font-weight: normal;
-  line-height: normal;
-  margin: 0;
-  position: relative;
-  text-decoration: none;
-  text-align: center;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  display: inline-block;
-  padding-top: 12px;
-  padding-top: 0.75rem;
-  padding-bottom: 12px;
-  padding-bottom: 0.75rem;
-  padding-left: 18px;
-  padding-left: 1.125rem;
-  padding-right: 18px;
-  padding-right: 1.125rem;
-  font-size: 14px;
-  font-size: 0.875rem;
-  background-color: #3498db;
-  color: #ffffff;
-  transition: all 0.2s ease-in-out;
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
-  .button:hover, .button--secondary:hover, .button--success:hover, .button--alert:hover, .button--warning:hover, .button--large:hover, .button--small:hover, .button--tiny:hover, .button--expand:hover, .button--radius:hover, .button--round:hover, .button:active, .button--secondary:active, .button--success:active, .button--alert:active, .button--warning:active, .button--large:active, .button--small:active, .button--tiny:active, .button--expand:active, .button--radius:active, .button--round:active, .button:focus, .button--secondary:focus, .button--success:focus, .button--alert:focus, .button--warning:focus, .button--large:focus, .button--small:focus, .button--tiny:focus, .button--expand:focus, .button--radius:focus, .button--round:focus,
-  input[type="button"]:hover,
-  input[type="button"]:active,
-  input[type="button"]:focus,
-  input[type="submit"]:hover,
-  input[type="submit"]:active,
-  input[type="submit"]:focus,
-  input[type="reset"]:hover,
-  input[type="reset"]:active,
-  input[type="reset"]:focus {
-    background-color: #2980b9;
-    color: #ffffff;
-    box-shadow: none;
-    outline: 0; }
-
-/* Secondary button [LIGHT GREY] */
-.button--secondary {
-  background-color: #dddddd;
-  color: #333333; }
-  .button--secondary:hover, .button--secondary:focus {
-    background-color: #cccccc;
-    color: #333333; }
-
-/* Success button [GREEN] */
-.button--success {
-  background-color: #2ecc71;
-  color: #ffffff; }
-  .button--success:hover, .button--success:focus {
-    background-color: #27ae60;
-    color: #ffffff; }
-
-/* Alert button [RED] */
-.button--alert {
-  background-color: #e74c3c;
-  color: #ffffff; }
-  .button--alert:hover, .button--alert:focus {
-    background-color: #c0392b;
-    color: #ffffff; }
-
-/* Warning button [ORANGE] */
-.button--warning {
-  background-color: #e67e22;
-  color: #ffffff; }
-  .button--warning:hover, .button--warning:focus {
-    background-color: #d35400;
-    color: #ffffff; }
-
-/** BUTTON SIZING */
-.button--large {
-  padding-left: 36px;
-  padding-left: 2.25rem;
-  padding-right: 36px;
-  padding-right: 2.25rem;
-  font-size: 14px;
-  font-size: 0.875rem; }
-
-.button--small {
-  padding: 9px;
-  padding: 0.5625rem;
-  font-size: 14px;
-  font-size: 0.875rem; }
-
-.button--tiny {
-  padding: 6px;
-  padding: 0.375rem;
-  font-size: 14px;
-  font-size: 0.875rem; }
-
-.button--expand {
-  padding-right: 0;
-  padding-left: 0;
-  width: 100%; }
-
-/** BUTTON RADIUS */
-.button--radius {
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px; }
-
-.button--round {
-  -webkit-border-radius: 1000px;
-  -moz-border-radius: 1000px;
-  -ms-border-radius: 1000px;
-  border-radius: 1000px; }
-
 /*  GRID SYSTEM
  *  There are three types of gutter:
  *  .row: Normal gutter: 1em (16px).
@@ -1258,11 +664,10 @@ input[type="reset"] {
   width: 100%;
   margin: 0 auto;
   max-width: 1024px;
-  padding-left: 10px;
-  padding-right: 10px; }
-  @media screen and (min-width: 640px) {
-    .grid-container, .grid-container--small, .grid-container--large, .grid-container--responsive {
-      padding: 0; } }
+  padding-left: 12px;
+  padding-left: 0.75rem;
+  padding-right: 12px;
+  padding-right: 0.75rem; }
 
 .grid-container--small {
   max-width: 800px; }
@@ -1278,6 +683,504 @@ input[type="reset"] {
   @media screen and (min-width: 1324px) {
     .grid-container--responsive {
       max-width: 1220px; } }
+
+/**
+ * 0.0 Float
+ * ---------------------------------------------------------------------------- */
+/* You can change the float behavior of an element by adding .left or .right to an HTML element.
+ * To clear floats, add the class .cl to the parent element. */
+.left {
+  float: left !important; }
+
+.right {
+  float: right !important; }
+
+.cl:before,
+.cl:after {
+  content: " ";
+  display: table; }
+
+.cl:after {
+  clear: both; }
+
+/* Clear mixin */
+.txt-left {
+  text-align: left; }
+
+.txt-right {
+  text-align: right; }
+
+.txt-center {
+  text-align: center; }
+
+.txt-justify {
+  text-align: justify; }
+
+/**
+ * 0.0 Typography
+ * ---------------------------------------------------------------------------- */
+/* Default Link Styles */
+a {
+  color: #3498db;
+  text-decoration: none;
+  line-height: inherit; }
+
+a:hover,
+a:focus {
+  color: #2980b9; }
+
+a img {
+  border: none; }
+
+/* Default paragraph styles */
+p {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility; }
+
+/* Default header styles */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  text-rendering: optimizeLegibility;
+  line-height: 1.6; }
+
+/** HEADER TITLES MEDIA QUERIES */
+h1 {
+  font-size: 24px;
+  font-size: 1.5rem; }
+  @media screen and (min-width: 640px) {
+    h1 {
+      font-size: 26px;
+      font-size: 1.625rem; } }
+  @media screen and (min-width: 1024px) {
+    h1 {
+      font-size: 28px;
+      font-size: 1.75rem; } }
+
+h2 {
+  font-size: 20px;
+  font-size: 1.25rem; }
+  @media screen and (min-width: 640px) {
+    h2 {
+      font-size: 22px;
+      font-size: 1.375rem; } }
+  @media screen and (min-width: 1024px) {
+    h2 {
+      font-size: 24px;
+      font-size: 1.5rem; } }
+
+h3 {
+  font-size: 18px;
+  font-size: 1.125rem; }
+  @media screen and (min-width: 640px) {
+    h3 {
+      font-size: 18px;
+      font-size: 1.125rem; } }
+  @media screen and (min-width: 1024px) {
+    h3 {
+      font-size: 20px;
+      font-size: 1.25rem; } }
+
+h4 {
+  font-size: 18px;
+  font-size: 1.125rem; }
+  @media screen and (min-width: 640px) {
+    h4 {
+      font-size: 18px;
+      font-size: 1.125rem; } }
+  @media screen and (min-width: 1024px) {
+    h4 {
+      font-size: 20px;
+      font-size: 1.25rem; } }
+
+h5 {
+  font-size: 18px;
+  font-size: 1.125rem; }
+  @media screen and (min-width: 640px) {
+    h5 {
+      font-size: 18px;
+      font-size: 1.125rem; } }
+  @media screen and (min-width: 1024px) {
+    h5 {
+      font-size: 20px;
+      font-size: 1.25rem; } }
+
+h6 {
+  font-size: 18px;
+  font-size: 1.125rem; }
+  @media screen and (min-width: 640px) {
+    h6 {
+      font-size: 18px;
+      font-size: 1.125rem; } }
+  @media screen and (min-width: 1024px) {
+    h6 {
+      font-size: 20px;
+      font-size: 1.25rem; } }
+
+/* Helpful Typography Defaults */
+em,
+i {
+  font-style: italic;
+  line-height: inherit; }
+
+strong,
+b {
+  font-weight: bold;
+  line-height: inherit; }
+
+small {
+  font-size: 60%;
+  line-height: inherit; }
+
+code {
+  font-family: "Lucida Console", Monaco, monospace;
+  font-weight: normal;
+  color: #000000;
+  background-color: #f6f6f6;
+  border-width: 1px;
+  border-style: solid;
+  border-color: #eeeeee;
+  padding-left: 3px;
+  padding-left: 0.1875rem;
+  padding-right: 3px;
+  padding-right: 0.1875rem; }
+
+/* Lists */
+ul,
+ol,
+dl {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.6;
+  list-style-position: outside;
+  font-family: inherit; }
+
+ul li {
+  margin-bottom: 0;
+  list-style: none; }
+
+/* Inline List */
+.inline-li {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .inline-li > li {
+    list-style: none;
+    margin-left: 1.375rem;
+    display: inline-block; }
+    .inline-li > li > * {
+      display: block; }
+  .inline-li.center-li {
+    text-align: center; }
+  .inline-li.left-li {
+    text-align: left; }
+  .inline-li.right-li {
+    text-align: right; }
+
+/* Unordered Lists */
+ul li ul,
+ul li ol {
+  margin-bottom: 0; }
+
+ul.square li ul,
+ul.circle li ul,
+ul.disc li ul {
+  list-style: inherit; }
+
+ul.square {
+  list-style-type: square; }
+
+ul.circle {
+  list-style-type: circle; }
+
+ul.disc {
+  list-style-type: disc; }
+
+ul.none {
+  list-style: none; }
+
+/* Ordered Lists */
+ol {
+  margin-left: 3.5rem; }
+
+ol li ul,
+ol li ol {
+  margin-bottom: 0; }
+
+/* Print styles.
+ *
+ * Inlined to avoid required HTTP connection: www.phpied.com/delay-loading-your-print-css/
+ * Credit to Paul Irish and HTML5 Boilerplate (html5boilerplate.com) */
+.print-only {
+  display: none !important; }
+
+@media print {
+  * {
+    background: transparent !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    text-shadow: none !important; }
+
+  a,
+  a:visited {
+    text-decoration: underline; }
+
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+
+  .ir a:after,
+  a[href^="javascript:"]:after,
+  a[href^="#"]:after {
+    content: ""; }
+
+  pre {
+    border: 1px solid #999999;
+    page-break-inside: avoid; }
+
+  thead {
+    display: table-header-group; }
+
+  tr,
+  img {
+    page-break-inside: avoid; }
+
+  img {
+    max-width: 100% !important; }
+
+  @page {
+    margin: 0.5cm; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+
+  h2,
+  h3 {
+    page-break-after: avoid; }
+
+  .hide-on-print {
+    display: none !important; }
+
+  .print-only {
+    display: block !important; } }
+.formatted-content {
+  /* Blockquotes */ }
+  .formatted-content ul,
+  .formatted-content ol,
+  .formatted-content dd,
+  .formatted-content p,
+  .formatted-content figure,
+  .formatted-content pre,
+  .formatted-content table,
+  .formatted-content fieldset,
+  .formatted-content hr,
+  .formatted-content form {
+    margin-bottom: 6px;
+    margin-bottom: 0.375rem; }
+    .formatted-content ul:last-child,
+    .formatted-content ol:last-child,
+    .formatted-content dd:last-child,
+    .formatted-content p:last-child,
+    .formatted-content figure:last-child,
+    .formatted-content pre:last-child,
+    .formatted-content table:last-child,
+    .formatted-content fieldset:last-child,
+    .formatted-content hr:last-child,
+    .formatted-content form:last-child {
+      margin-bottom: 0; }
+  .formatted-content ul,
+  .formatted-content ol,
+  .formatted-content blockquote {
+    padding-left: 30px; }
+  .formatted-content ul li {
+    list-style-type: disc; }
+  .formatted-content ol li {
+    list-style-type: decimal; }
+  .formatted-content h1,
+  .formatted-content h2,
+  .formatted-content h3,
+  .formatted-content h4,
+  .formatted-content h5,
+  .formatted-content h6 {
+    margin-top: 12px;
+    margin-top: 0.75rem; }
+    .formatted-content h1:first-child,
+    .formatted-content h2:first-child,
+    .formatted-content h3:first-child,
+    .formatted-content h4:first-child,
+    .formatted-content h5:first-child,
+    .formatted-content h6:first-child {
+      margin-top: 0; }
+  .formatted-content table {
+    width: 100%; }
+  .formatted-content blockquote {
+    margin: 1.25rem 0;
+    padding: 0.5625rem 1.25rem 0 1.1875rem;
+    border-left: 1px solid #cccccc; }
+  .formatted-content blockquote cite {
+    display: block;
+    font-size: 12px;
+    font-size: 0.75rem;
+    color: #555555; }
+  .formatted-content blockquote cite a,
+  .formatted-content blockquote cite a:visited {
+    color: #555555; }
+  .formatted-content blockquote,
+  .formatted-content blockquote p {
+    line-height: 1.6;
+    color: #555555; }
+  @media print {
+    .formatted-content blockquote {
+      border: 1px solid #999999;
+      page-break-inside: avoid; } }
+
+::selection {
+  background: #3498db;
+  color: #ffffff; }
+
+::-moz-selection {
+  background: #3498db;
+  color: #ffffff; }
+
+/**
+ * 0.0 BUTTONS
+ * ---------------------------------------------------------------------------- */
+/* Default button [BLUE] */
+.button, .button--secondary, .button--success, .button--alert, .button--warning, .button--large, .button--small, .button--tiny, .button--expand, .button--radius, .button--round,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  border-style: none;
+  cursor: pointer;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  line-height: normal;
+  margin: 0;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  display: inline-block;
+  padding-top: 12px;
+  padding-top: 0.75rem;
+  padding-bottom: 12px;
+  padding-bottom: 0.75rem;
+  padding-left: 18px;
+  padding-left: 1.125rem;
+  padding-right: 18px;
+  padding-right: 1.125rem;
+  font-size: 14px;
+  font-size: 0.875rem;
+  background-color: #3498db;
+  color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none; }
+  .button:hover, .button--secondary:hover, .button--success:hover, .button--alert:hover, .button--warning:hover, .button--large:hover, .button--small:hover, .button--tiny:hover, .button--expand:hover, .button--radius:hover, .button--round:hover, .button:active, .button--secondary:active, .button--success:active, .button--alert:active, .button--warning:active, .button--large:active, .button--small:active, .button--tiny:active, .button--expand:active, .button--radius:active, .button--round:active, .button:focus, .button--secondary:focus, .button--success:focus, .button--alert:focus, .button--warning:focus, .button--large:focus, .button--small:focus, .button--tiny:focus, .button--expand:focus, .button--radius:focus, .button--round:focus,
+  input[type="button"]:hover,
+  input[type="button"]:active,
+  input[type="button"]:focus,
+  input[type="submit"]:hover,
+  input[type="submit"]:active,
+  input[type="submit"]:focus,
+  input[type="reset"]:hover,
+  input[type="reset"]:active,
+  input[type="reset"]:focus {
+    background-color: #2980b9;
+    color: #ffffff;
+    box-shadow: none;
+    outline: 0; }
+
+/* Secondary button [LIGHT GREY] */
+.button--secondary {
+  background-color: #dddddd;
+  color: #333333; }
+  .button--secondary:hover, .button--secondary:focus {
+    background-color: #cccccc;
+    color: #333333; }
+
+/* Success button [GREEN] */
+.button--success {
+  background-color: #2ecc71;
+  color: #ffffff; }
+  .button--success:hover, .button--success:focus {
+    background-color: #27ae60;
+    color: #ffffff; }
+
+/* Alert button [RED] */
+.button--alert {
+  background-color: #e74c3c;
+  color: #ffffff; }
+  .button--alert:hover, .button--alert:focus {
+    background-color: #c0392b;
+    color: #ffffff; }
+
+/* Warning button [ORANGE] */
+.button--warning {
+  background-color: #e67e22;
+  color: #ffffff; }
+  .button--warning:hover, .button--warning:focus {
+    background-color: #d35400;
+    color: #ffffff; }
+
+/** BUTTON SIZING */
+.button--large {
+  padding-left: 36px;
+  padding-left: 2.25rem;
+  padding-right: 36px;
+  padding-right: 2.25rem;
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+.button--small {
+  padding: 9px;
+  padding: 0.5625rem;
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+.button--tiny {
+  padding: 6px;
+  padding: 0.375rem;
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+.button--expand {
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%; }
+
+/** BUTTON RADIUS */
+.button--radius {
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  border-radius: 4px; }
+
+.button--round {
+  -webkit-border-radius: 1000px;
+  -moz-border-radius: 1000px;
+  -ms-border-radius: 1000px;
+  border-radius: 1000px; }
 
 /**
  * 0.0 FORMS
@@ -1573,26 +1476,6 @@ fieldset {
     margin: 0;
     margin-left: -0.1875rem; }
 
-/**
- * 0.0 Float
- * ---------------------------------------------------------------------------- */
-/* You can change the float behavior of an element by adding .left or .right to an HTML element.
- * To clear floats, add the class .cl to the parent element. */
-.left {
-  float: left !important; }
-
-.right {
-  float: right !important; }
-
-.cl:before,
-.cl:after {
-  content: " ";
-  display: table; }
-
-.cl:after {
-  clear: both; }
-
-/* Clear mixin */
 /*!
  *  Iconae 1.0 by lobae design - http://www.iconae.com
  *  Lobae Studio - http://www.lobae.com
@@ -2336,5 +2219,155 @@ fieldset {
 
 .ae-dropbox:before {
   content: ""; }
+
+/**
+ * 0.0 Reset
+ * ---------------------------------------------------------------------------- */
+html {
+  width: 100%;
+  height: 100%;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%; }
+
+body {
+  width: 100%;
+  min-height: 100%;
+  margin: 0; }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  background: #ffffff;
+  color: #000000;
+  padding: 0;
+  margin: 0;
+  position: relative;
+  cursor: auto;
+  font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  letter-spacing: normal;
+  font-size: 14px;
+  font-size: 0.875rem; }
+
+a {
+  background-color: transparent; }
+
+a:hover {
+  cursor: pointer; }
+
+a:active,
+a:hover {
+  outline: 0; }
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
+  -ms-interpolation-mode: bicubic;
+  display: inline-block;
+  vertical-align: middle; }
+
+#map_canvas img,
+#map_canvas embed,
+#map_canvas object,
+.map_canvas img,
+.map_canvas embed,
+.map_canvas object {
+  max-width: none !important; }
+
+.antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+textarea {
+  height: auto;
+  min-height: 50px; }
+
+/* Typography gaps resets */
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0; }
+
+hr {
+  display: block;
+  border: solid #cccccc;
+  border-width: 1px 0 0;
+  clear: both;
+  margin-top: 6px;
+  margin-top: 0.375rem;
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
+  height: 0; }
+
+.hero {
+  background-color: #3498db; }
+  .hero hgroup {
+    padding-top: 132px;
+    padding-top: 8.25rem;
+    padding-bottom: 36px;
+    padding-bottom: 2.25rem; }
+    .hero hgroup h1,
+    .hero hgroup h2 {
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 2px; }
+    .hero hgroup h1 {
+      font-weight: bold; }
+    .hero hgroup h2 {
+      font-weight: 200; }
+
+.main-content {
+  margin-top: 36px;
+  margin-top: 2.25rem; }
+
+.doc-section {
+  margin-bottom: 36px;
+  margin-bottom: 2.25rem; }
+  .doc-section hr.grid-container, .doc-section hr.grid-container--small, .doc-section hr.grid-container--large, .doc-section hr.grid-container--responsive {
+    margin-top: 36px;
+    margin-top: 2.25rem; }
+
+.doc-section__example {
+  padding-top: 24px;
+  padding-top: 1.5rem;
+  padding-bottom: 12px;
+  padding-bottom: 0.75rem; }
+
+.doc-section__example__column-style {
+  padding: 12px;
+  padding: 0.75rem;
+  margin-top: 12px;
+  margin-top: 0.75rem;
+  margin-bottom: 12px;
+  margin-bottom: 0.75rem;
+  background-color: #eeeeee;
+  color: #555555;
+  text-align: center; }
 
 /*# sourceMappingURL=framaework.css.map */
