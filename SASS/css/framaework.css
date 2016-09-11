@@ -131,10 +131,10 @@ hr {
   border: solid #cccccc;
   border-width: 1px 0 0;
   clear: both;
-  margin-top: 12px;
-  margin-top: 0.75rem;
-  margin-bottom: 12px;
-  margin-bottom: 0.75rem;
+  margin-top: 6px;
+  margin-top: 0.375rem;
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
   height: 0; }
 
 /**
@@ -419,8 +419,8 @@ ol li ol {
   .formatted-content fieldset,
   .formatted-content hr,
   .formatted-content form {
-    margin-bottom: 12px;
-    margin-bottom: 0.75rem; }
+    margin-bottom: 6px;
+    margin-bottom: 0.375rem; }
     .formatted-content h1:last-child,
     .formatted-content h2:last-child,
     .formatted-content h3:last-child,
@@ -453,8 +453,8 @@ ol li ol {
   .formatted-content h4,
   .formatted-content h5,
   .formatted-content h6 {
-    margin-top: 24px;
-    margin-top: 1.5rem; }
+    margin-top: 12px;
+    margin-top: 0.75rem; }
     .formatted-content h1:first-child,
     .formatted-content h2:first-child,
     .formatted-content h3:first-child,
@@ -1321,8 +1321,8 @@ input[type="reset"]:focus {
  * ---------------------------------------------------------------------------- */
 /* Standard Forms */
 form {
-  margin-bottom: 12px;
-  margin-bottom: 0.75rem; }
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem; }
 
 /* Using forms within rows, we need to set some defaults */
 form .row .row, form .row--half .row, form .row--stuck .row, form .row .row--half, form .row--half .row--half, form .row--stuck .row--half, form .row .row--stuck, form .row--half .row--stuck, form .row--stuck .row--stuck {
@@ -1475,8 +1475,8 @@ textarea {
   display: block;
   font-size: 16px;
   font-size: 1rem;
-  margin-bottom: 12px;
-  margin-bottom: 0.75rem;
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem;
   padding: 0.5rem;
   min-height: 2.3125rem;
   width: 100%;
@@ -1582,8 +1582,8 @@ input[type="file"],
 input[type="checkbox"],
 input[type="radio"],
 select {
-  margin-bottom: 12px;
-  margin-bottom: 0.75rem; }
+  margin-bottom: 6px;
+  margin-bottom: 0.375rem; }
 
 input[type="checkbox"] + label,
 input[type="radio"] + label {

@@ -1,5 +1,4 @@
-$space-unit: 12
-$space-amounts: 1, 2, 3, 5, 8
+$space-unit: 6
 
 // MARGIN
 =margin($value: 1)
@@ -20,6 +19,20 @@ $space-amounts: 1, 2, 3, 5, 8
   margin-bottom: $space-unit * $value + px
   margin-bottom: $space-unit * $value / 16 + rem
 
+=marginX($value: 1)
+  margin-left: $space-unit * $value + px
+  margin-left: $space-unit * $value / 16 + rem
+  margin-right: $space-unit * $value + px
+  margin-right: $space-unit * $value / 16 + rem
+
+=margin-left($value: 1)
+  margin-left: $space-unit * $value + px
+  margin-left: $space-unit * $value / 16 + rem
+
+=margin-right($value: 1)
+  margin-right: $space-unit * $value + px
+  margin-right: $space-unit * $value / 16 + rem
+
 // PADDING
 =padding($value: 1)
   padding: $space-unit * $value + px
@@ -38,3 +51,17 @@ $space-amounts: 1, 2, 3, 5, 8
 =padding-bottom($value: 1)
   padding-bottom: $space-unit * $value + px
   padding-bottom: $space-unit * $value / 16 + rem
+
+=paddingX($value: 1)
+  padding-left: $space-unit * $value + px
+  padding-left: $space-unit * $value / 16 + rem
+  padding-right: $space-unit * $value + px
+  padding-right: $space-unit * $value / 16 + rem
+
+=padding-left($value: 1)
+  padding-left: $space-unit * $value + px
+  padding-left: $space-unit * $value / 16 + rem
+
+=padding-right($value: 1)
+  padding-right: $space-unit * $value + px
+  padding-right: $space-unit * $value / 16 + rem
