@@ -74,7 +74,7 @@
             <li><strong>.grid-container--large:</strong> Contenitore fluido con larghezza massima a 1220px.</li>
             <li><strong>.grid-container--responsive:</strong> Varia di grandezza a seconda delle risoluzioni: dal desktop in giù rispettivamente 1220px, 1024px e 800px.</li>
           </ul>
-          <hr class="grid-container">
+          <p>Il file del grid-container è raggiungibile da <strong>layout/_grid-container.sass</strong>.</p>
         </div>
 
         <!-- START example -->
@@ -104,6 +104,149 @@
 
         <hr class="grid-container">
 
+      </section>
+
+      <section class="doc-section grid-container formatted-content">
+        <h2>Columns Grid system</h2>
+        <p>Per impaginare gli elementi all'nterno della pagina, Framaework utilizza un classico sistema a dodici colonne.<br>Per funzionare, necessita di un padre con la classe <code>.row</code> all'interno del quale è possibile definire delle colonne tramite la classe <code>.row__columns</code> associata alla risoluzione e il numero di colonne, seguendo lo schema <code>risoluzione-num</code>.</p>
+
+        <p>Tutte le classi e le funzionalità del columns grid system sono raggiungibili in <strong>layout/_grid.sass</strong>.</p>
+
+        <pre>
+          <code>
+  &lt;div class="row"&gt;
+    &lt;div class="row__column mobile-3 tab-6 desk-3"&gt;
+      1
+    &lt;/div&gt;
+    &lt;div class="row__column mobile-3 tab-6 desk-3"&gt;
+      2
+    &lt;/div&gt;
+    &lt;div class="row__column mobile-3 tab-6 desk-3"&gt;
+      3
+    &lt;/div&gt;
+    &lt;div class="row__column mobile-3 tab-6 desk-3"&gt;
+      4
+    &lt;/div&gt;
+  &lt;/div&gt;
+          </code>
+        </pre>
+
+        <div class="doc-section__example">
+          <div class="row">
+            <div class="row__column mobile-3 tab-6 desk-3">
+              <div class="doc-section__example__column-style">
+                1
+              </div>
+            </div>
+            <div class="row__column mobile-3 tab-6 desk-3">
+              <div class="doc-section__example__column-style">
+                2
+              </div>
+            </div>
+            <div class="row__column mobile-3 tab-6 desk-3">
+              <div class="doc-section__example__column-style">
+                3
+              </div>
+            </div>
+            <div class="row__column mobile-3 tab-6 desk-3">
+              <div class="doc-section__example__column-style">
+                4
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <small><strong>N.B:</strong> Per ottenere una visualizzazione sempre ottimale del contenuto, ogni elemento all'interno della classe <code>.row</code> dovrà sempre essere a sua volta contenuto in un div <code>.row__column</code>, anche se la colonna è una sola.</small>
+
+        <hr class="grid-container">
+      </section>
+
+      <section class="doc-section grid-container formatted-content">
+        <h2>Columns Grid <em>X-spaces</em></h2>
+        <p>Per riuscire a gestire al meglio ogni casistica, Framaework mette a disposizione tre diversi rapporti di spazio tra una colonna e l'altra, per impostarlo è sufficiente aggiungere un modificatore alla classe <code>.row</code>:</p>
+        <ul>
+          <li><strong>row:</strong> È lo standard, tra una colonna e l'altra sono presenti 16px (<em>1rem</em>).</li>
+          <li><strong>row--half:</strong> Lo spazio tra le colonne è dimezzato, sarà quindi di 8px (<em>0.5rem</em>).</li>
+          <li><strong>row--stuck:</strong> Lo spazio viene totalmente eliminato, le colonne si trovano affiancate l'una all'altra.</li>
+        </ul>
+
+        <div class="doc-section__example">
+
+          <h4>.row</h4>
+          <div class="row">
+            <div class="row__column tab-6 desk-3">
+              <div class="doc-section__example__column-style">
+                1
+              </div>
+            </div>
+            <div class="row__column tab-6 desk-3">
+              <div class="doc-section__example__column-style">
+                2
+              </div>
+            </div>
+            <div class="row__column tab-6 desk-3">
+              <div class="doc-section__example__column-style">
+                3
+              </div>
+            </div>
+            <div class="row__column tab-6 desk-3">
+              <div class="doc-section__example__column-style">
+                4
+              </div>
+            </div>
+          </div>
+
+        <h4>.row--half</h4>
+        <div class="row--half">
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              1
+            </div>
+          </div>
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              2
+            </div>
+          </div>
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              3
+            </div>
+          </div>
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              4
+            </div>
+          </div>
+        </div>
+
+        <h4>.row--stuck</h4>
+        <div class="row--stuck">
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              1
+            </div>
+          </div>
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              2
+            </div>
+          </div>
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              3
+            </div>
+          </div>
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              4
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+        <hr class="grid-container">
       </section>
 
   </main>
