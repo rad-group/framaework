@@ -1190,32 +1190,10 @@ form {
   margin-bottom: 6px;
   margin-bottom: 0.375rem; }
 
-/* Using forms within rows, we need to set some defaults */
-form .row .row, form .row--half .row, form .row--stuck .row, form .row .row--half, form .row--half .row--half, form .row--stuck .row--half, form .row .row--stuck, form .row--half .row--stuck, form .row--stuck .row--stuck {
-  margin: 0 -0.5rem; }
-  form .row .row .row__column, form .row--half .row .row__column, form .row--stuck .row .row__column, form .row .row--half .row__column, form .row--half .row--half .row__column, form .row--stuck .row--half .row__column, form .row .row--stuck .row__column, form .row--half .row--stuck .row__column, form .row--stuck .row--stuck .row__column {
-    padding: 0 0.5rem; }
-  form .row .row.collapse, form .row--half .row.collapse, form .row--stuck .row.collapse, form .row .collapse.row--half, form .row--half .collapse.row--half, form .row--stuck .collapse.row--half, form .row .collapse.row--stuck, form .row--half .collapse.row--stuck, form .row--stuck .collapse.row--stuck {
-    margin: 0; }
-    form .row .row.collapse .row__column, form .row--half .row.collapse .row__column, form .row--stuck .row.collapse .row__column, form .row .collapse.row--half .row__column, form .row--half .collapse.row--half .row__column, form .row--stuck .collapse.row--half .row__column, form .row .collapse.row--stuck .row__column, form .row--half .collapse.row--stuck .row__column, form .row--stuck .collapse.row--stuck .row__column {
-      padding: 0; }
-    form .row .row.collapse input, form .row--half .row.collapse input, form .row--stuck .row.collapse input, form .row .collapse.row--half input, form .row--half .collapse.row--half input, form .row--stuck .collapse.row--half input, form .row .collapse.row--stuck input, form .row--half .collapse.row--stuck input, form .row--stuck .collapse.row--stuck input {
-      -webkit-border-radius: 0;
-      -moz-border-radius: 0;
-      -ms-border-radius: 0;
-      border-radius: 0; }
-
-form .row input.row__column, form .row--half input.row__column, form .row--stuck input.row__column,
-form .row textarea.row__column,
-form .row--half textarea.row__column,
-form .row--stuck textarea.row__column {
-  padding-left: 0.5rem; }
-
 /* Label Styles */
 label {
   font-size: 14px;
   font-size: 0.875rem;
-  color: #555555;
   cursor: pointer;
   display: block;
   font-weight: normal;
@@ -1224,11 +1202,6 @@ label {
   label.right {
     float: none !important;
     text-align: right; }
-  label.inline {
-    margin: 0 0 1rem 0;
-    padding: 0.5625rem 0; }
-  label.small {
-    text-transform: capitalize; }
 
 /* Attach elements to the beginning or end of an input */
 .prefix,
@@ -1267,38 +1240,6 @@ label {
   padding-left: 0;
   text-align: center;
   border: none; }
-  .postfix.button.radius, .postfix.radius.button--secondary, .postfix.radius.button--success, .postfix.radius.button--alert, .postfix.radius.button--warning, .postfix.radius.button--large, .postfix.radius.button--small, .postfix.radius.button--tiny, .postfix.radius.button--expand, .postfix.radius.button--radius, .postfix.radius.button--round,
-  .prefix.button.radius,
-  .prefix.radius.button--secondary,
-  .prefix.radius.button--success,
-  .prefix.radius.button--alert,
-  .prefix.radius.button--warning,
-  .prefix.radius.button--large,
-  .prefix.radius.button--small,
-  .prefix.radius.button--tiny,
-  .prefix.radius.button--expand,
-  .prefix.radius.button--radius,
-  .prefix.radius.button--round {
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    border-radius: 4px; }
-  .postfix.button.round, .postfix.round.button--secondary, .postfix.round.button--success, .postfix.round.button--alert, .postfix.round.button--warning, .postfix.round.button--large, .postfix.round.button--small, .postfix.round.button--tiny, .postfix.round.button--expand, .postfix.round.button--radius, .postfix.round.button--round,
-  .prefix.button.round,
-  .prefix.round.button--secondary,
-  .prefix.round.button--success,
-  .prefix.round.button--alert,
-  .prefix.round.button--warning,
-  .prefix.round.button--large,
-  .prefix.round.button--small,
-  .prefix.round.button--tiny,
-  .prefix.round.button--expand,
-  .prefix.round.button--radius,
-  .prefix.round.button--round {
-    -webkit-border-radius: 1000px;
-    -moz-border-radius: 1000px;
-    -ms-border-radius: 1000px;
-    border-radius: 1000px; }
 
 /* Separate prefix and postfix styles when on span or label so buttons keep their own */
 .prefix,
@@ -1306,14 +1247,14 @@ label {
   background: #f6f6f6;
   border-right: none;
   color: #555555;
-  border-color: #cccccc; }
+  border-color: #dddddd; }
 
 .postfix,
 .postfix {
   background: #f6f6f6;
   border-left: none;
   color: #555555;
-  border-color: #cccccc; }
+  border-color: #dddddd; }
 
 /* We use this to get basic styling on all basic form elements */
 input[type="text"],
@@ -1336,20 +1277,24 @@ textarea {
   background-color: #ffffff;
   font-family: inherit;
   font-weight: 300;
-  border: solid 1px #cccccc;
+  border: solid 1px #dddddd;
   color: rgba(0, 0, 0, 0.75);
   display: block;
   font-size: 14px;
   font-size: 0.875rem;
   margin-bottom: 6px;
   margin-bottom: 0.375rem;
-  padding: 0.5rem;
+  padding: 6px;
+  padding: 0.375rem;
   min-height: 2.3125rem;
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  transition: all 0.15s linear; }
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out; }
   input[type="text"]:focus,
   input[type="password"]:focus,
   input[type="date"]:focus,
@@ -1383,8 +1328,8 @@ textarea {
   input[type="url"]:disabled,
   input[type="color"]:disabled,
   textarea:disabled {
-    background-color: #eeeeee;
-    cursor: default; }
+    background-color: #f6f6f6;
+    cursor: not-allowed; }
   input[type="text"].radius,
   input[type="password"].radius,
   input[type="date"].radius,
@@ -1426,7 +1371,7 @@ select {
   font-size: 0.875rem;
   font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
   color: rgba(0, 0, 0, 0.75);
-  line-height: normal;
+  line-height: 1.5;
   border-radius: 0;
   min-height: 2.3125rem; }
   select::-ms-expand {
@@ -1438,10 +1383,10 @@ select {
     border-radius: 4px; }
   select:hover {
     background-color: #f6f6f6;
-    border-color: #999999; }
+    border-color: #dddddd; }
   select:disabled {
     background-color: #eeeeee;
-    cursor: default; }
+    cursor: not-allowed; }
 
 /* Adjust margin for form elements below */
 input[type="file"],
@@ -1454,9 +1399,12 @@ select {
 input[type="checkbox"] + label,
 input[type="radio"] + label {
   display: inline-block;
-  margin-left: 0.5rem;
-  margin-right: 1rem;
-  margin-bottom: 0;
+  margin-left: 6px;
+  margin-left: 0.375rem;
+  margin-right: 12px;
+  margin-right: 0.75rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
   vertical-align: baseline; }
 
 /* Normalize file input width */
@@ -1467,8 +1415,16 @@ input[type="file"] {
 /* We add basic fieldset styling */
 fieldset {
   border: 1px solid #eeeeee;
-  padding: 1.25rem;
-  margin: 1.125rem 0; }
+  padding: 18px;
+  padding: 1.125rem;
+  margin-top: 18px;
+  margin-top: 1.125rem;
+  margin-bottom: 18px;
+  margin-bottom: 1.125rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem; }
   fieldset legend {
     font-weight: bold;
     background: #ffffff;

@@ -6,48 +6,18 @@
 form
   +margin-bottom
 
-/* Using forms within rows, we need to set some defaults
-form .row .row
-  margin: 0 -0.5rem
-
-  .row__column
-    padding: 0 0.5rem
-
-  &.collapse
-    margin: 0
-
-    .row__column
-      padding: 0
-
-    input
-      +radius(0)
-
-form .row
-  input.row__column,
-  textarea.row__column
-    padding-left: 0.5rem
-
 /* Label Styles
 label
   +font-size
-
-  color: $grey_5
   cursor: pointer
   display: block
   font-weight: normal
-  line-height: 1.5
+  +line-height
   margin-bottom: 0
 
   &.right
     float: none !important
     text-align: right
-
-  &.inline
-    margin: 0 0 1rem 0
-    padding: 0.5625rem 0
-
-  &.small
-    text-transform: capitalize
 
 /* Attach elements to the beginning or end of an input
 .prefix,
@@ -79,26 +49,20 @@ label
   text-align: center
   border: none
 
-  &.radius
-    +radius
-
-  &.round
-    +radius(1000px)
-
 /* Separate prefix and postfix styles when on span or label so buttons keep their own
 .prefix,
 .prefix
   background: $dark_white
   border-right: none
   color: $grey_5
-  border-color: $grey_c
+  border-color: $border-color
 
 .postfix,
 .postfix
   background: $dark_white
   border-left: none
   color: $grey_5
-  border-color: $grey_c
+  border-color: $border-color
 
 /* We use this to get basic styling on all basic form elements
 input[type="text"],
@@ -121,21 +85,18 @@ textarea
   background-color: $white
   font-family: inherit
   font-weight: 300
-  border: solid 1px $grey_c
+  border: solid 1px $border-color
   color: rgba(0, 0, 0, 0.75)
   display: block
-
   +font-size
-
   +margin-bottom
-
-  padding: 0.5rem
+  +padding(1)
   min-height: 2.3125rem
   width: 100%
   -webkit-box-sizing: border-box
   -moz-box-sizing: border-box
   box-sizing: border-box
-  transition: all 0.15s linear
+  +transition()
 
   &:focus
     background: $dark_white
@@ -143,8 +104,8 @@ textarea
     outline: none
 
   &:disabled
-    background-color: $grey_e
-    cursor: default
+    background-color: $dark_white
+    cursor: not-allowed
 
   &.radius
     +radius
@@ -171,7 +132,7 @@ select
 
   font-family: $sans-serif
   color: rgba(0, 0, 0, 0.75)
-  line-height: normal
+  +line-height
   border-radius: 0
   min-height: 2.3125rem
 
@@ -183,11 +144,11 @@ select
 
   &:hover
     background-color: $dark_white
-    border-color: $grey_9
+    border-color: $border-color
 
   &:disabled
     background-color: $grey_e
-    cursor: default
+    cursor: not-allowed
 
 /* Adjust margin for form elements below
 input[type="file"],
@@ -199,9 +160,9 @@ select
 input[type="checkbox"] + label,
 input[type="radio"] + label
   display: inline-block
-  margin-left: 0.5rem
-  margin-right: 1rem
-  margin-bottom: 0
+  +margin-left(1)
+  +margin-right(2)
+  +margin-bottom(0)
   vertical-align: baseline
 
 /* Normalize file input width
@@ -212,8 +173,9 @@ input[type="file"]
 /* We add basic fieldset styling
 fieldset
   border: 1px solid $grey_e
-  padding: 1.25rem
-  margin: 1.125rem 0
+  +padding(3)
+  +marginY(3)
+  +marginX(0)
 
   legend
     font-weight: bold
