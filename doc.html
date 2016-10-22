@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Framaework CSS - Documentation</title>
+
+  <link href="css/framaework.min.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <header class="hero txt-center">
+    <hgroup>
+      <h1 class="hero__title">Framaework CSS</h1>
+      <h2 class="hero__subtitle">Documentation</h2>
+    </hgroup>
+  </header>
+
+  <main class="main-content">
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Intro</h2>
+      <p>Framaework CSS è un framework sviluppato internamente dal team di Lobae per lo sviluppo di siti web responsive, frutto dell'esperienza maturata nel tempo e della collaborazione con esperti del settore. Il progetto è in continua evoluzione e coesiste insieme ad altri, come il Wordpress starter theme e Iconae: il set di icone dinamico.</p>
+      <p>è scritto in <a href="http://sass-lang.com/" target="_blank" title="SASS official website">SASS</a> puro (non in SCSS) e sfrutta la metodologia <a href="http://getbem.com/" target="_blank" title="Get BEM">BEM</a> per mantenere una logica chiara e ben definita. Per una guida dettagliata consiglio questo link: <a href="https://en.bem.info/methodology" target="_blank" title="BEM methodology">https://en.bem.info/methodology</a>.</p>
+      <p>La versione BEM utilizzata da Framaework è descritta in <a href="http://csswizardry.com/2013/01/mindbemding-getting-your-head-round-bem-syntax/" target="_blank">questo articolo</a>.</p>
+      <p><strong>N.B: Tutta la documentazione è scritta non soltanto per spiegare come si utilizza il framework ma anche come funziona, per permettere ad eventuali sviluppatori interessati a contribuire al suo sviluppo.</strong></p>
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>La semantica</h2>
+      <p>Framaework segue gli standard BEM già descritti nell'introduzione, consiglio l'articolo <a href="http://nicolasgallagher.com/about-html-semantics-front-end-architecture/" target="_blank">About HTML semantics and front-end architecture</a>, di Nicolas Gallagher per prendere spunto su ottimi consigli di semantica (<i>alcuni presenti anche in questa documentazione</i>) oltre a questo, ecco alcune regole da tenere in considerazione per sfruttarlo al meglio:</p>
+      <h4>HTML</h4>
+      <ul>
+        <li>Utilizzare sempre i tag semantici di <strong>HTML5</strong>.</li>
+        <li>Eccetto dove specificato, inserire le classi di Framaework all'interno di <code>div</code>.</li>
+        <li>Utilizzare <code>div</code> appositi per le classi strutturali di Framaework, senza associare ad essi altre classi che possano modificarne il corretto funzionamneto.</li>
+        <li>Nel caso in cui sia necessario modificare il funzionamento delle classi di Framaework, creare degli overlay del codice tramite un padre che inglobi la regola interessata. (<i>questo permette di continuare a sfruttare la modularità di BEM</i>).</li>
+        <li>Tutto il codice di Framaework è sviluppato con un sistema di indentazione composto da due spazi per tab.</li>
+        <li>Utilizzare sempre <strong>classi</strong>. Gli ID possono essere utilizzati solo per il <strong>JavaScript</strong>.</li>
+        <li>Quando sarà necessario creare classi da richimare in funzioni JavaScript dovranno essere precedute dal suffisso <code>js--nome-classe</code>. Questo permette di riconoscere quali classi non toccare per non interrompere il funzionamento del JS.</li>
+      </ul>
+
+      <h4>CSS</h4>
+      <ul>
+        <li>Per poter utilizzare correttamente Framaework, è necessario scrivere il codice in <strong>SASS</strong>.</li>
+        <li>Creare <strong>file multipli</strong> da inlcudere successivamente tramite SASS permette di gestire il codice in modo più pulito e ordinato.</li>
+        <li>Ogni nuovo file dovrà essere rinominato secondo la seguente logica: <code>nome-pagina_blocco_elemento_modificatore</code>. In questo modo ogni membro del team sarà in grado di capire che file andare a modificare.</li>
+      </ul>
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Media Queries</h2>
+      <p>Tutto il framework è sviluppato seguendo le regole del <em>mobile first</em> e si basa su tre <strong>breakpoints</strong> per definire le risoluzioni dei vari dispositivi:</p>
+      <ul>
+        <li><strong>$tab:</strong> 640px</li>
+        <li><strong>$desk:</strong> 1024px</li>
+        <li><strong>$wall:</strong> 1324px</li>
+      </ul>
+      <p>È possibile gestire e modificare questi parametri dalla sezione <strong>dev/variables/_media-queries.sass</strong>. In questo file sono presenti delle condizioni in grado di definire i breakpoint in modo molto semplice: richiamando la funzione <code>+breakpoint('risoluzione')</code> è possibile decidere per quali dispositivi rendere valida la regola CSS (sempre tenendo conto del mobile first):</p>
+      <ul>
+        <li><strong>Nessun breakpoint:</strong> Senza nessuna specifica, la regola è valida da 0px di risoluzione in su.</li>
+        <li><strong>+breakpoint(tab):</strong> Valido da 640px in su.</li>
+        <li><strong>+breakpoint(eq_mobile):</strong> Valido fino a 640px.</li>
+        <li><strong>+breakpoint(eq_tab):</strong> Valido da 640px a 1024px.</li>
+        <li><strong>+breakpoint(desk):</strong> Valido da 1024px in su.</li>
+        <li><strong>+breakpoint(wall):</strong> Valido da 1324px in su.</li>
+      </ul>
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Font</h2>
+      <p>Di default, Framaework è impostato per riportare il testo base alla grandezza di 14px (0.875em). È possibile cambiare questa impostazione tramite CSS, nella sezione "<strong>dev/text/_font.sass</strong>", impostando il valore di default della funzione SASS <code>=font-size($sizeValue: FONT-SIZE)</code>, dove al posto di "FONT-SIZE dovrà essere inserita la grandezza desiderata in pixel, senza l'aggiunta di unità di misura.</p>
+      <p>Allo stesso modo è possibile cambiare il valore di <code>line-height</code> e <code>letter-spacing</code>, delle funzioni presenti nella solita sezione.</p>
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Font Families</h2>
+      <p>Tramite la sezione <strong>dev/text/_font-families.sass</strong> è posisbile aggiungere o modificare le impostazioni delle famiglie dei fonts del framework: di base sono presenti tre variabili: <code>$sans-serif</code>, <code>$serif</code> e <code>$monospace</code>.</p>
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Text Alignment</h2>
+      <p>Aggiungendo le classi <code>.txt-left</code>, <code>.txt-right</code>, <code>.txt-center</code> e <code>.txt-justify</code> è possibile definire come allineare il testo, rispetivamente a: sinistra, destra, centrato o giustificato. Il file che definisce queste funzioni è <strong>dev/text/_text-alignment.sass</strong>.</p>
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section formatted-content">
+      <div class="grid-container">
+        <h2>Grid Container</h2>
+        <p>Con il grid container introduciamo la sezione che gestisce il layout. Il grid container permette di definire dei contenitori per i nostri contenuti, ne esistono di quattro tipi e si assegnano semplicemente con delle classi al nostro contenitore:</p>
+        <ul>
+          <li><strong>.grid-container:</strong> È lo standard, contenitore fluido con larghezza massima a 1024px.</li>
+          <li><strong>.grid-container--small:</strong> Contenitore fluido con larghezza massima a 800px.</li>
+          <li><strong>.grid-container--large:</strong> Contenitore fluido con larghezza massima a 1220px.</li>
+          <li><strong>.grid-container--responsive:</strong> Varia di grandezza a seconda delle risoluzioni: dal desktop in giù rispettivamente 1220px, 1024px e 800px.</li>
+        </ul>
+        <p>Il file del grid-container è raggiungibile da <strong>dev/grid/_grid-container.sass</strong>.</p>
+      </div>
+
+      <!-- START example -->
+      <div class="doc-section__example">
+        <div class="grid-container">
+          <div class="doc-section__example__column-style">
+            .grid-container
+          </div>
+        </div>
+        <div class="grid-container--small">
+          <div class="doc-section__example__column-style">
+            .grid-container--small
+          </div>
+        </div>
+        <div class="grid-container--large">
+          <div class="doc-section__example__column-style">
+            .grid-container--large
+          </div>
+        </div>
+        <div class="grid-container--responsive">
+          <div class="doc-section__example__column-style">
+            .grid-container--responsive
+          </div>
+        </div>
+      </div>
+      <!-- END example -->
+
+      <hr class="grid-container">
+
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Columns Grid system</h2>
+      <p>Per impaginare gli elementi all'nterno della pagina, Framaework utilizza un classico sistema a dodici colonne.<br>Per funzionare, necessita di un padre con la classe <code>.row</code> all'interno del quale è possibile definire delle colonne tramite la classe <code>.row__columns</code> associata alla risoluzione e il numero di colonne, seguendo lo schema <code>risoluzione-num</code>.</p>
+
+      <p>Tutte le classi e le funzionalità del columns grid system sono raggiungibili in <strong>dev/grid/_grid.sass</strong>.</p>
+
+      <pre>
+        <code>
+&lt;div class="row"&gt;
+  &lt;div class="row__column mobile-3 tab-6 desk-3"&gt;
+    1
+  &lt;/div&gt;
+  &lt;div class="row__column mobile-3 tab-6 desk-3"&gt;
+    2
+  &lt;/div&gt;
+  &lt;div class="row__column mobile-3 tab-6 desk-3"&gt;
+    3
+  &lt;/div&gt;
+  &lt;div class="row__column mobile-3 tab-6 desk-3"&gt;
+    4
+  &lt;/div&gt;
+&lt;/div&gt;
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <div class="row">
+          <div class="row__column mobile-3 tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              1
+            </div>
+          </div>
+          <div class="row__column mobile-3 tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              2
+            </div>
+          </div>
+          <div class="row__column mobile-3 tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              3
+            </div>
+          </div>
+          <div class="row__column mobile-3 tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              4
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <small><strong>N.B:</strong> Per ottenere una visualizzazione sempre ottimale del contenuto, ogni elemento all'interno della classe <code>.row</code> dovrà sempre essere a sua volta contenuto in un div <code>.row__column</code>, anche se la colonna è una sola.</small>
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Columns Grid <em>Margins</em></h2>
+      <p>Per riuscire a gestire al meglio ogni casistica, Framaework mette a disposizione tre diversi rapporti di spazio tra una colonna e l'altra, per impostarlo è sufficiente aggiungere un modificatore alla classe <code>.row</code>:</p>
+      <ul>
+        <li><strong>row:</strong> È lo standard, tra una colonna e l'altra sono presenti 16px (<em>1rem</em>).</li>
+        <li><strong>row--half:</strong> Lo spazio tra le colonne è dimezzato, sarà quindi di 8px (<em>0.5rem</em>).</li>
+        <li><strong>row--stuck:</strong> Lo spazio viene totalmente eliminato, le colonne si trovano affiancate l'una all'altra.</li>
+      </ul>
+
+      <div class="doc-section__example">
+
+        <h4>.row</h4>
+        <div class="row">
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              1
+            </div>
+          </div>
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              2
+            </div>
+          </div>
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              3
+            </div>
+          </div>
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              4
+            </div>
+          </div>
+        </div>
+
+      <h4>.row--half</h4>
+      <div class="row--half">
+        <div class="row__column tab-6 desk-3">
+          <div class="doc-section__example__column-style">
+            1
+          </div>
+        </div>
+        <div class="row__column tab-6 desk-3">
+          <div class="doc-section__example__column-style">
+            2
+          </div>
+        </div>
+        <div class="row__column tab-6 desk-3">
+          <div class="doc-section__example__column-style">
+            3
+          </div>
+        </div>
+        <div class="row__column tab-6 desk-3">
+          <div class="doc-section__example__column-style">
+            4
+          </div>
+        </div>
+      </div>
+
+      <h4>.row--stuck</h4>
+      <div class="row--stuck">
+        <div class="row__column tab-6 desk-3">
+          <div class="doc-section__example__column-style">
+            1
+          </div>
+        </div>
+        <div class="row__column tab-6 desk-3">
+          <div class="doc-section__example__column-style">
+            2
+          </div>
+        </div>
+        <div class="row__column tab-6 desk-3">
+          <div class="doc-section__example__column-style">
+            3
+          </div>
+        </div>
+        <div class="row__column tab-6 desk-3">
+          <div class="doc-section__example__column-style">
+            4
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Columns Grid <em>Vertical align</em></h2>
+      <p>È possibile gestire l'allineamento verticale delle colonne assegnando uno classe extra all'elemento <code>.row</code>, è riconoscibile tramite il suffisso <code>columns-</code>, aggiungendo infine tab o desk è possibile definirne anche il responsive ai diversi breackpoint:</p>
+      <ul>
+        <li><strong>columns-top:</strong> È lo standard, le colonne di diversa altezza si allineano dall'alto.</li>
+        <li><strong>columns-middle:</strong> Le colonne di diversa altezza si centrano nel mezzo.</li>
+        <li><strong>columns-bottom:</strong> le colonne di diversa altezza si allineano dal basso.</li>
+      </ul>
+
+      <h4>I breakpoints:</h4>
+
+      <ul>
+        <li><strong>columns- :</strong> Senza nessun prefisso è valido per tutti i breakpoints.</li>
+        <li><strong>tab-columns- :</strong> Allineamento verticale valido per i breackpoints tablet e desktop.</li>
+        <li><strong>desk-columns- :</strong> Allineamento verticale valido per il breackpoint desktop.</li>
+      </ul>
+
+      <br>
+
+      <p>Questo esempio allinea verticalmente le colonne in alto per gli smartphone e al centro per tablet e desktop:</p>
+
+      <pre>
+        <code>
+&lt;div class="row columns-top tab-columns-middle"&gt;&lt;/div&gt;
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+
+        <div class="row columns-top tab-columns-middle">
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              Lorem ipsum<br>dolor sit amet
+            </div>
+          </div>
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              Lorem ipsum dolor sit amet
+            </div>
+          </div>
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              Lorem ipsum<br>dolor<br>sit amet
+            </div>
+          </div>
+          <div class="row__column tab-6 desk-3">
+            <div class="doc-section__example__column-style">
+              Lorem ipsum<br>dolor sit amet
+            </div>
+          </div>
+        </div>
+
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Columns Grid <em>Horizontal align</em></h2>
+      <p>È possibile gestire l'allineamento orizzontale delle colonne assegnando uno classe extra all'elemento <code>.row</code>, è riconoscibile tramite il suffisso <code>columns-</code>, aggiungendo infine tab o desk è possibile definirne anche il responsive ai diversi breackpoint:</p>
+      <ul>
+        <li><strong>columns-start:</strong> È lo standard, le colonne si allineano da sinistra verso destra.</li>
+        <li><strong>columns-center:</strong> Le colonne si centrano nel mezzo.</li>
+        <li><strong>columns-end:</strong> Le colonne si allineano da destra verso sinistra.</li>
+        <li><strong>columns-around:</strong> Le colonne si distanziano l'una dall'altra in egual misura.</li>
+        <li><strong>columns-between:</strong> Le si posizionano al centro e agli estremi, con lo spazio massimo possibile l'una tra l'altra.</li>
+      </ul>
+
+      <h4>I breakpoints:</h4>
+
+      <ul>
+        <li><strong>columns- :</strong> Senza nessun prefisso è valido per tutti i breakpoints.</li>
+        <li><strong>tab-columns- :</strong> Allineamento orizzontale valido per i breakpoints tablet e desktop.</li>
+        <li><strong>desk-columns- :</strong> Allineamento orizzontale valido per il breakpoint desktop.</li>
+      </ul>
+
+      <br>
+
+      <p>Vari esempi di allineamento:</p>
+
+      <div class="doc-section__example">
+
+        <h4>Start:</h4>
+        <pre>
+          <code>
+  &lt;div class="row columns-top columns-start"&gt;&lt;/div&gt;
+          </code>
+        </pre>
+
+        <div class="row columns-top columns-start">
+          <div class="row__column mobile-3">
+            <div class="doc-section__example__column-style">
+              1
+            </div>
+          </div>
+          <div class="row__column mobile-3">
+            <div class="doc-section__example__column-style">
+              2
+            </div>
+          </div>
+          <div class="row__column mobile-3">
+            <div class="doc-section__example__column-style">
+              3
+            </div>
+          </div>
+        </div>
+
+        <h4>Center:</h4>
+        <pre>
+          <code>
+  &lt;div class="row columns-top columns-center"&gt;&lt;/div&gt;
+          </code>
+        </pre>
+
+        <div class="row columns-top columns-center">
+          <div class="row__column mobile-3">
+            <div class="doc-section__example__column-style">
+              1
+            </div>
+          </div>
+          <div class="row__column mobile-3">
+            <div class="doc-section__example__column-style">
+              2
+            </div>
+          </div>
+          <div class="row__column mobile-3">
+            <div class="doc-section__example__column-style">
+              3
+            </div>
+          </div>
+        </div>
+
+        <h4>End:</h4>
+        <pre>
+          <code>
+  &lt;div class="row columns-top columns-end"&gt;&lt;/div&gt;
+          </code>
+        </pre>
+
+        <div class="row columns-top columns-end">
+          <div class="row__column mobile-3">
+            <div class="doc-section__example__column-style">
+              1
+            </div>
+          </div>
+          <div class="row__column mobile-3">
+            <div class="doc-section__example__column-style">
+              2
+            </div>
+          </div>
+          <div class="row__column mobile-3">
+            <div class="doc-section__example__column-style">
+              3
+            </div>
+          </div>
+        </div>
+
+        <h4>Around:</h4>
+        <pre>
+          <code>
+  &lt;div class="row columns-top columns-around"&gt;&lt;/div&gt;
+          </code>
+        </pre>
+
+        <div class="row columns-top columns-around">
+          <div class="row__column mobile-3">
+            <div class="doc-section__example__column-style">
+              1
+            </div>
+          </div>
+          <div class="row__column mobile-3">
+            <div class="doc-section__example__column-style">
+              2
+            </div>
+          </div>
+          <div class="row__column mobile-3">
+            <div class="doc-section__example__column-style">
+              3
+            </div>
+          </div>
+        </div>
+
+        <h4>Between:</h4>
+        <pre>
+          <code>
+  &lt;div class="row columns-top columns-between"&gt;&lt;/div&gt;
+          </code>
+        </pre>
+
+        <div class="row columns-top columns-between">
+          <div class="row__column mobile-3">
+            <div class="doc-section__example__column-style">
+              1
+            </div>
+          </div>
+          <div class="row__column mobile-3">
+            <div class="doc-section__example__column-style">
+              2
+            </div>
+          </div>
+          <div class="row__column mobile-3">
+            <div class="doc-section__example__column-style">
+              3
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
+  </main>
+
+</body>
+</html>
