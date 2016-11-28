@@ -32,9 +32,7 @@ label
   border-style: solid
   border-width: 1px
   overflow: visible
-
   +font-size
-
   min-height: 2.3125rem
   line-height: 2.125rem
 
@@ -86,10 +84,9 @@ textarea
   font-family: inherit
   font-weight: 300
   border: solid 1px $border-color
-  color: rgba(0, 0, 0, 0.75)
+  color: rgba($black, 0.75)
   display: block
   +font-size
-  +margin-bottom
   +padding(1)
   min-height: 2.3125rem
   width: 100%
@@ -97,16 +94,13 @@ textarea
   -moz-box-sizing: border-box
   box-sizing: border-box
   +transition()
-
-  &:focus
-    background: $dark_white
-    border-color: $grey_9
+  &:focus,
+  &:active
+    border-color: $primary-color
     outline: none
-
   &:disabled
     background-color: $dark_white
     cursor: not-allowed
-
   &.radius
     +radius
 
@@ -117,6 +111,7 @@ textarea[rows]
 /* Not allow resize out of parent
 textarea
   max-width: 100%
+  min-height: 80px
 
 /* Add height value for select elements to match text input height
 select
@@ -125,45 +120,108 @@ select
   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+)
   background-position: 100% center
   background-repeat: no-repeat
-  border: 1px solid $grey_c
+  border: 1px solid $border-color
   padding: 0.5rem
-
   +font-size
-
   font-family: $sans-serif
-  color: rgba(0, 0, 0, 0.75)
+  color: rgba($black, 0.75)
   +line-height
   border-radius: 0
-  min-height: 2.3125rem
-
+  +transition()
+  display: block
+  width: 100%
+  cursor: pointer
   &::-ms-expand
     display: none
-
   &.radius
     +radius
-
   &:hover
     background-color: $dark_white
     border-color: $border-color
-
   &:disabled
     background-color: $grey_e
     cursor: not-allowed
+  &:focus,
+  &:active
+    border-color: $primary-color
+    outline: none
 
 /* Adjust margin for form elements below
 input[type="file"],
 input[type="checkbox"],
 input[type="radio"],
 select
-  +margin-bottom
+  +margin-bottom(2)
 
-input[type="checkbox"] + label,
-input[type="radio"] + label
+input[type="checkbox"]+label,
+input[type="radio"]+label
   display: inline-block
   +margin-left(1)
   +margin-right(2)
   +margin-bottom(0)
   vertical-align: baseline
+
+// Custom radio buttons
+.custom-radio
+  display: inline-block
+  +margin-right(2)
+  input
+    display: none
+  input:checked ~ .custom-radio__icon
+    border: 6px solid $primary-color
+    +transition()
+
+  label
+    display: inline-block
+
+.custom-radio__icon
+  display: inline-block
+  width: 18px
+  height: 18px
+  position: relative
+  bottom: 1px
+  vertical-align: middle
+  cursor: pointer
+  -moz-border-radius: 50%
+  border-radius: 50%
+  border: 2px solid $primary-color
+  +transition()
+
+// Custom Checkbox
+.custom-checkbox
+  display: inline-block
+  +margin-right(2)
+  input
+    display: none
+  input ~ .custom-checkbox__icon:after
+    content: ''
+    display: block
+    position: absolute
+    left: 4px
+    top: 1px
+    width: 6px
+    height: 10px
+    border: solid $white
+    border-width: 0 2px 2px 0
+    transform: rotate(45deg)
+    opacity: 0
+    +transition()
+  input:checked ~ .custom-checkbox__icon
+    background-color: $primary-color
+    &:after
+      opacity: 1
+
+.custom-checkbox__icon
+  display: inline-block
+  vertical-align: middle
+  width: 18px
+  height: 18px
+  position: relative
+  border-radius: 2px
+  bottom: 1px
+  border: 2px solid $primary-color
+  +transition()
+
 
 /* Normalize file input width
 input[type="file"]
@@ -174,12 +232,90 @@ input[type="file"]
 fieldset
   border: 1px solid $grey_e
   +padding(3)
-  +marginY(3)
   +marginX(0)
 
   legend
     font-weight: bold
     background: $white
-    padding: 0 0.1875rem
+    padding: 0
+    +paddingX(1)
     margin: 0
-    margin-left: -0.1875rem
+
+// Form container
+.form__field
+  +margin-bottom(3)
+
+// Invalid Message
+.form__field--invalid
+  @extend .form__field
+  input,
+  input:focus
+    border: 1px solid $alert-feedback
+  .form__msg
+    color: $alert-feedback
+
+// Warning Message
+.form__field--warning
+  @extend .form__field
+  input,
+  input:focus
+    border: 1px solid $warning-feedback
+  .form__msg
+    color: $warning-feedback
+
+// Success Message
+.form__field--success
+  @extend .form__field
+  input,
+  input:focus
+    border: 1px solid $success-feedback
+  .form__msg
+    color: $success-feedback
+
+.form__msg
+  font-size: 82%
+
+// Input Group
+.input-group
+  display: table
+  width: 100%
+
+.input-group__label,
+.input-group__field,
+.input-group__button
+  margin: 0
+  white-space: nowrap
+  display: table-cell
+  vertical-align: middle
+
+.input-group__label
+  text-align: center
+  padding: 0 1rem
+  background: $grey_e
+  color: rgba($black, 0.75)
+  border: 1px solid $border-color
+  white-space: nowrap
+  width: 1%
+  height: 100%
+  &:first-child
+    border-right: none
+  &:last-child
+    border-left: none
+
+.input-group__field
+  border-radius: 0
+  height: 2.5rem
+
+.input-group__button
+  padding-top: 0
+  padding-bottom: 0
+  text-align: center
+  height: 100%
+  width: 1%
+  .input-group__button a,
+  .input-group__button input,
+  .input-group__button button
+    margin: 0
+
+.input-group .input-group__button
+  display: table-cell

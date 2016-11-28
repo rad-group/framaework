@@ -151,14 +151,35 @@
       </div>
       <div class="row">
       <div class="desk-6 row__column">
-        <label>Choose Your Favorite</label>
-        <input type="radio" name="pokemon" value="Red" id="pokemonRed"><label for="pokemonRed">Red</label>
-        <input type="radio" name="pokemon" value="Blue" id="pokemonBlue"><label for="pokemonBlue">Blue</label>
+        <h4>Radio</h4>
+
+        <label class="custom-radio">
+          <input type="radio" name="color" value="Red" id="colorRed">
+          <span class="custom-radio__icon"></span>
+          Red
+        </label>
+
+        <label class="custom-radio">
+          <input type="radio" name="color" value="Blue" id="colorBlue">
+          <span class="custom-radio__icon"></span>
+          Blue
+        </label>
+
       </div>
       <div class="desk-6 row__column">
-        <label>Check these out</label>
-        <input id="checkbox1" type="checkbox"><label for="checkbox1">Checkbox 1</label>
-        <input id="checkbox2" type="checkbox"><label for="checkbox2">Checkbox 2</label>
+        <h4>Checkbox</h4>
+
+        <label class="custom-checkbox">
+          <input type="checkbox" for="Red" id="checkRed">
+          <span class="custom-checkbox__icon"></span>
+          Red
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox" for="Blue" id="checkBlue">
+          <span class="custom-checkbox__icon"></span>
+          Blue
+        </label>
+
       </div>
       </div>
       <div class="row">
@@ -171,6 +192,37 @@
       <input type="submit" value="Create Contact" class="button--large">
       </form>
       <h4>Another form:</h4>
+
+
+      <label class="input-group">
+
+        <span class="input-group__label">label</span>
+        <input class="input-group__field" type="text">
+        <div class="input-group__button">
+          <input type="submit" class="button" value="Submit">
+        </div>
+
+      </label>
+
+      <label class="input-group">
+
+        <span class="input-group__label">$</span>
+        <input class="input-group__field" type="text">
+        <span class="input-group__label">.00</span>
+
+      </label>
+
+      <label class="input-group">
+
+        <div class="input-group__button">
+          <input type="submit" class="button" value="Submit Button">
+        </div>
+        <input class="input-group__field" type="text">
+        <span class="input-group__label">label</span>
+
+      </label>
+
+
       <form class="form">
   <fieldset>
     <legend>Signup</legend>
@@ -200,6 +252,47 @@
     </div>
   </fieldset>
 </form>
+
+
+    <div class="row--stuck">
+      <div class="row__column">
+        <div class="row">
+          <div class="row__column tab-3"><div>1</div></div>
+          <div class="row__column tab-3"><div>2</div></div>
+          <div class="row__column tab-3"><div>3</div></div>
+          <div class="row__column tab-3"><div>4</div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row--stuck">
+      <div class="row__column">
+        <div class="row">
+          <div class="row__column tab-6">
+            <div class="row--stuck">
+              <div class="row__column tab-6">
+                <div>1</div>
+              </div>
+              <div class="row__column tab-6">
+                <div>2</div>
+              </div>
+            </div>
+          </div>
+          <div class="row__column tab-6">
+            <div class="row--stuck">
+              <div class="row__column tab-6">
+                <div>1</div>
+              </div>
+              <div class="row__column tab-6">
+                <div>2</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
     </div>
   </body>
 

@@ -3,10 +3,7 @@
  * ----------------------------------------------------------------------------
 
 /* Default button [BLUE]
-.button,
-input[type="button"],
-input[type="submit"],
-input[type="reset"]
+.button
   border-style: none
   cursor: pointer
   font-family: $sans-serif
@@ -75,6 +72,19 @@ input[type="reset"]
   &:focus
     background-color: $warning-feedback-dark
     color: $white
+
+/* Disabled button [LOW OPACITY]
+.button--disabled
+  @extend .button
+  color: $white
+  opacity: 0.25
+  cursor: not-allowed
+  +text-shadow()
+  &:hover,
+  &:focus
+    background-color: $primary-color
+    color: $white
+    cursor: not-allowed
 
 /** BUTTON SIZING *
 .button--large

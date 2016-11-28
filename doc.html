@@ -484,6 +484,343 @@
       <hr class="grid-container">
     </section>
 
+    <section class="doc-section grid-container formatted-content">
+      <h2>Columns Grid <em>Custom columns grid</em></h2>
+      <p>Di base Framaework funziona con il classico sistema a 12 colonne, di conseguenza, tutti i layout possibili delle colonne devono essere multipli di dodici. È possibile definire dei columns grid customizzati sfruttando un mixin del SASS (situato in <strong>dev/grid/_grid-custom.sass</strong>), ad esempio per creare cinque colonne.</p>
+
+      <h4>Layout a 5 colonne:</h4>
+
+      <pre>
+        <code>
+&nbsp;.custom-columns .row__column
+&nbsp;&nbsp;&nbsp;&nbsp;+custom-grid(5)
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+
+        <div class="row columns-top custom-columns">
+          <div class="row__column">
+            <div class="doc-section__example__column-style">
+              1
+            </div>
+          </div>
+          <div class="row__column">
+            <div class="doc-section__example__column-style">
+              2
+            </div>
+          </div>
+          <div class="row__column">
+            <div class="doc-section__example__column-style">
+              3
+            </div>
+          </div>
+          <div class="row__column">
+            <div class="doc-section__example__column-style">
+              4
+            </div>
+          </div>
+          <div class="row__column">
+            <div class="doc-section__example__column-style">
+              5
+            </div>
+          </div>
+        </div>
+
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Buttons</h2>
+      <p>Framaework permette di sfruttare varie tipologie di bottoni di default, che differiscono per forma dimenioni e colori.<br>Tutti i colori sono gestibili tramite il file colors in <strong>dev/variables/_colors.sass</strong> alla sezione "<i>Feedback colors</i>".<br>Le altre impostazioni dei bottoni sono invece presenti <strong>in dev/blocks/_buttons.sass</strong>.</p>
+      <p>Il bottone standard può essere richiamato utilizzando la classe <code>.button</code>.</p>
+
+      <h4>Sizing:</h4>
+
+      <pre>
+        <code>
+<div class="doc-section__example">  &lt;a href="#" class="button"&gt;Standard&lt;/a&gt;
+  &lt;a href="#" class="button--large"&gt;Standard Button&gt;&lt;/a&gt;
+  &lt;a href="#" class="button--small"&gt;Large Button&gt;&lt;/a&gt;
+  &lt;a href="#" class="button--tiny"&gt;Tiny Button&gt;&lt;/a&gt;</div>
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <a href="#" class="button">Standard</a>
+        <a href="#" class="button--large">Standard Button</a>
+        <a href="#" class="button--small">Large Button</a>
+        <a href="#" class="button--tiny">Tiny Button</a>
+      </div>
+
+      <h4>Coloring:</h4>
+
+      <pre>
+        <code>
+<div class="doc-section__example">  &lt;a href="#" class="button"&gt;Primary Button&lt;/a&gt;
+  &lt;a href="#" class="button--secondary"&gt;Secondary Button&gt;&lt;/a&gt;
+  &lt;a href="#" class="button--success"&gt;Success Button&gt;&lt;/a&gt;
+  &lt;a href="#" class="button--alert"&gt;Alert Button&gt;&lt;/a&gt;
+  &lt;a href="#" class="button--warning"&gt;Warning Button&gt;&lt;/a&gt;
+  &lt;a href="#" class="button--disabled"&gt;Disabled Button&gt;&lt;/a&gt;</div>
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <a href="#" class="button">Primary Button</a>
+        <a href="#" class="button--secondary">Secondary Button</a>
+        <a href="#" class="button--success">Success Button</a>
+        <a href="#" class="button--alert">Alert Button</a>
+        <a href="#" class="button--warning">Warning Button</a>
+        <a href="#" class="button--disabled">Disabled Button</a>
+      </div>
+
+      <h4>Expanding:</h4>
+
+      <pre>
+        <code>
+<div class="doc-section__example">  &lt;a href="#" class="button--expand"&gt;Primary Button&lt;/a&gt;</div>
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <a href="#" class="button--expand">Expand Button</a>
+      </div>
+
+      <h4>Rounding:</h4>
+
+      <pre>
+        <code>
+<div class="doc-section__example">  &lt;a href="#" class="button--radius"&gt;Radius Button&lt;/a&gt;
+  &lt;a href="#" class="button--round"&gt;Round Button&gt;&lt;/a&gt;</div>
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <a href="#" class="button--radius">Radius Button</a>
+        <a href="#" class="button--round">Round Button</a>
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Forms</h2>
+      <p>Grazie a Framaework è possibile impaginare i forms con pochi semplici accorgimenti, è possibile modificare lo stile dei forms in <strong>dev/blocks/_forms.sass</strong>.<br>Seguendo la logica BEM, gli input non posseggono larghezze definite o margini: per poter distanziare verticalmente più input, questi devono essere inseriti dentro un div con classe <code>.form__field</code>.</p>
+
+      <h4>Form standard:</h4>
+
+      <pre>
+        <code>
+  &lt;form class="form"&gt;
+    &lt;fieldset&gt;
+
+      &lt;legend&gt;Signup&lt;/legend&gt;
+
+      &lt;div class="form__field form__field--invalid"&gt;
+        &lt;label&gt;
+          Email
+          &lt;input placeholder="foo@bar.com" type="email" class="form__input--large"&gt;
+        &lt;/label&gt;
+        &lt;div class="form__msg"&gt;Invalid email&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;label&gt;
+          Password
+          &lt;input placeholder="Insert your password" type="password"&gt;
+        &lt;/label&gt;
+        &lt;div class="form__msg"&gt;Password must be at least 6 chars long&lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;label&gt;Select Box
+          &lt;select&gt;
+            &lt;option value="husker"&gt;Husker&lt;/option&gt;
+            &lt;option value="starbuck"&gt;Starbucks&lt;/option&gt;
+            &lt;option value="hotdog"&gt;Hot Dog&lt;/option&gt;
+            &lt;option value="apollo"&gt;Apollo&lt;/option&gt;
+          &lt;/select&gt;
+        &lt;/label&gt;
+      &lt;/div&gt;
+
+      &lt;input type="submit" value="Create Contact" class="button--large"&gt;
+
+    &lt;/fieldset&gt;
+  &lt;/form&gt;
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <form class="form">
+          <fieldset>
+
+            <legend>Signup</legend>
+
+            <div class="form__field form__field--invalid">
+              <label>
+                Email
+                <input placeholder="foo@bar.com" type="email" class="form__input--large">
+              </label>
+              <div class="form__msg">Invalid email</div>
+            </div>
+
+            <div class="form__field">
+              <label>
+                Password
+                <input placeholder="Insert your password" type="password">
+              </label>
+              <div class="form__msg">Password must be at least 6 chars long</div>
+            </div>
+
+            <div class="form__field">
+              <label>Select Box
+                <select>
+                  <option value="husker">Husker</option>
+                  <option value="starbuck">Starbucks</option>
+                  <option value="hotdog">Hot Dog</option>
+                  <option value="apollo">Apollo</option>
+                </select>
+              </label>
+            </div>
+
+            <div class="form__field">
+              <label>
+                Notes
+                <textarea placeholder="Add a comment" type="password"></textarea>
+              </label>
+            </div>
+
+            <input type="submit" value="Create Contact" class="button--large">
+
+          </fieldset>
+        </form>
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Forms - Special status</h2>
+      <p>È possibile personalizzare gli input dei form associando dei modificatori alle classi. Inserendo dei testi con la classe <code>.form__msg</code> verranno posizionati dei messaggi sotto gli input.</p>
+
+      <div class="doc-section__example">
+
+        <div class="row">
+          <div class="row__column tab-3">
+            <div class="form__field form__field">
+              <label>
+                Disabled Input
+                <input placeholder="Disables form" type="text" disabled class="form__input--large">
+              </label>
+              <div class="form__msg">Disabled messagge here.</div>
+            </div>
+          </div>
+
+          <div class="row__column tab-3">
+            <div class="form__field form__field--invalid">
+              <label>
+                Invalid Input
+                <input placeholder="Invalid Input" type="text" class="form__input--large">
+              </label>
+              <div class="form__msg">Invalid messagge here.</div>
+            </div>
+          </div>
+
+          <div class="row__column tab-3">
+            <div class="form__field form__field--warning">
+              <label>
+                Warning Input
+                <input placeholder="Warning Input" type="text" class="form__input--large">
+              </label>
+              <div class="form__msg">Warning messagge here.</div>
+            </div>
+          </div>
+
+          <div class="row__column tab-3">
+            <div class="form__field form__field--success">
+              <label>
+                Success Input
+                <input placeholder="Success Input" type="text" class="form__input--large">
+              </label>
+              <div class="form__msg">Success messagge here.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Forms - Radio e Checkbox</h2>
+      <p>È possibile assegnare uno stile grafico a checkbox e radio buttons, aggiungendo alcune classi agli elementi standard: il tag label dovrà contenere tutto, con le classi <code>.custom-radio</code> o <code>.custom-checkbox</code>. Al suo interno, oltre all'input, sarà presente un altro elemento con classe <code>.custom-radio__icon</code> o <code>custom-radio__icon</code>.</p>
+
+      <h4>Radio buttons:</h4>
+
+      <pre>
+        <code>
+  &lt;label class="custom-radio"&gt;
+    &lt;input type="radio" name="color" value="Red" id="colorRed"&gt;
+    &lt;span class="custom-radio__icon"&gt;&lt;/span&gt;
+    Red
+  &lt;/label&gt;
+
+  &lt;label class="custom-radio"&gt;
+    &lt;input type="radio" name="color" value="Blue" id="colorBlue"&gt;
+    &lt;span class="custom-radio__icon"&gt;&lt;/span&gt;
+    Blue
+  &lt;/label&gt;
+
+  &lt;label class="custom-checkbox"&gt;
+    &lt;input type="checkbox" for="Red" id="checkRed"&gt;
+    &lt;span class="custom-checkbox__icon"&gt;&lt;/span&gt;
+    Red
+  &lt;/label&gt;
+  &lt;label class="custom-checkbox"&gt;
+    &lt;input type="checkbox" for="Blue" id="checkBlue"&gt;
+    &lt;span class="custom-checkbox__icon"&gt;&lt;/span&lt;
+    Blue
+  &lt;/label&gt;
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <div class="row">
+          <div class="row__column mobile-6">
+            <label class="custom-radio">
+              <input type="radio" name="color" value="Red" id="colorRed">
+              <span class="custom-radio__icon"></span>
+              Red
+            </label>
+
+            <label class="custom-radio">
+              <input type="radio" name="color" value="Blue" id="colorBlue">
+              <span class="custom-radio__icon"></span>
+              Blue
+            </label>
+          </div>
+
+          <div class="row__column mobile-6">
+            <label class="custom-checkbox">
+              <input type="checkbox" for="Red" id="checkRed">
+              <span class="custom-checkbox__icon"></span>
+              Red
+            </label>
+            <label class="custom-checkbox">
+              <input type="checkbox" for="Blue" id="checkBlue">
+              <span class="custom-checkbox__icon"></span>
+              Blue
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
   </main>
 
 </body>
