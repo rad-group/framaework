@@ -1,0 +1,58 @@
+.table
+  width: 100%
+  max-width: 100%
+  border-collapse: collapse
+  background-color: transparent
+  td,
+  th
+    text-align: left
+    vertical-align: top
+    border-bottom: 1px solid $border-color
+    +padding(2)
+  thead
+    th
+      border-bottom: 2px solid $border-color
+  &.bordered-cell
+    th,
+    td
+      border: 1px solid $border-color
+  &.hover-row
+    tbody tr
+      +transition()
+      &:hover
+        background-color: $dark_white
+
+// Bordered Table
+.table--bordered
+  @extend .table
+  border: 1px solid $border-color
+
+// Stripped Table
+.table--striped
+  @extend .table
+  tbody tr:nth-of-type(odd)
+    background-color: $bg-color-light
+  &.hover-row
+    tbody tr
+      &:hover
+        background-color: $grey_e
+
+// Condensed Table
+.table--condensed
+  @extend .table
+  td,
+  th
+    +padding(1)
+
+// Responsive tables
+.table-responsive
+  display: block
+  width: 100%
+  min-height: 0%
+  overflow-x: auto
+  +breakpoint(eq_mobile)
+    .table,
+    .table--bordered,
+    .table--striped,
+    .table--condensed
+      width: 720px

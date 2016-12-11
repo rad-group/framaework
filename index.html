@@ -193,35 +193,50 @@
       </form>
       <h4>Another form:</h4>
 
+      <div class="form__field">
+        <label class="input-group">
 
-      <label class="input-group">
+          <span class="input-group__label">label</span>
+          <input class="input-group__field" type="text">
+          <div class="input-group__button">
+            <input type="submit" class="button" value="Submit">
+          </div>
 
-        <span class="input-group__label">label</span>
-        <input class="input-group__field" type="text">
-        <div class="input-group__button">
-          <input type="submit" class="button" value="Submit">
-        </div>
+        </label>
+      </div>
 
-      </label>
+      <div class="form__field">
+        <label class="input-group">
 
-      <label class="input-group">
+          <span class="input-group__label">$</span>
+          <input class="input-group__field" type="text">
+          <span class="input-group__label">.00</span>
 
-        <span class="input-group__label">$</span>
-        <input class="input-group__field" type="text">
-        <span class="input-group__label">.00</span>
+        </label>
+      </div>
 
-      </label>
+      <div class="form__field">
+        <label class="input-group">
 
-      <label class="input-group">
+          <div class="input-group__button">
+            <input type="submit" class="button" value="Submit Button">
+          </div>
+          <input class="input-group__field" type="text">
+          <span class="input-group__label">label</span>
 
-        <div class="input-group__button">
-          <input type="submit" class="button" value="Submit Button">
-        </div>
-        <input class="input-group__field" type="text">
-        <span class="input-group__label">label</span>
+        </label>
+      </div>
 
-      </label>
-
+      <div class="form__field">
+        <label for="exampleSelect2">Example multiple select</label>
+        <select multiple="" class="form-control" id="exampleSelect2">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
 
       <form class="form">
   <fieldset>
@@ -247,6 +262,18 @@
     </div>
 
 
+    <input type="color">
+    <input type="date">
+    <input type="datetime">
+    <input type="datetime-local">
+    <input type="month">
+    <input type="range">
+    <input type="search">
+    <input type="tel">
+    <input type="time">
+    <input type="url">
+    <input type="week">
+
     <div class="form__actions">
       <input type="submit" value="Create Contact" class="button--large">
     </div>
@@ -254,46 +281,267 @@
 </form>
 
 
-    <div class="row--stuck">
-      <div class="row__column">
-        <div class="row">
-          <div class="row__column tab-3"><div>1</div></div>
-          <div class="row__column tab-3"><div>2</div></div>
-          <div class="row__column tab-3"><div>3</div></div>
-          <div class="row__column tab-3"><div>4</div></div>
+<h1>row--stuck test</h1>
+<div class="row--stuck">
+  <div>
+    <div class="row__column tab-4">
+      1
+    </div>
+    <div class="row__column tab-4">
+      1
+    </div>
+    <div class="row__column tab-4">
+      1
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<h1>From Bootsrtap...</h1>
+<form class="form">
+
+  <fieldset>
+
+    <legend>HTML5 Special input</legend>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-text-input">Text</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
         </div>
       </div>
     </div>
 
-    <div class="row--stuck">
-      <div class="row__column">
-        <div class="row">
-          <div class="row__column tab-6">
-            <div class="row--stuck">
-              <div class="row__column tab-6">
-                <div>1</div>
-              </div>
-              <div class="row__column tab-6">
-                <div>2</div>
-              </div>
-            </div>
-          </div>
-          <div class="row__column tab-6">
-            <div class="row--stuck">
-              <div class="row__column tab-6">
-                <div>1</div>
-              </div>
-              <div class="row__column tab-6">
-                <div>2</div>
-              </div>
-            </div>
-          </div>
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-search-input">Search</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="search" value="How do I shoot web" id="example-search-input">
         </div>
       </div>
     </div>
 
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-email-input">Email</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="email" value="mail@example.com" id="example-email-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-url-input">URL</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="url" value="http://www.example.com" id="example-url-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-tel-input">Telephone</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="tel" value="1-(555)-555-5555" id="example-tel-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-password-input">Password</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="password" value="hunter2" id="example-password-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-number-input">Number</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="number" value="42" id="example-number-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-datetime-local-input">Date and time</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-date-input">Date</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="date" value="2011-08-19" id="example-date-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-month-input">Month</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="month" value="2011-08" id="example-month-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-week-input">Week</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="week" value="2011-W33" id="example-week-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-time-input">Time</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="time" value="13:45:00" id="example-time-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-color-input">Color</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input class="form-control" type="color" value="#563d7c" id="example-color-input">
+        </div>
+      </div>
+    </div>
+
+  </fieldset>
+
+</form>
+
+
+<h1>Table</h1>
+
+<div class="table-responsive">
+  <table class="table--striped hover-row bordered-cell">
+    <thead>
+      <tr>
+        <th width="200">Table Header</th>
+        <th>Table Header</th>
+        <th width="150">Table Header</th>
+        <th width="150">Table Header</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Content Goes Here</td>
+        <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+      </tr>
+      <tr>
+        <td>Content Goes Here</td>
+        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+      </tr>
+      <tr>
+        <td>Content Goes Here</td>
+        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div data-popup="popup1" class="button js--popup-action">Open Popup</div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/gen/global.min.js"></script>
+
+    <div class="js--popup popup" id="popup1">
+
+      <div class="popup__wrap vertical-align">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, incidunt quae distinctio facere sint voluptas magnam est, fugiat, vel tempore velit. Quia, blanditiis pariatur rem, dolorem molestiae officiis officia aliquid!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, incidunt quae distinctio facere sint voluptas magnam est, fugiat, vel tempore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        <a class="js--close-popup button">Close Pop-up!</a>
+        <button class="js--close-popup popup__button">&times;</button>
+      </div>
 
     </div>
   </body>
+
 
 </html>

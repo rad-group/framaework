@@ -541,16 +541,16 @@
       <pre>
         <code>
 <div class="doc-section__example">  &lt;a href="#" class="button"&gt;Standard&lt;/a&gt;
-  &lt;a href="#" class="button--large"&gt;Standard Button&gt;&lt;/a&gt;
-  &lt;a href="#" class="button--small"&gt;Large Button&gt;&lt;/a&gt;
+  &lt;a href="#" class="button--large"&gt;Large Button&gt;&lt;/a&gt;
+  &lt;a href="#" class="button--small"&gt;Small Button&gt;&lt;/a&gt;
   &lt;a href="#" class="button--tiny"&gt;Tiny Button&gt;&lt;/a&gt;</div>
         </code>
       </pre>
 
       <div class="doc-section__example">
         <a href="#" class="button">Standard</a>
-        <a href="#" class="button--large">Standard Button</a>
-        <a href="#" class="button--small">Large Button</a>
+        <a href="#" class="button--large">Large Button</a>
+        <a href="#" class="button--small">Small Button</a>
         <a href="#" class="button--tiny">Tiny Button</a>
       </div>
 
@@ -607,7 +607,7 @@
 
     <section class="doc-section grid-container formatted-content">
       <h2>Forms</h2>
-      <p>Grazie a Framaework è possibile impaginare i forms con pochi semplici accorgimenti, è possibile modificare lo stile dei forms in <strong>dev/blocks/_forms.sass</strong>.<br>Seguendo la logica BEM, gli input non posseggono larghezze definite o margini: per poter distanziare verticalmente più input, questi devono essere inseriti dentro un div con classe <code>.form__field</code>.</p>
+      <p>Grazie a Framaework è possibile impaginare i forms con pochi semplici accorgimenti, è possibile modificare lo stile dei forms in <strong>dev/blocks/_forms.sass</strong>.<br>Seguendo la logica BEM, gli input non posseggono larghezze definite o margini: per poter distanziare verticalmente più input, questi devono essere inseriti dentro un div con classe <code>.form__field</code> o <code>.form__field--double</code> per avere uno spazio doppio (vedi lo spazio dopo il bottone di file upload nell'esempio).</p>
 
       <h4>Form standard:</h4>
 
@@ -643,6 +643,23 @@
             &lt;option value="apollo"&gt;Apollo&lt;/option&gt;
           &lt;/select&gt;
         &lt;/label&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;label for="exampleSelect2"&gt;Example multiple select&lt;/label&gt;
+        &lt;select multiple="" class="form-control" id="exampleSelect2"&gt;
+          &lt;option&gt;1&lt;/option&gt;
+          &lt;option&gt;2&lt;/option&gt;
+          &lt;option&gt;3&lt;/option&gt;
+          &lt;option&gt;4&lt;/option&gt;
+          &lt;option&gt;5&lt;/option&gt;
+          &lt;option&gt;6&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field--double"&gt;
+        &lt;label for="exampleFileUpload" class="button"&gt;Upload File&lt;/label&gt;
+        &lt;input type="file" id="exampleFileUpload" class="hidden"&gt;
       &lt;/div&gt;
 
       &lt;input type="submit" value="Create Contact" class="button--large"&gt;
@@ -686,6 +703,23 @@
             </div>
 
             <div class="form__field">
+              <label for="multiple-select">Example multiple select</label>
+              <select multiple="" class="form-control" id="multiple-select">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+              </select>
+            </div>
+
+            <div class="form__field--double">
+              <label for="exampleFileUpload" class="button">Upload File</label>
+              <input type="file" id="exampleFileUpload" class="hidden">
+            </div>
+
+            <div class="form__field">
               <label>
                 Notes
                 <textarea placeholder="Add a comment" type="password"></textarea>
@@ -702,8 +736,359 @@
     </section>
 
     <section class="doc-section grid-container formatted-content">
+      <h2>Forms - All HTML5 inputs</h2>
+      <p>Lista di tutti i nuovi input speciali HTML5, stilizzati con Framaework.</p>
+
+      <pre>
+        <code>
+  &lt;form class="form"&gt;
+    &lt;fieldset&gt;
+      &lt;legend&gt;HTML5 Special input&lt;/legend&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;div class="row columns-middle"&gt;
+          &lt;div class="row__column mobile-2"&gt;
+            &lt;label for="example-text-input"&gt;Text&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class="row__column mobile-10"&gt;
+            &lt;input class="form-control" type="text" value="Text input" id="example-text-input"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;div class="row columns-middle"&gt;
+          &lt;div class="row__column mobile-2"&gt;
+            &lt;label for="example-search-input"&gt;Search&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class="row__column mobile-10"&gt;
+            &lt;input type="search" value="Search input" id="example-search-input"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;div class="row columns-middle"&gt;
+          &lt;div class="row__column mobile-2"&gt;
+            &lt;label for="example-email-input"&gt;Email&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class="row__column mobile-10"&gt;
+            &lt;input type="email" value="mail@example.com" id="example-email-input"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;div class="row columns-middle"&gt;
+          &lt;div class="row__column mobile-2"&gt;
+            &lt;label for="example-url-input"&gt;URL&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class="row__column mobile-10"&gt;
+            &lt;input type="url" value="http://www.example.com" id="example-url-input"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;div class="row columns-middle"&gt;
+          &lt;div class="row__column mobile-2"&gt;
+            &lt;label for="example-tel-input"&gt;Telephone&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class="row__column mobile-10"&gt;
+            &lt;input type="tel" value="+39 340 0000000" id="example-tel-input"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;div class="row columns-middle"&gt;
+          &lt;div class="row__column mobile-2"&gt;
+            &lt;label for="example-password-input"&gt;Password&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class="row__column mobile-10"&gt;
+            &lt;input type="password" value="Password" id="example-password-input"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;div class="row columns-middle"&gt;
+          &lt;div class="row__column mobile-2"&gt;
+            &lt;label for="example-number-input"&gt;Number&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class="row__column mobile-10"&gt;
+            &lt;input type="number" value="42" id="example-number-input"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;div class="row columns-middle"&gt;
+          &lt;div class="row__column mobile-2"&gt;
+            &lt;label for="example-datetime-local-input"&gt;Date and time&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class="row__column mobile-10"&gt;
+            &lt;input type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;div class="row columns-middle"&gt;
+          &lt;div class="row__column mobile-2"&gt;
+            &lt;label for="example-date-input"&gt;Date&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class="row__column mobile-10"&gt;
+            &lt;input type="date" value="2011-08-19" id="example-date-input"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;div class="row columns-middle"&gt;
+          &lt;div class="row__column mobile-2"&gt;
+            &lt;label for="example-month-input"&gt;Month&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class="row__column mobile-10"&gt;
+            &lt;input type="month" value="2011-08" id="example-month-input"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;div class="row columns-middle"&gt;
+          &lt;div class="row__column mobile-2"&gt;
+            &lt;label for="example-week-input"&gt;Week&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class="row__column mobile-10"&gt;
+            &lt;input type="week" value="2011-W33" id="example-week-input"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;div class="row columns-middle"&gt;
+          &lt;div class="row__column mobile-2"&gt;
+            &lt;label for="example-time-input"&gt;Time&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class="row__column mobile-10"&gt;
+            &lt;input type="time" value="13:45:00" id="example-time-input"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+      &lt;div class="form__field"&gt;
+        &lt;div class="row columns-middle"&gt;
+          &lt;div class="row__column mobile-2"&gt;
+            &lt;label for="example-color-input"&gt;Color&lt;/label&gt;
+          &lt;/div&gt;
+          &lt;div class="row__column mobile-10"&gt;
+            &lt;input class="form-control" type="color" value="#2980b9" id="example-color-input"&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+
+    &lt;/fieldset&gt;
+  &lt;/form&gt;
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+
+        <form class="form">
+          <fieldset>
+            <legend>HTML5 Special input</legend>
+
+            <div class="form__field">
+              <div class="row columns-middle">
+                <div class="row__column mobile-2">
+                  <label for="example-text-input">Text</label>
+                </div>
+                <div class="row__column mobile-10">
+                  <input class="form-control" type="text" value="Text input" id="example-text-input">
+                </div>
+              </div>
+            </div>
+
+            <div class="form__field">
+              <div class="row columns-middle">
+                <div class="row__column mobile-2">
+                  <label for="example-search-input">Search</label>
+                </div>
+                <div class="row__column mobile-10">
+                  <input type="search" value="Search input" id="example-search-input">
+                </div>
+              </div>
+            </div>
+
+            <div class="form__field">
+              <div class="row columns-middle">
+                <div class="row__column mobile-2">
+                  <label for="example-email-input">Email</label>
+                </div>
+                <div class="row__column mobile-10">
+                  <input type="email" value="mail@example.com" id="example-email-input">
+                </div>
+              </div>
+            </div>
+
+            <div class="form__field">
+              <div class="row columns-middle">
+                <div class="row__column mobile-2">
+                  <label for="example-url-input">URL</label>
+                </div>
+                <div class="row__column mobile-10">
+                  <input type="url" value="http://www.example.com" id="example-url-input">
+                </div>
+              </div>
+            </div>
+
+            <div class="form__field">
+              <div class="row columns-middle">
+                <div class="row__column mobile-2">
+                  <label for="example-tel-input">Telephone</label>
+                </div>
+                <div class="row__column mobile-10">
+                  <input type="tel" value="+39 340 0000000" id="example-tel-input">
+                </div>
+              </div>
+            </div>
+
+            <div class="form__field">
+              <div class="row columns-middle">
+                <div class="row__column mobile-2">
+                  <label for="example-password-input">Password</label>
+                </div>
+                <div class="row__column mobile-10">
+                  <input type="password" value="Password" id="example-password-input">
+                </div>
+              </div>
+            </div>
+
+            <div class="form__field">
+              <div class="row columns-middle">
+                <div class="row__column mobile-2">
+                  <label for="example-number-input">Number</label>
+                </div>
+                <div class="row__column mobile-10">
+                  <input type="number" value="42" id="example-number-input">
+                </div>
+              </div>
+            </div>
+
+            <div class="form__field">
+              <div class="row columns-middle">
+                <div class="row__column mobile-2">
+                  <label for="example-datetime-local-input">Date and time</label>
+                </div>
+                <div class="row__column mobile-10">
+                  <input type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+                </div>
+              </div>
+            </div>
+
+            <div class="form__field">
+              <div class="row columns-middle">
+                <div class="row__column mobile-2">
+                  <label for="example-date-input">Date</label>
+                </div>
+                <div class="row__column mobile-10">
+                  <input type="date" value="2011-08-19" id="example-date-input">
+                </div>
+              </div>
+            </div>
+
+            <div class="form__field">
+              <div class="row columns-middle">
+                <div class="row__column mobile-2">
+                  <label for="example-month-input">Month</label>
+                </div>
+                <div class="row__column mobile-10">
+                  <input type="month" value="2011-08" id="example-month-input">
+                </div>
+              </div>
+            </div>
+
+            <div class="form__field">
+              <div class="row columns-middle">
+                <div class="row__column mobile-2">
+                  <label for="example-week-input">Week</label>
+                </div>
+                <div class="row__column mobile-10">
+                  <input type="week" value="2011-W33" id="example-week-input">
+                </div>
+              </div>
+            </div>
+
+            <div class="form__field">
+              <div class="row columns-middle">
+                <div class="row__column mobile-2">
+                  <label for="example-time-input">Time</label>
+                </div>
+                <div class="row__column mobile-10">
+                  <input type="time" value="13:45:00" id="example-time-input">
+                </div>
+              </div>
+            </div>
+
+            <div class="form__field">
+              <div class="row columns-middle">
+                <div class="row__column mobile-2">
+                  <label for="example-color-input">Color</label>
+                </div>
+                <div class="row__column mobile-10">
+                  <input class="form-control" type="color" value="#2980b9" id="example-color-input">
+                </div>
+              </div>
+            </div>
+
+          </fieldset>
+        </form>
+
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
       <h2>Forms - Special status</h2>
       <p>È possibile personalizzare gli input dei form associando dei modificatori alle classi. Inserendo dei testi con la classe <code>.form__msg</code> verranno posizionati dei messaggi sotto gli input.</p>
+
+      <pre>
+        <code>
+  &lt;div class="form__field form__field"&gt;
+    &lt;label&gt;
+      Disabled Input
+      &lt;input placeholder="Disables form" type="text" disabled class="form__input--large"&gt;
+    &lt;/label&gt;
+    &lt;div class="form__msg"&gt;Disabled messagge here.&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form__field form__field--invalid"&gt;
+    &lt;label&gt;
+      Invalid Input
+      &lt;input placeholder="Invalid Input" type="text" class="form__input--large"&gt;
+    &lt;/label&gt;
+    &lt;div class="form__msg"&gt;Invalid messagge here.&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form__field form__field--warning"&gt;
+    &lt;label&gt;
+      Warning Input
+      &lt;input placeholder="Warning Input" type="text" class="form__input--large"&gt;
+    &lt;/label&gt;
+    &lt;div class="form__msg"&gt;Warning messagge here.&lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form__field form__field--success"&gt;
+    &lt;label&gt;
+      Success Input
+      &lt;input placeholder="Success Input" type="text" class="form__input--large"&gt;
+    &lt;/label&gt;
+    &lt;div class="form__msg"&gt;Success messagge here.&lt;/div&gt;
+  &lt;/div&gt;
+        </code>
+      </pre>
 
       <div class="doc-section__example">
 
@@ -821,7 +1206,554 @@
       <hr class="grid-container">
     </section>
 
+    <section class="doc-section grid-container formatted-content">
+      <h2>Forms - <i>Custom Labels</i></h2>
+      <p>È possibile definire delle etichette customizzate con un background di sfondo e un bottone affiancato al campo di testo: può far comodo per inserire dei suffissi per gli url, numeri di telefono o valute, ecco alcuni esempi:</p>
+
+
+      <h4>Custm Label:</h4>
+
+      <pre>
+        <code>
+  &lt;div class="form__field"&gt;
+    &lt;label class="input-group"&gt;
+      &lt;span class="input-group__label"&gt;http://&lt;/span&gt;
+      &lt;input class="input-group__field" type="text" placeholder="www.your-domain.com"&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class="form__field"&gt;
+    &lt;label class="input-group"&gt;
+      &lt;span class="input-group__label"&gt;$&lt;/span&gt;
+      &lt;input class="input-group__field" type="text"&gt;
+      &lt;span class="input-group__label"&gt;.00&lt;/span&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+
+        <div class="form__field">
+          <label class="input-group">
+            <span class="input-group__label">http://</span>
+            <input class="input-group__field" type="text" placeholder="www.your-domain.com">
+          </label>
+        </div>
+
+        <div class="form__field">
+          <label class="input-group">
+            <span class="input-group__label">$</span>
+            <input class="input-group__field" type="text">
+            <span class="input-group__label">.00</span>
+          </label>
+        </div>
+
+      </div>
+
+
+      <h4>Label + input:</h4>
+
+      <pre>
+        <code>
+  &lt;div class="form__field"&gt;
+    &lt;label class="input-group"&gt;
+      &lt;span class="input-group__label"&gt;Label Text&lt;/span&gt;
+      &lt;input class="input-group__field" type="text"&gt;
+      &lt;div class="input-group__button"&gt;
+        &lt;input type="submit" class="button" value="Submit"&gt;
+      &lt;/div&gt;
+    &lt;/label&gt;
+  &lt;/div&gt;
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <div class="form__field">
+          <label class="input-group">
+            <span class="input-group__label">Label Text</span>
+            <input class="input-group__field" type="text">
+            <div class="input-group__button">
+              <input type="submit" class="button" value="Submit">
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Tables</h2>
+      <p>Le tabelle dovranno essere utilizzate solo per la gestione dei dati, non servono per definire ogni tipologia di layout (per quello utilizzare gli elementi della sezione <strong>grid</strong>).</p>
+      <p>Esistono varie tipologie di tabelle: è possibile fare vari tipi di accostamenti sfruttando i modificatori SASS e alcune classi speciali, è possibile modificare il codice delle tabele in <strong>dev/bloks/_table.sass</strong>.</p>
+      <p>Per sfruttare le funzionalità base delle tabelle, basta affiancare la classe <code>.table</code> al normale tag <i>table</i>.</p>
+
+      <h4>Standard Table:</h4>
+
+      <pre>
+        <code>
+  &lt;table class="table"&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th width="200"&gt;Table Header&lt;/th&gt;
+        &lt;th&gt;Table Header&lt;/th&gt;
+        &lt;th width="150"&gt;Table Header&lt;/th&gt;
+        &lt;th width="150"&gt;Table Header&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Content Goes Here&lt;/td&gt;
+        &lt;td&gt;This is longer content Donec id elit non mi porta gravida at eget metus.&lt;/td&gt;
+        &lt;td&gt;Content Goes Here&lt;/td&gt;
+        &lt;td&gt;Content Goes Here&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Content Goes Here&lt;/td&gt;
+        &lt;td&gt;This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.&lt;/td&gt;
+        &lt;td&gt;Content Goes Here&lt;/td&gt;
+        &lt;td&gt;Content Goes Here&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;Content Goes Here&lt;/td&gt;
+        &lt;td&gt;This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.&lt;/td&gt;
+        &lt;td&gt;Content Goes Here&lt;/td&gt;
+        &lt;td&gt;Content Goes Here&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <table class="table">
+          <thead>
+            <tr>
+              <th width="200">Table Header</th>
+              <th>Table Header</th>
+              <th width="150">Table Header</th>
+              <th width="150">Table Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Tables - <i>Striped Table</i></h2>
+      <p>Aggiungere il modificatore striped alla classe table per ottenere background alternati alle colonne delle tabelle.</p>
+
+      <pre>
+        <code>
+  &lt;table class="table--striped"&gt;
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <table class="table--striped">
+          <thead>
+            <tr>
+              <th width="200">Table Header</th>
+              <th>Table Header</th>
+              <th width="150">Table Header</th>
+              <th width="150">Table Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Tables - <i>Bordered Table</i></h2>
+      <p>Aggiungere il modificatore bordered alla classe table per aggiungere i bordi alla tabella (non alle singole celle).</p>
+
+      <pre>
+        <code>
+  &lt;table class="table--bordered"&gt;
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <table class="table--bordered">
+          <thead>
+            <tr>
+              <th width="200">Table Header</th>
+              <th>Table Header</th>
+              <th width="150">Table Header</th>
+              <th width="150">Table Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Tables - <i>Condensed Table</i></h2>
+      <p>Aggiungere il modificatore condensed alla classe table per dimezzare i padding della tabella e ottenere una versione con gli spazi ridotti.</p>
+
+      <pre>
+        <code>
+  &lt;table class="table--condensed"&gt;
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <table class="table--condensed">
+          <thead>
+            <tr>
+              <th width="200">Table Header</th>
+              <th>Table Header</th>
+              <th width="150">Table Header</th>
+              <th width="150">Table Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Tables - <i>Bordered Cell</i></h2>
+      <p>Aggiungendo come classe aggiuntiva la classe <code>.bordered-cell</code>, ogni cella avrà un bordo.</p>
+
+      <pre>
+        <code>
+  &lt;table class="table bordered-cell"&gt;
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <table class="table bordered-cell">
+          <thead>
+            <tr>
+              <th width="200">Table Header</th>
+              <th>Table Header</th>
+              <th width="150">Table Header</th>
+              <th width="150">Table Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Tables - <i>Hover on row</i></h2>
+      <p>Aggiungendo come classe aggiuntiva la classe <code>.hover-row</code>, all'hover del mouse ogni riga della tabella sarà evidenziata.<br>Ecco un esempio su una tabella con più caratteristiche:</p>
+
+      <pre>
+        <code>
+  &lt;table class="table--striped bordered-cell hover-row"&gt;
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <table class="table--striped bordered-cell hover-row">
+          <thead>
+            <tr>
+              <th width="200">Table Header</th>
+              <th>Table Header</th>
+              <th width="150">Table Header</th>
+              <th width="150">Table Header</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+            <tr>
+              <td>Content Goes Here</td>
+              <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+              <td>Content Goes Here</td>
+              <td>Content Goes Here</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Tables - <i>Responsive</i></h2>
+      <p>Per rendere le tabele responsive, aggungere attorno al tag table un div con classe <code>.table-responsive</code>.</p>
+
+      <div class="doc-section__example">
+        <div class="table-responsive">
+          <table class="table--striped bordered-cell hover-row">
+            <thead>
+              <tr>
+                <th width="200">Table Header</th>
+                <th>Table Header</th>
+                <th width="150">Table Header</th>
+                <th width="150">Table Header</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Content Goes Here</td>
+                <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+                <td>Content Goes Here</td>
+                <td>Content Goes Here</td>
+              </tr>
+              <tr>
+                <td>Content Goes Here</td>
+                <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                <td>Content Goes Here</td>
+                <td>Content Goes Here</td>
+              </tr>
+              <tr>
+                <td>Content Goes Here</td>
+                <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+                <td>Content Goes Here</td>
+                <td>Content Goes Here</td>
+              </tr>
+            </tbody>
+          </table>
+        <div class="table-responsive">
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
+    <section class="doc-section grid-container formatted-content">
+      <h2>Modal Pop-up</h2>
+      <p>È possibile richiamare dei contenuti in overlay, tramite dei pop-up: inserendo il codice del contenuto a fondo pagina, può essere richiamato tramite un qualsiasi tipo di bottone o link, inserendo un attributo extra <code>data-popup="popup1"</code>. Il valore dell'attributo dovrà coincidere con un id del pop-up con il solito valore del pulsante d'azione.</p>
+
+      <p>Aggiungendo le variazioni della lista, è possibile definire la grandezza dei pop-up:</p>
+
+      <ul>
+        <li><code>.popup--tiny</code>: Pop-up largo 320px;</li>
+        <li><code>.popup--small</code>: Pop-up largo 520px;</li>
+        <li><code>.popup</code>: Pop-up largo 900px;</li>
+        <li><code>.popup--large</code>: Pop-up largo 1200px;</li>
+        <li><code>.popup--full</code>: Pop-up full screen;</li>
+      </ul>
+
+      <h4>Come utilizzare il pop-up</h4>
+      <p>Un contenuto, per essere definito come pop-up, deve possedere le classi <code>js--popup</code> e <code>popup</code>, più un ID univoco.</p>
+
+      <p>Per richiamare il pop-up, basterà creare un bottone con la classe <code>js--popup-action</code> e l'attributo <code>data-popup=""</code> che, come valore, dovrà contenere l'ID univoco del pop-up.</p>
+
+      <p>È possibile inserire la chiusura del pop-up con <code>&lt;button class="js--close-popup popup__button"&gt;×&lt;/button&gt;</code> o semplicemente inserendo la classe <code>js--close-popup</code> a qualsiasi elemento.</p>
+
+      <p>All'interno del pop-up è possibile inserire ogni tipologia di contenuto.</p>
+
+      <p>È possibile decidere se centrare il popup, inserendo la classe <code>vertical-align</code> all'elemento <strong>.popup__wrap</strong>. Ricordarsi di non inserirlo nel pop-up full-screen, causerebbe un malfunzionamento. </p>
+
+      <p>Per funzionare, i pop-up hanno bisogno del file CSS <strong>dev/blocks/_popup.sass</strong> e il file JS in <strong>js/dev/global/popup.js</strong>, più la dipendenza alla libreria jQuery.</p>
+
+      <h4>Standard Pop-up</h4>
+
+      <pre>
+        <code>
+  &lt;!-- Bottone in qualsiasi parte della pagina --&gt;
+  &lt;div data-popup="popup1" class="button js--popup-action"&gt;Open Popup&lt;/div&gt;
+
+  &lt;!-- Codice del Pop-up a fondo pagina (Prima della chiusura del body) --&gt;
+  &lt;div class="js--popup popup" id="popup1"&gt;
+
+    &lt;div class="popup__wrap vertical-align"&gt;
+      &lt;h2&gt;Pop-up Title&lt;/h2&gt;
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+      &lt;button class="js--close-popup popup__button"&gt;&times;&lt;/button&gt;
+    &lt;/div&gt;
+
+  &lt;/div&gt;
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <div data-popup="popup-tiny" class="button js--popup-action">Open Tiny Pop-up</div>
+        <div data-popup="popup-small" class="button js--popup-action">Open Small Pop-up</div>
+        <div data-popup="popup-standard" class="button js--popup-action">Open Standard Pop-up</div>
+        <div data-popup="popup-large" class="button js--popup-action">Open Large Pop-up</div>
+        <div data-popup="popup-full" class="button js--popup-action">Open Full Screen Pop-up</div>
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
   </main>
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="js/gen/global.min.js"></script>
+
+  <div class="js--popup popup--tiny" id="popup-tiny">
+
+    <div class="popup__wrap vertical-align">
+      <h2>Tiny Pop-up</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, incidunt quae distinctio facere sint voluptas magnam est, fugiat, vel tempore velit. Quia, blanditiis pariatur rem, dolorem molestiae officiis officia aliquid!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, incidunt quae distinctio facere sint voluptas magnam est, fugiat, vel tempore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <a class="js--close-popup button--expand">Close Pop-up!</a>
+      <button class="js--close-popup popup__button">&times;</button>
+    </div>
+
+  </div>
+
+  <div class="js--popup popup--small" id="popup-small">
+
+    <div class="popup__wrap vertical-align">
+      <h2>Small Pop-up</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, incidunt quae distinctio facere sint voluptas magnam est, fugiat, vel tempore velit. Quia, blanditiis pariatur rem, dolorem molestiae officiis officia aliquid!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, incidunt quae distinctio facere sint voluptas magnam est, fugiat, vel tempore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <a class="js--close-popup button--expand">Close Pop-up!</a>
+      <button class="js--close-popup popup__button">&times;</button>
+    </div>
+
+  </div>
+
+  <div class="js--popup popup" id="popup-standard">
+
+    <div class="popup__wrap vertical-align">
+      <h2>Standard Pop-up</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, incidunt quae distinctio facere sint voluptas magnam est, fugiat, vel tempore velit. Quia, blanditiis pariatur rem, dolorem molestiae officiis officia aliquid!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, incidunt quae distinctio facere sint voluptas magnam est, fugiat, vel tempore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <a class="js--close-popup button--expand">Close Pop-up!</a>
+      <button class="js--close-popup popup__button">&times;</button>
+    </div>
+
+  </div>
+
+  <div class="js--popup popup--large" id="popup-large">
+
+    <div class="popup__wrap vertical-align">
+      <h2>Large Pop-up</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, incidunt quae distinctio facere sint voluptas magnam est, fugiat, vel tempore velit. Quia, blanditiis pariatur rem, dolorem molestiae officiis officia aliquid!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, incidunt quae distinctio facere sint voluptas magnam est, fugiat, vel tempore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <a class="js--close-popup button--expand">Close Pop-up!</a>
+      <button class="js--close-popup popup__button">&times;</button>
+    </div>
+
+  </div>
+
+  <div class="js--popup popup--full" id="popup-full">
+
+    <div class="popup__wrap">
+      <h2>Full Pop-up</h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, incidunt quae distinctio facere sint voluptas magnam est, fugiat, vel tempore velit. Quia, blanditiis pariatur rem, dolorem molestiae officiis officia aliquid!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, incidunt quae distinctio facere sint voluptas magnam est, fugiat, vel tempore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <a class="js--close-popup button--expand">Close Pop-up!</a>
+      <button class="js--close-popup popup__button">&times;</button>
+    </div>
+
+  </div>
 
 </body>
 </html>
