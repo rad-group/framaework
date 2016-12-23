@@ -2520,8 +2520,14 @@ pre code {
     text-align: left;
     vertical-align: top;
     border-bottom: 1px solid #dddddd;
-    padding: 12px;
-    padding: 0.75rem; }
+    padding-top: 18px;
+    padding-top: 1.125rem;
+    padding-bottom: 18px;
+    padding-bottom: 1.125rem;
+    padding-left: 12px;
+    padding-left: 0.75rem;
+    padding-right: 12px;
+    padding-right: 0.75rem; }
   .table thead th, .table--bordered thead th, .table--striped thead th, .table--condensed thead th {
     border-bottom: 2px solid #dddddd; }
   .table.bordered-cell th, .bordered-cell.table--bordered th, .bordered-cell.table--striped th, .bordered-cell.table--condensed th,
