@@ -1125,7 +1125,7 @@ ol li ol {
 
 /* Secondary button [LIGHT GREY] */
 .button--secondary {
-  background-color: #3498db;
+  background-color: #dddddd;
   color: #333333; }
   .button--secondary:hover, .button--secondary:focus {
     background-color: #cccccc;
