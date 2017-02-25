@@ -1,0 +1,63 @@
+%fixed
+  position: fixed
+  left: 0
+  +padding(4)
+
+.feedback-modal
+  +paddingY(1)
+  width: 100%
+  z-index: 999
+  display: none
+  &.fixed--top
+    @extend %fixed
+    top: 0
+  &.fixed--bottom
+    @extend %fixed
+    bottom: 0
+  .feedback-modal--container
+    border: 1px solid $standard-feedback
+    background-color: $standard-feedback-bg
+    color: $standard-feedback
+  &.enable
+    display: block
+
+.feedback-modal--container
+  background-color: $white
+  +padding(2)
+  position: relative
+  border-radius: 4px
+
+.feedback-modal__close-btn
+  position: absolute
+  top: 50%
+  margin-top: -10px
+  right: 12px
+  +transition
+  cursor: pointer
+  &:hover
+    i
+      font-weight: 900
+
+// POSITIVE FEEDBACK
+.feedback-modal--positive
+  @extend .feedback-modal
+  .feedback-modal--container
+    border: 1px solid rgba($success-feedback-dark, 0.3)
+    background-color: $success-feedback-bg
+    color: $success-feedback-dark
+
+// ALERT FEEDBACK
+.feedback-modal--alert
+  @extend .feedback-modal
+  .feedback-modal--container
+    border: 1px solid rgba($alert-feedback, 0.3)
+    background-color: $alert-feedback-bg
+    color: $alert-feedback
+
+// WARNING FEEDBACK
+.feedback-modal--warning
+  @extend .feedback-modal
+  .feedback-modal--container
+    border: 1px solid rgba($warning-feedback, 0.3)
+    background-color: $warning-feedback-bg
+    color: $warning-feedback

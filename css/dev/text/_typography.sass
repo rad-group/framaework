@@ -104,8 +104,10 @@ ul
 
   & > li
     list-style: none
-    margin-left: 1.375rem
+    +margin-left(2)
     display: inline-block
+    &:first-child
+      +margin-left(0)
 
     & > *
       display: block

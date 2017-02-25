@@ -1,0 +1,5 @@
+/* Extra Light */
+<% if (iconsStyles) { %><% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { %>
+.<%= classPrefix %><%= glyphs[glyphIdx] %>:before
+  content: "<% if (addLigatures) { %><%= glyphs[glyphIdx] %><% } else { %>\<%= codepoints[glyphIdx] %><% } %>"
+<% } } %>

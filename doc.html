@@ -1695,6 +1695,86 @@
       <hr class="grid-container">
     </section>
 
+    <section class="doc-section grid-container formatted-content">
+      <h2>Modal Feedback</h2>
+      <p>Può far comodo inserire dei messaggi di feedback, tramite delle barre colorate (<em>a seconda della tipologia di messaggio</em>), inserendo al suo interno un contenuto testuale. I possibili stati sono: <strong>standard</strong>, <strong>alert</strong>, <strong>success</strong> e <strong>warning</strong>. È inoltre possibile inserire un modificatore per decidere se inserire il feedback fisso in alto, o in basso.</p>
+
+      <p>Per funzionare, i feedback hanno bisogno del file CSS <strong>dev/blocks/_feedback.sass</strong> e il file JS in <strong>js/dev/global/feedback.js</strong>, più la dipendenza alla libreria jQuery.</p>
+
+      <p>le possibili variazioni sono:</p>
+
+      <ul>
+        <li><code>.feedback-modal</code>: Messaggio di feddback standard (grigio);</li>
+        <li><code>.feedback-modal--positive</code>: Messaggio di feddback positivo (verde);</li>
+        <li><code>.feedback-modal--warning</code>: Messaggio di feddback di avvertimento (giallo);</li>
+        <li><code>.feedback-modal--alert</code>: Messaggio di feddback di errore (rosso);</li>
+        <li><code>.feedback-modal fixed--top</code>: Messaggio di feddback posizionato fisso, in alto;</li>
+        <li><code>.feedback-modal fixed--bottom</code>: Messaggio di feddback posizionato fisso, in basso;</li>
+      </ul>
+
+      <h4>Esempi di Feedback:</h4>
+
+      <pre>
+        <code>
+  &lt;!-- START Feedback modal --&gt;
+  &lt;div class="feedback-modal js--feedback-action enable"&gt;
+    &lt;div class="feedback-modal--container"&gt;
+      Standard Feedback messagge
+      &lt;div class="feedback-modal__close-btn js--feedback-modal__close-btn"&gt;
+        &lt;i class="iconae regular ae--circle-cross"&gt;&lt;/i&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;!-- END Feedback modal --&gt;
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+        <!-- START Feedback modal -->
+        <div class="feedback-modal js--feedback-action enable">
+          <div class="feedback-modal--container">
+            Standard Feedback messagge
+            <div class="feedback-modal__close-btn js--feedback-modal__close-btn">
+              <i class="iconae regular ae--circle-cross"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END Feedback modal -->
+        <!-- START Feedback modal -->
+        <div class="feedback-modal--positive js--feedback-action enable">
+          <div class="feedback-modal--container">
+            Positive Feedback messagge
+            <div class="feedback-modal__close-btn js--feedback-modal__close-btn">
+              <i class="iconae regular ae--circle-cross"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END Feedback modal -->
+        <!-- START Feedback modal -->
+        <div class="feedback-modal--warning js--feedback-action enable">
+          <div class="feedback-modal--container">
+            Warning Feedback messagge
+            <div class="feedback-modal__close-btn js--feedback-modal__close-btn">
+              <i class="iconae regular ae--circle-cross"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END Feedback modal -->
+        <!-- START Feedback modal -->
+        <div class="feedback-modal--alert js--feedback-action enable">
+          <div class="feedback-modal--container">
+            Alert Feedback messagge
+            <div class="feedback-modal__close-btn js--feedback-modal__close-btn">
+              <i class="iconae regular ae--circle-cross"></i>
+            </div>
+          </div>
+        </div>
+        <!-- END Feedback modal -->
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
   </main>
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

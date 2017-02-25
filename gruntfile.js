@@ -9,7 +9,7 @@ module.exports = function (grunt) {
           'css/import/_layout.sass': 'css/dev/layout/**/*.sass',
           'css/import/_text.sass': 'css/dev/text/**/*.sass',
           'css/import/_blocks.sass': 'css/dev/blocks/**/*.sass',
-          'css/import/_resets.sass': 'css/dev/_resets.sass',
+          'css/import/_resets.sass': 'css/dev/_resets.sass'
         }
       }
     },
@@ -57,6 +57,79 @@ module.exports = function (grunt) {
           dest: 'css/',
           ext: '.css'
         }]
+      }
+    },
+    webfont: {
+      light: {
+        src: 'iconae/svg/light/*.svg',
+        dest: 'fonts/iconae/light/',
+        destCss: 'css/dev/iconae',
+        options: {
+          engine: 'node',
+          stylesheet: 'sass',
+          font: 'iconae-light',
+          template: 'iconae/tmpl/tmpl_iconae.css',
+          templateOptions: {
+            baseClass: 'iconae light',
+            classPrefix: 'ae--'
+          },
+          types: 'eot,woff2,woff,ttf,svg',
+          htmlDemo: false
+        }
+      },
+      regular: {
+        src: 'iconae/svg/regular/*.svg',
+        dest: 'fonts/iconae/regular/',
+        destCss: 'css/dev/iconae',
+        options: {
+          engine: 'node',
+          stylesheet: 'sass',
+          font: 'iconae-regular',
+          template: 'iconae/tmpl/tmpl_iconae.css',
+          htmlDemoTemplate: 'iconae/tmpl/tmpl_specimen.html',
+          templateOptions: {
+            baseClass: 'iconae regular',
+            classPrefix: 'ae--'
+          },
+          types: 'eot,woff2,woff,ttf,svg',
+          htmlDemo: true,
+          htmlDemoFilename: 'specimen',
+          destHtml: 'iconae/'
+        }
+      },
+      bold: {
+        src: 'iconae/svg/bold/*.svg',
+        dest: 'fonts/iconae/bold/',
+        destCss: 'css/dev/iconae',
+        options: {
+          engine: 'node',
+          stylesheet: 'sass',
+          font: 'iconae-bold',
+          template: 'iconae/tmpl/tmpl_iconae.css',
+          templateOptions: {
+            baseClass: 'iconae bold',
+            classPrefix: 'ae--'
+          },
+          types: 'eot,woff2,woff,ttf,svg',
+          htmlDemo: false
+        }
+      },
+      filled: {
+        src: 'iconae/svg/filled/*.svg',
+        dest: 'fonts/iconae/filled/',
+        destCss: 'css/dev/iconae',
+        options: {
+          engine: 'node',
+          stylesheet: 'sass',
+          font: 'iconae-filled',
+          template: 'iconae/tmpl/tmpl_iconae.css',
+          templateOptions: {
+            baseClass: 'iconae filled',
+            classPrefix: 'ae--'
+          },
+          types: 'eot,woff2,woff,ttf,svg',
+          htmlDemo: false
+        }
       }
     },
     watch: {
@@ -139,6 +212,7 @@ module.exports = function (grunt) {
   //grunt.loadNpmTasks('grunt-sass-globbing');
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-contrib-uglify');
+  grunt.loadNpmTasks('grunt-webfont');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['sass','cssmin', 'uglify','watch']);
+  grunt.registerTask('default', ['sass', 'cssmin', 'uglify', 'webfont:light', 'webfont:regular', 'webfont:bold', 'webfont:filled', 'watch']);
 }
