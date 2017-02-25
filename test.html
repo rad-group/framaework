@@ -1,0 +1,585 @@
+<!doctype html>
+<html>
+
+  <head>
+    <title>Page Title</title>
+    <meta charset="utf-8">
+    <link href="css/framaework.min.css" rel="stylesheet" type="text/css">
+  </head>
+  <style>
+    .row__column > div {
+      background-color: #f6f6f6;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+  </style>
+  <body>
+    <div class="grid-container--responsive">
+      <h1>H1 Title</h1>
+      <h2>H2 Title</h2>
+      <h3>H3 Title</h3>
+      <h4>H4 Title</h4>
+      <h5>H5 Title</h5>
+      <hr>
+      <h1>H1 Title</h1>
+      <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et <i>accusam et justo duo dolores</i> et ea rebum. Stet clita kasd gubergren, <strong>no sea takimata sanctus</strong> est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
+      <hr>
+      <h1>Grid Test</h1>
+
+      <div class="row">
+        <div class="row__column desk-3 tab-6 mobile-3"><div><b>1</b> desktop-3 Column</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div><b>2</b> desktop-3 Column lorem ipsum dolor site amet</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div><b>3</b> desktop-3 Column</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div><b>4</b> desktop-3 Column</div></div>
+      </div>
+
+      <div class="row">
+        <div class="row__column mobile-push-3 tab-push-5 desk-push-8 mobile-3">desktop-3 Column</div>
+      </div>
+
+      <hr>
+
+      <div class="row--half">
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column lorem ipsum dolor site amet</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+      </div>
+
+      <div class="row--half">
+        <div class="row__column mobile-push-3 tab-push-5 desk-push-8 mobile-3">desktop-3 Column</div>
+      </div>
+
+      <hr>
+
+      <div class="row--stuck columns-bottom tab-columns-top desk-columns-middle">
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column lorem ipsum dolor site amet</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+        <div class="row__column desk-3 tab-6 mobile-3"><div>desktop-3 Column</div></div>
+      </div>
+
+      <div class="row--stuck">
+        <div class="row__column mobile-push-3 tab-push-5 desk-push-8 mobile-3">desktop-3 Column</div>
+      </div>
+
+      <div class="row">
+        <div class="row__column mobile"><div><b>1</b> desktop-3 Column</div></div>
+        <div class="row__column mobile"><div><b>2</b> desktop-3 Column lorem ipsum dolor site amet</div></div>
+        <div class="row__column mobile"><div><b>3</b> desktop-3 Column</div></div>
+        <div class="row__column mobile"><div><b>4</b> desktop-3 Column</div></div>
+      </div>
+
+      <div class="row columns-between">
+        <div class="row__column mobile-2"><div>mobile-2 Column</div></div>
+        <div class="row__column mobile-2"><div>mobile-2 Column</div></div>
+        <div class="row__column mobile-2"><div>mobile-2 Column</div></div>
+      </div>
+
+      <hr>
+
+      <ul class="menu">
+        <li class="item1">Test</li>
+        <li class="item2">Test</li>
+        <li class="item3">Test</li>
+        <li class="item4">Test</li>
+      </ul>
+
+      <hr>
+
+      <blockquote>Those people who think they know everything are a great annoyance to those of us who do.<cite>Isaac Asimov</cite></blockquote>
+
+      <hr>
+
+      <h1>Buttons test</h1>
+
+      <a href="#" class="button">Primary Button</a>
+      <a href="#" class="button button--secondary">Secondary Button</a>
+      <a href="#" class="button button--success">Success Button</a>
+      <a href="#" class="button button--alert">Alert Button</a>
+      <a href="#" class="button button--warning">Warning Button</a>
+      <hr>
+      <a href="#" class="button button--large">Large Button</a>
+      <a href="#" class="button button--small">Small Button</a>
+      <a href="#" class="button button--tiny">Tiny Button</a>
+      <hr>
+      <a href="#" class="button button--expand">Expand Button</a>
+      <hr>
+      <a href="#" class="button button--radius">Radius Button</a>
+      <a href="#" class="button button--round">Round Button</a>
+
+      <hr>
+
+      <h1>Form Test</h1>
+
+      <form>
+      <div class="row">
+      <div class="desk-12 row__column">
+        <label>Input Label
+          <input type="text" placeholder="desk-12.columns" />
+        </label>
+      </div>
+      </div>
+      <div class="row">
+        <div class="desk-4 row__column">
+          <label>Input Label
+            <input type="text" placeholder="desk-4.columns" disabled />
+          </label>
+        </div>
+        <div class="desk-4 row__column">
+          <label>Input Label
+            <input type="email" required placeholder="desk-4.columns" />
+          </label>
+        </div>
+        <div class="desk-4 row__column">
+          <label>Input Label
+            <input type="password" placeholder="desk-4.columns" />
+          </label>
+        </div>
+      </div>
+      <div class="row">
+      <div class="desk-12 row__column">
+        <label>Select Box
+          <select>
+            <option value="husker">Husker</option>
+            <option value="starbuck">Starbuck</option>
+            <option value="hotdog">Hot Dog</option>
+            <option value="apollo">Apollo</option>
+          </select>
+        </label>
+      </div>
+      </div>
+      <div class="row">
+      <div class="desk-6 row__column">
+        <h4>Radio</h4>
+
+        <label class="custom-radio">
+          <input type="radio" name="color" value="Red" id="colorRed">
+          <span class="custom-radio__icon"></span>
+          Red
+        </label>
+
+        <label class="custom-radio">
+          <input type="radio" name="color" value="Blue" id="colorBlue">
+          <span class="custom-radio__icon"></span>
+          Blue
+        </label>
+
+      </div>
+      <div class="desk-6 row__column">
+        <h4>Checkbox</h4>
+
+        <label class="custom-checkbox">
+          <input type="checkbox" for="Red" id="checkRed">
+          <span class="custom-checkbox__icon"></span>
+          Red
+        </label>
+        <label class="custom-checkbox">
+          <input type="checkbox" for="Blue" id="checkBlue">
+          <span class="custom-checkbox__icon"></span>
+          Blue
+        </label>
+
+      </div>
+      </div>
+      <div class="row">
+      <div class="desk-12 row__column">
+        <label>Textarea Label
+          <textarea placeholder="mobile-12.columns"></textarea>
+        </label>
+      </div>
+      </div>
+      <input type="submit" value="Create Contact" class="button--large">
+      </form>
+      <h4>Another form:</h4>
+
+      <div class="form__field">
+        <label class="input-group">
+
+          <span class="input-group__label">label</span>
+          <input class="input-group__field" type="text">
+          <div class="input-group__button">
+            <input type="submit" class="button" value="Submit">
+          </div>
+
+        </label>
+      </div>
+
+      <div class="form__field">
+        <label class="input-group">
+
+          <span class="input-group__label">$</span>
+          <input class="input-group__field" type="text">
+          <span class="input-group__label">.00</span>
+
+        </label>
+      </div>
+
+      <div class="form__field">
+        <label class="input-group">
+
+          <div class="input-group__button">
+            <input type="submit" class="button" value="Submit Button">
+          </div>
+          <input class="input-group__field" type="text">
+          <span class="input-group__label">label</span>
+
+        </label>
+      </div>
+
+      <div class="form__field">
+        <label for="exampleSelect2">Example multiple select</label>
+        <select multiple="" class="form-control" id="exampleSelect2">
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+
+      <form class="form">
+  <fieldset>
+    <legend>Signup</legend>
+
+    <div class="form__field form__field--invalid">
+      <label class="form__label">Email</label><input placeholder="foo@bar.com"
+      type="email" class="form__input--large">
+
+      <div class="form__error">
+        Invalid email
+      </div>
+    </div>
+
+
+    <div class="form__field">
+      <label class="form__label">Password</label><input placeholder=
+      "Insert your password" type="password">
+
+      <div class="form__hint">
+        Password must be at least 6 chars long
+      </div>
+    </div>
+
+
+    <input type="color">
+    <input type="date">
+    <input type="datetime">
+    <input type="datetime-local">
+    <input type="month">
+    <input type="range">
+    <input type="search">
+    <input type="tel">
+    <input type="time">
+    <input type="url">
+    <input type="week">
+
+    <div class="form__actions">
+      <input type="submit" value="Create Contact" class="button--large">
+    </div>
+  </fieldset>
+</form>
+
+
+<h1>row--stuck test</h1>
+<div class="row--stuck">
+  <div>
+    <div class="row__column tab-4">
+      1
+    </div>
+    <div class="row__column tab-4">
+      1
+    </div>
+    <div class="row__column tab-4">
+      1
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+<h1>From Bootsrtap...</h1>
+<form class="form">
+
+  <fieldset>
+
+    <legend>HTML5 Special input</legend>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-text-input">Text</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input class="form-control" type="text" value="Artisanal kale" id="example-text-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-search-input">Search</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="search" value="How do I shoot web" id="example-search-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-email-input">Email</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="email" value="mail@example.com" id="example-email-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-url-input">URL</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="url" value="http://www.example.com" id="example-url-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-tel-input">Telephone</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="tel" value="1-(555)-555-5555" id="example-tel-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-password-input">Password</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="password" value="hunter2" id="example-password-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-number-input">Number</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="number" value="42" id="example-number-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-datetime-local-input">Date and time</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="datetime-local" value="2011-08-19T13:45:00" id="example-datetime-local-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-date-input">Date</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="date" value="2011-08-19" id="example-date-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-month-input">Month</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="month" value="2011-08" id="example-month-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-week-input">Week</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="week" value="2011-W33" id="example-week-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-time-input">Time</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input type="time" value="13:45:00" id="example-time-input">
+        </div>
+      </div>
+    </div>
+
+    <div class="form__field">
+      <div class="row columns-middle">
+        <div class="row__column mobile-2">
+          <label for="example-color-input">Color</label>
+        </div>
+        <div class="row__column mobile-10">
+          <input class="form-control" type="color" value="#563d7c" id="example-color-input">
+        </div>
+      </div>
+    </div>
+
+  </fieldset>
+
+</form>
+
+
+<h1>Table</h1>
+
+<div class="table-responsive">
+  <table class="table--striped hover-row bordered-cell">
+    <thead>
+      <tr>
+        <th width="200">Table Header</th>
+        <th>Table Header</th>
+        <th width="150">Table Header</th>
+        <th width="150">Table Header</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Content Goes Here</td>
+        <td>This is longer content Donec id elit non mi porta gravida at eget metus.</td>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+      </tr>
+      <tr>
+        <td>Content Goes Here</td>
+        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+      </tr>
+      <tr>
+        <td>Content Goes Here</td>
+        <td>This is longer Content Goes Here Donec id elit non mi porta gravida at eget metus.</td>
+        <td>Content Goes Here</td>
+        <td>Content Goes Here</td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <table class="table--striped hover-row">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@TwBootstrap</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">4</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<i class="iconae ae--test"></i>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div data-popup="popup1" class="button js--popup-action">Open Popup</div>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/gen/global.min.js"></script>
+
+    <div class="js--popup popup" id="popup1">
+
+      <div class="popup__wrap vertical-align">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, incidunt quae distinctio facere sint voluptas magnam est, fugiat, vel tempore velit. Quia, blanditiis pariatur rem, dolorem molestiae officiis officia aliquid!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, incidunt quae distinctio facere sint voluptas magnam est, fugiat, vel tempore velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        <a class="js--close-popup button">Close Pop-up!</a>
+        <button class="js--close-popup popup__button">&times;</button>
+      </div>
+
+
+    </div>
+  </body>
+
+
+</html>
