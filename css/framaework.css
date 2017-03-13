@@ -2110,47 +2110,62 @@ hr {
 .ae--floppy:before {
   content: ""; }
 
-.ae--hamburger:before {
+.ae--globe:before {
   content: ""; }
 
-.ae--instagram:before {
+.ae--google-plus-square:before {
   content: ""; }
 
-.ae--minus:before {
+.ae--hamburger:before {
   content: ""; }
 
-.ae--plus:before {
+.ae--instagram:before {
   content: ""; }
 
-.ae--row-down:before {
+.ae--linkedin-square:before {
   content: ""; }
 
-.ae--row-left:before {
+.ae--minus:before {
   content: ""; }
 
-.ae--row-right:before {
+.ae--pause-circle:before {
   content: ""; }
 
-.ae--row-up:before {
+.ae--play-circle:before {
   content: ""; }
 
-.ae--search:before {
+.ae--plus:before {
   content: ""; }
 
-.ae--shopping-bag:before {
+.ae--row-down:before {
   content: ""; }
 
-.ae--twitter-square:before {
+.ae--row-left:before {
   content: ""; }
 
-.ae--user:before {
+.ae--row-right:before {
   content: ""; }
 
-.ae--youtube-play:before {
+.ae--row-up:before {
   content: ""; }
 
-.ae--zoom-out:before {
+.ae--search:before {
   content: ""; }
 
-.ae--zoom:before {
+.ae--shopping-bag:before {
   content: ""; }
+
+.ae--twitter-square:before {
+  content: ""; }
+
+.ae--user:before {
+  content: ""; }
+
+.ae--youtube-play:before {
+  content: ""; }
+
+.ae--zoom-out:before {
+  content: ""; }
+
+.ae--zoom:before {
+  content: ""; }

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+</style>
+<g>
+	<path d="M432,16H80c-35.3,0-64,28.7-64,64v352c0,35.3,28.7,64,64,64h352c35.3,0,64-28.7,64-64V80C496,44.7,467.3,16,432,16z
+		 M432,432H80V80h352h0V432z"/>
+	<polygon points="384,216 352,216 352,242 326,242 326,274 352,274 352,300 384,300 384,274 410,274 410,242 384,242 	"/>
+	<path d="M200,242v32h59.1c-7.8,24.1-30.4,42-57.1,42c-33.1,0-60-26.9-60-60c0-33.1,26.9-60,60-60c13.8,0,25.9,4.1,36,12l26-24
+		c-16.7-14.8-37.9-23-62-23c-52.5,0-95,42.5-95,95c0,52.5,42.5,95,95,95s92.8-42.3,94-95c0.1-4.6,0.3-9.2,0-14H200z"/>
+</g>
+</svg>
