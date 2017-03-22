@@ -33,7 +33,7 @@
       }
     });
 
-    $('.js--close-popup').click(function(){
+    $('.js--close-off-canvas').click(function(){
       remove_off_canvas();
     })
   }
