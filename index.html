@@ -1775,6 +1775,75 @@
       <hr class="grid-container">
     </section>
 
+    <section class="doc-section grid-container formatted-content">
+      <h2>Off Canvas</h2>
+      <p>Off canvas è la soluzione perfetta per creare sidebar animate, apribili con un click. Comodo con un hamburger menu o per layout responsivi. Per funzionare correttamente, l'Off Canvas necessita di tre elementi fondamentali:</p>
+      <ul>
+      <li>Un tasto azione per aprire il canvas, con un attributo univoco <code>data-off-canvas</code> e la classe <code>.js--off-canvas-action</code>. Spesso è applicato ad un bottone o all'hamburger menu.</li>
+      <li>La sidebar del canvas con classe <code>.js--off-canvas</code>, un id con il solito valore dell'attributo <code>data-off-canvas</code>, per connettere i due elementi e infine <code>.off-canvas--left</code> per far apparire l'elemento a sinistra oppure <code>.off-canvas--right</code> per farlo apparire a destra. All'interno della sidebar è possibile inserire altri elementi opzionali come il <code>.off-canvas__header</code> per creare una piccola testata, il <code>.off-canvas__close-btn</code> per creare un bottone di chiusura (se inserito all'interno della testata si centrerà automaticamente) e <code>.off-canvas__body</code> per crearre un po' di margini e inserire il contenuto.</li>
+      <li>Per oscurare il resto della viewport, inserire un div vuoto con la classe <code>.js--off-canvas-overlay</code>.</li>
+      <li>Per poter chiudere l'Off Canvas, assegnare la classe <code>.js--close-popup</code>. In questo esempio è stata assegnata al bottone di chiusura e a tutto l'overlay.</li>
+      </ul>
+
+      <p>Tutte le classi e le funzionalità dell'Off Canvas system sono raggiungibili in <strong>css/dev/blocks/_off-canvas.sass</strong>. per il CSS e in <strong>js/global/off-canvas.js</strong> per il JS.</p>
+
+      <pre>
+        <code>
+&lt;div data-off-canvas="off-canvas-right" class="button js--off-canvas-action"&gt;
+  Open Off Canvas Right &lt;i class="iconae regular ae--row-right"&gt;&lt;/i&gt;
+&lt;/div&gt;
+
+&lt;div id="off-canvas-right" class="off-canvas--right js--off-canvas"&gt;
+  &lt;header class="off-canvas__header"&gt;
+    &lt;h2 class="off-canvas__title"&gt;Off Canvas Title&lt;/h2&gt;
+    &lt;div class="off-canvas__close-btn js--close-popup"&gt;
+      &lt;i class="iconae light ae--cross x2"&gt;&lt;/i&gt;
+    &lt;/div&gt;
+  &lt;/header&gt;
+  &lt;div class="off-canvas__body"&gt;
+    Lorem ipsum dolor sit amet...
+  &lt;/div&gt;
+&lt;/div&gt;
+        </code>
+      </pre>
+
+      <div class="doc-section__example">
+
+        <div data-off-canvas="off-canvas-left" class="button js--off-canvas-action"><i class="iconae regular ae--row-left"></i> Open Off Canvas Left</div>
+
+        <div id="off-canvas-left" class="off-canvas--left js--off-canvas">
+          <header class="off-canvas__header">
+            <h2 class="off-canvas__title">Off Canvas Title</h2>
+            <div class="off-canvas__close-btn js--close-popup">
+              <i class="iconae light ae--cross x2"></i>
+            </div>
+          </header>
+          <div class="off-canvas__body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deleniti ab laborum id earum, iste, possimus nobis libero architecto porro tenetur deserunt sequi aspernatur doloribus quidem itaque corporis repudiandae magnam!
+          </div>
+        </div>
+
+        <div data-off-canvas="off-canvas-right" class="button js--off-canvas-action">Open Off Canvas Right <i class="iconae regular ae--row-right"></i></div>
+
+        <div id="off-canvas-right" class="off-canvas--right js--off-canvas">
+          <header class="off-canvas__header">
+            <h2 class="off-canvas__title">Off Canvas Title</h2>
+            <div class="off-canvas__close-btn js--close-popup">
+              <i class="iconae light ae--cross x2"></i>
+            </div>
+          </header>
+          <div class="off-canvas__body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi deleniti ab laborum id earum, iste, possimus nobis libero architecto porro tenetur deserunt sequi aspernatur doloribus quidem itaque corporis repudiandae magnam!
+          </div>
+        </div>
+
+        <div class="js--off-canvas-overlay js--close-popup"></div>
+
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
   </main>
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

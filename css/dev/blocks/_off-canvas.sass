@@ -1,0 +1,73 @@
+$canvas_width: 250px
+
+.js--off-canvas-overlay
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background-color: rgba($black, 0.7)
+  opacity: 0
+  visibility: hidden
+  z-index: 99
+  +transition
+
+.off-canvas-opened
+  overflow: hidden
+  .js--off-canvas-overlay
+    opacity: 1
+    visibility: visible
+
+%off_canvas
+  position: fixed
+  z-index: 999
+  +transition()
+  -webkit-backface-visibility: hidden
+  backface-visibility: hidden
+  top: 0
+  width: $canvas_width
+  height: 100%
+  overflow-y: auto
+  background-color: $white
+  &.opened
+    -webkit-transform: translateX(0)
+    -ms-transform: translateX(0)
+    transform: translateX(0)
+
+.off-canvas--left
+  @extend %off_canvas
+  left: 0
+  -webkit-transform: translateX(-$canvas_width)
+  -ms-transform: translateX(-$canvas_width)
+  transform: translateX(-$canvas_width)
+
+.off-canvas--right
+  @extend %off_canvas
+  right: 0
+  -webkit-transform: translateX($canvas_width)
+  -ms-transform: translateX($canvas_width)
+  transform: translateX($canvas_width)
+
+// Inside Off Canvas
+.off-canvas__close-btn
+  position: absolute
+  top: 12px
+  right: 12px
+  cursor: pointer
+  +transition()
+  &:hover
+    opacity: 0.7
+
+.off-canvas__header
+  +padding(2)
+  border-bottom: 1px solid $border-color
+  position: relative
+  .off-canvas__close-btn
+    top: 50%
+    margin-top: -16px
+
+.off-canvas__title
+  +font-size(18)
+
+.off-canvas__body
+  +padding(2)
