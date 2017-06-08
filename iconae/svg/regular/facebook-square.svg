@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 <g>
-	<path d="M432,16H80c-35.3,0-64,28.7-64,64v352c0,35.3,28.7,64,64,64h154v0h72v0h126c35.3,0,64-28.7,64-64V80
-		C496,44.7,467.3,16,432,16z M432,432H306V332h62l10-74h-72v-46c0-21,7.9-36,38-36h36v-64c-6.6-0.9-29.5-4-56-4c-55.3,0-90,34-90,96
-		v54h-66v74h66v100H80V80h352h0V432z"/>
+	<path d="M416,32H96c-35.3,0-64,28.7-64,64v320c0,35.3,28.7,64,64,64h320c35.3,0,64-28.7,64-64V96C480,60.7,451.3,32,416,32z
+		 M448,416c0,17.6-14.4,32-32,32h-96V308h64l14-70h-78v-43.6c0-19.7,10.6-34.4,38.9-34.4H392v-60c-6.2-0.8-27.1-4-52-4
+		c-52,0-84,32.7-84,90.9V238h-64v70h64v140H96c-17.6,0-32-14.4-32-32V96c0-17.6,14.4-32,32-32h320c17.6,0,32,14.4,32,32V416z"/>
 </g>
 </svg>

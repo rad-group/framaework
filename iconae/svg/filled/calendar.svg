@@ -1,24 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{stroke:#000000;stroke-width:32;stroke-miterlimit:10;}
-	.st1{stroke:#000000;stroke-width:64;stroke-miterlimit:10;}
-	.st2{stroke:#000000;stroke-width:96;stroke-miterlimit:10;}
-</style>
-<g>
-	<g>
-		<rect x="158" y="280" width="82" height="72"/>
-	</g>
-	<g>
-		<rect x="272" y="280" width="82" height="72"/>
-	</g>
-	<g>
-		<path d="M464,80h-32V32l0,0c0-17.7-14.3-32-32-32h-14c-17.7,0-32,14.3-32,32l0,0v48H158V32l0,0c0-17.7-14.3-32-32-32h-14
-			C94.3,0,80,14.3,80,32l0,0v48H48c-17.7,0-32,14.3-32,32v24v32v296c0,17.7,14.3,32,32,32h416c17.7,0,32-14.3,32-32V168v-32v-24
-			C496,94.3,481.7,80,464,80z M464,280h-78v72h78v32h-78v80h-32v-80h-82v80h-32v-80h-82v80h-32v-80H48v-32h78v-72H48v-32h78v-80h32
-			v80h82v-80h32v80h82v-80h32v80h78V280z"/>
-	</g>
-</g>
+<rect x="192" y="288" width="64" height="64"/>
+<rect x="288" y="288" width="64" height="64"/>
+<path d="M480,64h-32v32h0V32c0-17.7-14.3-32-32-32h-32c-17.7,0-32,14.3-32,32v32H192V32c0-17.7-14.3-32-32-32h-32
+	c-17.7,0-32,14.3-32,32v32H64c-17.7,0-32,14.3-32,32v384c0,17.7,14.3,32,32,32h416c17.7,0,32-14.3,32-32V96
+	C512,78.3,497.7,64,480,64z M384,32h32v64h-32V32z M128,32h32v64h-32V32z M448,288h-64v64h64v32h-64v64h-32v-64h-64v64h-32v-64h-64
+	v64h-32v-64H96v-32h64v-64H96v-32h64v-64h32v64h64v-64h32v64h64v-64h32v64h64V288z"/>
 </svg>

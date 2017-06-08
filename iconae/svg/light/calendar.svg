@@ -1,17 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{stroke:#000000;stroke-width:32;stroke-miterlimit:10;}
-	.st1{stroke:#000000;stroke-width:64;stroke-miterlimit:10;}
-	.st2{stroke:#000000;stroke-width:96;stroke-miterlimit:10;}
-</style>
-<path d="M464,80h-32V32c0-4.9-1.1-9.6-3.1-13.7c0,0,0-0.1-0.1-0.1c-0.9-1.8-1.9-3.5-3.1-5.1c-0.1-0.2-0.2-0.3-0.4-0.5
-	C419.6,4.9,410.4,0,400,0h-14c-17.7,0-32,14.3-32,32v48H158V32c0-4.9-1.1-9.6-3.1-13.7c0,0,0-0.1-0.1-0.1c-0.9-1.8-1.9-3.5-3.1-5.1
-	c-0.1-0.2-0.2-0.3-0.4-0.5C145.6,4.9,136.4,0,126,0h-14C94.3,0,80,14.3,80,32v48H48c-17.7,0-32,14.3-32,32v24v328
-	c0,17.7,14.3,32,32,32h416c17.7,0,32-14.3,32-32V136v-24C496,94.3,481.7,80,464,80z M126,464H48v-80h78V464z M126,352H48v-72h78V352
-	z M126,248H48v-80h78V248z M240,464h-82v-80h82V464z M240,352h-82v-72h82V352z M240,248h-82v-80h82V248z M354,464h-82v-80h82V464z
-	 M354,352h-82v-72h82V352z M354,248h-82v-80h82V248z M386,168h78l0,80h-78V168z M386,280h78v72h-78V280z M386,464v-80h78l0,80H386z"
-	/>
+<path d="M448,64h-32V32c0-17.7-14.3-32-32-32h-32c-17.7,0-32,14.3-32,32v32h-96V32c0-17.7-14.3-32-32-32h-32c-17.7,0-32,14.3-32,32
+	v32H96c-17.7,0-32,14.3-32,32v32v32v256c0,17.7,14.3,32,32,32h352c17.7,0,32-14.3,32-32V160v-32V96C480,78.3,465.7,64,448,64z
+	 M352,32h32v64h-32V32z M160,416H96v-64h64V416z M160,320H96v-64h64V320z M160,224H96v-64h64V224z M160,32h32v64h-32V32z M256,416
+	h-64v-64h64V416z M256,320h-64v-64h64V320z M192,224v-64h64v64H192z M352,416h-64v-64h64V416z M352,320h-64v-64h64V320z M288,224
+	v-64h64v64H288z M448,416h-64v-64h64V416z M448,320h-64v-64h64V320z M448,224h-64v-64h64V224z"/>
 </svg>

@@ -1,20 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{stroke:#000000;stroke-width:32;stroke-miterlimit:10;}
-	.st1{stroke:#000000;stroke-width:64;stroke-miterlimit:10;}
-	.st2{stroke:#000000;stroke-width:96;stroke-miterlimit:10;}
-	.st3{fill:none;stroke:#000000;stroke-width:32;stroke-miterlimit:10;}
-	.st4{fill:none;stroke:#FFFFFF;stroke-width:32;stroke-miterlimit:10;}
-	.st5{stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-miterlimit:10;}
-	.st6{fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-miterlimit:10;}
-	.st7{fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st8{fill:none;stroke:#000000;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st9{fill:none;stroke:#FFFFFF;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-</style>
-<path d="M486.6,158.6L353.4,25.4c-6-6-14.1-9.4-22.6-9.4H48c-17.7,0-32,14.3-32,32v416c0,17.7,14.3,32,32,32h416
-	c17.7,0,32-14.3,32-32V181.3C496,172.8,492.6,164.6,486.6,158.6z M70,64h228v100H70V64z M256,420c-50.8,0-92-41.2-92-92
-	c0-50.8,41.2-92,92-92s92,41.2,92,92C348,378.8,306.8,420,256,420z"/>
+<g>
+	<path d="M470.6,150.6L361.4,41.4c-6-6-14.1-9.4-22.6-9.4H64c-17.7,0-32,14.3-32,32v384c0,17.7,14.3,32,32,32h384
+		c17.7,0,32-14.3,32-32V173.3C480,164.8,476.6,156.6,470.6,150.6z M128,64h160v96H128V64z M256,384c-35.3,0-64-28.7-64-64
+		c0-35.3,28.7-64,64-64s64,28.7,64,64C320,355.3,291.3,384,256,384z"/>
+</g>
 </svg>

@@ -97,23 +97,6 @@ module.exports = function (grunt) {
           destHtml: 'iconae/'
         }
       },
-      bold: {
-        src: 'iconae/svg/bold/*.svg',
-        dest: 'fonts/iconae/bold/',
-        destCss: 'css/dev/iconae',
-        options: {
-          engine: 'node',
-          stylesheet: 'sass',
-          font: 'iconae-bold',
-          template: 'iconae/tmpl/tmpl_iconae.css',
-          templateOptions: {
-            baseClass: 'iconae bold',
-            classPrefix: 'ae--'
-          },
-          types: 'eot,woff2,woff,ttf,svg',
-          htmlDemo: false
-        }
-      },
       filled: {
         src: 'iconae/svg/filled/*.svg',
         dest: 'fonts/iconae/filled/',
@@ -214,5 +197,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-webfont');
   grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.registerTask('default', ['sass', 'cssmin', 'uglify', 'webfont:light', 'webfont:regular', 'webfont:bold', 'webfont:filled', 'watch']);
+  grunt.registerTask('default', ['sass', 'cssmin', 'uglify', 'webfont:light', 'webfont:regular', 'webfont:filled', 'watch']);
 }

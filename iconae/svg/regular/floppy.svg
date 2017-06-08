@@ -1,24 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{stroke:#000000;stroke-width:32;stroke-miterlimit:10;}
-	.st1{stroke:#000000;stroke-width:64;stroke-miterlimit:10;}
-	.st2{stroke:#000000;stroke-width:96;stroke-miterlimit:10;}
-	.st3{fill:none;stroke:#000000;stroke-width:32;stroke-miterlimit:10;}
-	.st4{fill:none;stroke:#FFFFFF;stroke-width:32;stroke-miterlimit:10;}
-	.st5{stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-miterlimit:10;}
-	.st6{fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-miterlimit:10;}
-	.st7{fill:none;stroke:#000000;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st8{fill:none;stroke:#000000;stroke-width:64;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-	.st9{fill:none;stroke:#FFFFFF;stroke-width:32;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
-</style>
 <g>
-	<path d="M486.6,158.6L353.4,25.4c-6-6-14.1-9.4-22.6-9.4H290H106H48c-17.7,0-32,14.3-32,32v416c0,17.7,14.3,32,32,32h416
-		c17.7,0,32-14.3,32-32V181.3C496,172.8,492.6,164.6,486.6,158.6z M138,80h120v68H138V80z M432,432H80V80h26v100h184V80h27.5
-		L432,194.5V432z"/>
-	<path d="M164,306c0,50.8,41.2,92,92,92s92-41.2,92-92c0-50.8-41.2-92-92-92S164,255.2,164,306z M316,306c0,33.1-26.9,60-60,60
-		s-60-26.9-60-60s26.9-60,60-60S316,272.9,316,306z"/>
+	<path d="M256,256c-35.3,0-64,28.7-64,64c0,35.3,28.7,64,64,64s64-28.7,64-64C320,284.7,291.3,256,256,256z M256,352
+		c-17.6,0-32-14.4-32-32s14.4-32,32-32s32,14.4,32,32S273.6,352,256,352z"/>
+	<path d="M470.6,150.6L361.4,41.4c-6-6-14.1-9.4-22.6-9.4H64c-17.7,0-32,14.3-32,32v384c0,17.7,14.3,32,32,32h384
+		c17.7,0,32-14.3,32-32V173.3C480,164.8,476.6,156.6,470.6,150.6z M160,96h96v64h-96V96z M416,416H96V96h32v96h160V96h37.5
+		l90.5,90.5V416z"/>
 </g>
 </svg>

@@ -1,19 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 21.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 21.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Livello_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
-<style type="text/css">
-	.st0{stroke:#000000;stroke-width:32;stroke-miterlimit:10;}
-	.st1{stroke:#000000;stroke-width:64;stroke-miterlimit:10;}
-	.st2{stroke:#000000;stroke-width:96;stroke-miterlimit:10;}
-	.st3{fill:none;stroke:#FFFFFF;stroke-width:32;stroke-miterlimit:10;}
-</style>
 <g>
-	<path d="M256,32c52.4,0,95,42.6,95,95s-42.6,95-95,95s-95-42.6-95-95S203.6,32,256,32 M256,0c-70.1,0-127,56.9-127,127
-		s56.9,127,127,127s127-56.9,127-127S326.1,0,256,0L256,0z"/>
-</g>
-<g>
-	<path d="M322.1,318c50.5,6,86,16.2,108.5,31.2c23.1,15.3,33.3,35.9,33.3,66.8v48H48v-48c0-31.1,10.3-51.8,33.3-67
-		c22.5-14.8,58-25,108.5-31H322.1 M324,286H188C85.8,297.8,16,327.6,16,416v80h480v-80C496,328.1,426.2,297.9,324,286L324,286z"/>
+	<path d="M256,256c70.7,0,128-57.3,128-128C384,57.3,326.7,0,256,0S128,57.3,128,128C128,198.7,185.3,256,256,256z M256,32
+		c52.9,0,96,43.1,96,96s-43.1,96-96,96s-96-43.1-96-96S203.1,32,256,32z"/>
+	<path d="M352,288H160c-70.7,0-128,57.3-128,128v96h448v-96C480,345.3,422.7,288,352,288z M448,480H64v-64c0-52.9,43.1-96,96-96h192
+		c52.9,0,96,43.1,96,96V480z"/>
 </g>
 </svg>
