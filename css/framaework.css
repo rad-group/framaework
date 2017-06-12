@@ -2205,7 +2205,6 @@ hr {
 .ae--floppy:before {
   content: ""; }
 
-<<<<<<< HEAD
 .ae--gear:before {
   content: ""; }
 
@@ -2253,58 +2252,3 @@ hr {
 
 .ae--zoom-out:before {
   content: ""; }
-=======
-.ae--move:before {
-  content: ""; }
-
-.ae--pause-circle:before {
-  content: ""; }
-
-.ae--pencil:before {
-  content: ""; }
-
-.ae--play-circle:before {
-  content: ""; }
-
-.ae--plus:before {
-  content: ""; }
-
-.ae--row-down:before {
-  content: ""; }
-
-.ae--row-left:before {
-  content: ""; }
-
-.ae--row-right:before {
-  content: ""; }
-
-.ae--row-up:before {
-  content: ""; }
-
-.ae--search:before {
-  content: ""; }
-
-.ae--shopping-bag:before {
-  content: ""; }
-
-.ae--test-49:before {
-  content: ""; }
-
-.ae--test-bis:before {
-  content: ""; }
-
-.ae--twitter-square:before {
-  content: ""; }
-
-.ae--user:before {
-  content: ""; }
-
-.ae--youtube-play:before {
-  content: ""; }
-
-.ae--zoom-out:before {
-  content: ""; }
-
-.ae--zoom:before {
-  content: ""; }
->>>>>>> a71e07e2f63ec0ef48b398530756e938c87f7015
