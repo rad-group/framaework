@@ -2217,38 +2217,47 @@ hr {
 .ae--heart:before {
   content: ""; }
 
-.ae--minus:before {
+.ae--instagram:before {
   content: ""; }
 
-.ae--pause-circle:before {
+.ae--minus:before {
   content: ""; }
 
-.ae--pause:before {
+.ae--pause-circle:before {
   content: ""; }
 
-.ae--play-circle:before {
+.ae--pause:before {
   content: ""; }
 
-.ae--play:before {
+.ae--play-circle:before {
   content: ""; }
 
-.ae--plus:before {
+.ae--play:before {
   content: ""; }
 
-.ae--search:before {
+.ae--plus:before {
   content: ""; }
 
-.ae--shopping-bag:before {
+.ae--search:before {
   content: ""; }
 
-.ae--user:before {
+.ae--shopping-bag:before {
   content: ""; }
 
-.ae--youtube-play:before {
+.ae--twitter-square:before {
   content: ""; }
 
-.ae--zoom-in:before {
+.ae--twitter:before {
   content: ""; }
 
-.ae--zoom-out:before {
+.ae--user:before {
   content: ""; }
+
+.ae--youtube-play:before {
+  content: ""; }
+
+.ae--zoom-in:before {
+  content: ""; }
+
+.ae--zoom-out:before {
+  content: ""; }
