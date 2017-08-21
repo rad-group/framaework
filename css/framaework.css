@@ -2202,77 +2202,119 @@ hr {
 .ae--download:before {
   content: ""; }
 
-.ae--eye:before {
+.ae--exit:before {
   content: ""; }
 
-.ae--facebook-square:before {
+.ae--eye:before {
   content: ""; }
 
-.ae--facebook:before {
+.ae--facebook-square:before {
   content: ""; }
 
-.ae--file:before {
+.ae--facebook:before {
   content: ""; }
 
-.ae--floppy:before {
+.ae--file:before {
   content: ""; }
 
-.ae--gear:before {
+.ae--floppy:before {
   content: ""; }
 
-.ae--globe:before {
+.ae--folder:before {
   content: ""; }
 
-.ae--hamburger:before {
+.ae--gear:before {
   content: ""; }
 
-.ae--heart:before {
+.ae--globe:before {
   content: ""; }
 
-.ae--instagram:before {
+.ae--hamburger:before {
   content: ""; }
 
-.ae--minus:before {
+.ae--heart:before {
   content: ""; }
 
-.ae--pause-circle:before {
+.ae--instagram:before {
   content: ""; }
 
-.ae--pause:before {
+.ae--laptop:before {
   content: ""; }
 
-.ae--play-circle:before {
+.ae--lock-open:before {
   content: ""; }
 
-.ae--play:before {
+.ae--lock:before {
   content: ""; }
 
-.ae--plus:before {
+.ae--mac:before {
   content: ""; }
 
-.ae--search:before {
+.ae--minus:before {
   content: ""; }
 
-.ae--shopping-bag:before {
+.ae--move:before {
   content: ""; }
 
-.ae--twitter-square:before {
+.ae--pause-circle:before {
   content: ""; }
 
-.ae--twitter:before {
+.ae--pause:before {
   content: ""; }
 
-.ae--upload:before {
+.ae--pencil:before {
   content: ""; }
 
-.ae--user:before {
+.ae--pin:before {
   content: ""; }
 
-.ae--youtube-play:before {
+.ae--play-circle:before {
   content: ""; }
 
-.ae--zoom-in:before {
+.ae--play:before {
   content: ""; }
 
-.ae--zoom-out:before {
+.ae--plus:before {
   content: ""; }
+
+.ae--search:before {
+  content: ""; }
+
+.ae--share:before {
+  content: ""; }
+
+.ae--shopping-bag:before {
+  content: ""; }
+
+.ae--smartphone:before {
+  content: ""; }
+
+.ae--smartwatch:before {
+  content: ""; }
+
+.ae--star:before {
+  content: ""; }
+
+.ae--tablet:before {
+  content: ""; }
+
+.ae--twitter-square:before {
+  content: ""; }
+
+.ae--twitter:before {
+  content: ""; }
+
+.ae--upload:before {
+  content: ""; }
+
+.ae--user:before {
+  content: ""; }
+
+.ae--youtube-play:before {
+  content: ""; }
+
+.ae--zoom-in:before {
+  content: ""; }
+
+.ae--zoom-out:before {
+  content: ""; }
