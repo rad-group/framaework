@@ -1846,6 +1846,105 @@
       <hr class="grid-container">
     </section>
 
+    <section class="doc-section grid-container">
+      <div class="formatted-content">
+      <h2>Accordions</h2>
+      <p>Gli accordions sono elementi che aiutano ad organizzare i contenuti in singole tab. Framaework implementa alcune animazioni che migliorano la user experience dell'utente, evitando cambi repentini dei documenti che potrebbero disorientare la navigazione. Gli accoridons sono perfettamente compatibili con iconae.</p>
+      <p>È possibile modificare il CSS degli accordion in <strong>css/dev/blocks/_accordion.sass</strong> e il JS in <strong>js/dev/global/accordion.js</strong>.</p>
+
+      <pre>
+        <code>
+  &lt;ul class="accordion js--accordion"&gt
+    &lt;li class="accordion__single js--accordion__single"&gt
+      &lt;div class="accordion__single-header"&gt
+        &lt;i class="iconae regular ae--gear"&gt&lt;/i&gt Titolo 1
+        &lt;div class="accordion__single-header-ui"&gt
+          &lt;i class="iconae light ae--arrow-down"&gt&lt;/i&gt
+        &lt;/div&gt
+      &lt;/div&gt
+      &lt;div class="accordion__single-content js--accordion__single-content"&gt
+        &lt;div class="accordion__single-content-wrap js--accordion__single-content-wrap"&gt
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        &lt;/div&gt
+      &lt;/div&gt
+    &lt;/li&gt
+    &lt;li class="accordion__single js--accordion__single"&gt
+      &lt;div class="accordion__single-header"&gt
+        &lt;i class="iconae regular ae--folder"&gt&lt;/i&gt Titolo 2
+        &lt;div class="accordion__single-header-ui"&gt
+          &lt;i class="iconae light ae--arrow-down"&gt&lt;/i&gt
+        &lt;/div&gt
+      &lt;/div&gt
+      &lt;div class="accordion__single-content js--accordion__single-content"&gt
+        &lt;div class="accordion__single-content-wrap js--accordion__single-content-wrap"&gt
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.&lt;br&gt Illum maxime nulla optio, quae, magni culpa.
+        &lt;/div&gt
+      &lt;/div&gt
+    &lt;/li&gt
+    &lt;li class="accordion__single js--accordion__single"&gt
+      &lt;div class="accordion__single-header"&gt
+        &lt;i class="iconae regular ae--pencil"&gt&lt;/i&gt Titolo 3
+        &lt;div class="accordion__single-header-ui"&gt
+          &lt;i class="iconae light ae--arrow-down"&gt&lt;/i&gt
+        &lt;/div&gt
+      &lt;/div&gt
+      &lt;div class="accordion__single-content js--accordion__single-content"&gt
+        &lt;div class="accordion__single-content-wrap js--accordion__single-content-wrap"&gt
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+        &lt;/div&gt
+      &lt;/div&gt
+    &lt;/li&gt
+  &lt;/ul&gt
+        </code>
+      </pre>
+    </div>
+      <div class="doc-section__example">
+        <ul class="accordion js--accordion">
+          <li class="accordion__single js--accordion__single">
+            <div class="accordion__single-header">
+              <i class="iconae regular ae--gear"></i> Titolo 1
+              <div class="accordion__single-header-ui">
+                <i class="iconae light ae--arrow-down"></i>
+              </div>
+            </div>
+            <div class="accordion__single-content js--accordion__single-content">
+              <div class="accordion__single-content-wrap js--accordion__single-content-wrap">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum maxime nulla optio, quae, magni culpa libero distinctio incidunt facere enim commodi voluptatibus laudantium deleniti expedita dolor neque ad similique odit!
+              </div>
+            </div>
+          </li>
+          <li class="accordion__single js--accordion__single">
+            <div class="accordion__single-header">
+              <i class="iconae regular ae--folder"></i> Titolo 2
+              <div class="accordion__single-header-ui">
+                <i class="iconae light ae--arrow-down"></i>
+              </div>
+            </div>
+            <div class="accordion__single-content js--accordion__single-content">
+              <div class="accordion__single-content-wrap js--accordion__single-content-wrap">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum maxime nulla optio, quae, magni culpa libero distinctio incidunt facere enim commodi voluptatibus laudantium deleniti expedita dolor neque ad similique odit!<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos accusamus in ad nobis, officia obcaecati tempore corporis ex minima qui ipsum commodi possimus debitis quam est dolorem porro sequi voluptatem.
+              </div>
+            </div>
+          </li>
+          <li class="accordion__single js--accordion__single">
+            <div class="accordion__single-header">
+              <i class="iconae regular ae--pencil"></i> Titolo 3
+              <div class="accordion__single-header-ui">
+                <i class="iconae light ae--arrow-down"></i>
+              </div>
+            </div>
+            <div class="accordion__single-content js--accordion__single-content">
+              <div class="accordion__single-content-wrap js--accordion__single-content-wrap">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illum maxime nulla optio, quae, magni culpa libero distinctio incidunt facere enim commodi voluptatibus laudantium deleniti expedita dolor neque ad similique odit!<br>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos accusamus in ad nobis, officia obcaecati tempore corporis ex minima qui ipsum commodi possimus debitis quam est dolorem porro sequi voluptatem.
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+
+      <hr class="grid-container">
+    </section>
+
   </main>
 
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>

@@ -1,0 +1,33 @@
+.accordion
+
+.accordion__single
+  border: 1px solid $border-color
+  +margin-top(0.5)
+  &:hover
+    .accordion__single-header
+      background-color: $dark_white
+  &.opened
+    .accordion__single-header
+      background-color: $dark_white
+      .accordion__single-header-ui
+        transform: rotate(180deg)
+
+.accordion__single-header
+  position: relative
+  cursor: pointer
+  +padding(2)
+  +transition
+
+.accordion__single-header-ui
+  +transition
+  position: absolute
+  right: 6px
+  top: 50%
+  margin-top: -11px
+
+.accordion__single-content
+  display: none
+  +padding(2)
+  overflow: hidden
+
+.accordion__single-content-wrap
