@@ -1097,6 +1097,8 @@ ol li ol {
   cursor: pointer;
   padding: 12px;
   padding: 0.75rem;
+  padding-right: 30px;
+  padding-right: 1.875rem;
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
