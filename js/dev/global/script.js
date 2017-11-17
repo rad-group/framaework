@@ -1,9 +1,5 @@
-;(function ($) {
-
-  // Document Ready
-  $( document ).ready(function() {
+// Document Ready
+$( document ).ready(function() {
 
 
-  }); //END Document Ready
-
-}(jQuery));
+}); //END Document Ready

@@ -28,7 +28,9 @@ module.exports = function (grunt) {
       global: {
         options: {
           beautify: false,
-          mangle: false
+          mangle: false,
+          banner: '(function($) {',
+          footer: '}(jQuery));'
         },
         files: {
           'js/gen/global.min.js': ['js/dev/global/*.js']
