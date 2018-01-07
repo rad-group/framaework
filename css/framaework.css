@@ -86,8 +86,7 @@
 .row .row--stuck:after,
 .row--half .row--stuck:after,
 .row--stuck .row--stuck:after {
-  content: " ";
-  display: table; }
+  content: " "; }
 
 .row .row:after, .row--half .row:after, .row--stuck .row:after, .row .row--half:after, .row--half .row--half:after, .row--stuck .row--half:after, .row .row--stuck:after, .row--half .row--stuck:after, .row--stuck .row--stuck:after {
   clear: both; }
@@ -2069,6 +2068,12 @@ img {
   -ms-interpolation-mode: bicubic;
   display: inline-block;
   vertical-align: middle; }
+
+figure {
+  padding: 0px;
+  padding: 0rem;
+  margin: 0px;
+  margin: 0rem; }
 
 #map_canvas img,
 #map_canvas embed,
