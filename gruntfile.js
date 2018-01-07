@@ -8,6 +8,7 @@ module.exports = function (grunt) {
           'css/import/_grid.sass': 'css/dev/grid/**/*.sass',
           'css/import/_layout.sass': 'css/dev/layout/**/*.sass',
           'css/import/_text.sass': 'css/dev/text/**/*.sass',
+          'css/import/_blocks_ae.sass': 'css/dev/blocks_ae/**/*.sass',
           'css/import/_blocks.sass': 'css/dev/blocks/**/*.sass',
           'css/import/_resets.sass': 'css/dev/_resets.sass'
         }
