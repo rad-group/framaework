@@ -33,6 +33,35 @@
     box-shadow: none
     outline: 0
 
+.button-outline
+  cursor: pointer
+  font-family: $sans-serif
+  font-weight: normal
+  line-height: normal
+  margin: 0
+  position: relative
+  text-decoration: none
+  text-align: center
+  -webkit-appearance: none
+  -moz-appearance: none
+  display: inline-block
+  +paddingY(2)
+  +paddingX(3)
+  +font-size
+  border: $primary-color 1px solid
+  color: $primary-color
+  +transition()
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  &:hover,
+  &:active,
+  &:focus
+    background-color: $primary-color
+    color: $white
+    box-shadow: none
+    outline: 0
+
 /* Secondary button [LIGHT GREY]
 .button--secondary
   @extend .button
@@ -43,6 +72,15 @@
     background-color: $grey_c
     color: $grey_3
 
+.button-outline--secondary
+  @extend .button-outline
+  border: $standard-feedback 1px solid
+  color: $standard-feedback
+  &:hover,
+  &:focus
+    background-color: $standard-feedback
+    color: $white
+
 /* Success button [GREEN]
 .button--success
   @extend .button
@@ -51,6 +89,15 @@
   &:hover,
   &:focus
     background-color: $success-feedback-dark
+    color: $white
+
+.button-outline--success
+  @extend .button-outline
+  border: $success-feedback 1px solid
+  color: $success-feedback
+  &:hover,
+  &:focus
+    background-color: $success-feedback
     color: $white
 
 /* Alert button [RED]
@@ -63,6 +110,15 @@
     background-color: $alert-feedback-dark
     color: $white
 
+.button-outline--alert
+  @extend .button-outline
+  border: $alert-feedback 1px solid
+  color: $alert-feedback
+  &:hover,
+  &:focus
+    background-color: $alert-feedback
+    color: $white
+
 /* Warning button [ORANGE]
 .button--warning
   @extend .button
@@ -71,6 +127,15 @@
   &:hover,
   &:focus
     background-color: $warning-feedback-dark
+    color: $white
+
+.button-outline--warning
+  @extend .button-outline
+  border: $warning-feedback 1px solid
+  color: $warning-feedback
+  &:hover,
+  &:focus
+    background-color: $warning-feedback
     color: $white
 
 /* Disabled button [LOW OPACITY]
@@ -86,9 +151,28 @@
     color: $white
     cursor: not-allowed
 
+.button-outline--disabled
+  @extend .button-outline
+  border: $primary-color 1px solid
+  color: $primary-color
+  opacity: 0.25
+  cursor: not-allowed
+  &:hover,
+  &:focus
+    background-color: transparent
+    color: $primary-color
+    cursor: not-allowed
+
 /** BUTTON SIZING *
 .button--large
   @extend .button
+  +paddingX(6)
+  +paddingY(3)
+  +font-size()
+  min-width: 160px
+
+.button-outline--large
+  @extend .button-outline
   +paddingX(6)
   +paddingY(3)
   +font-size()
@@ -99,8 +183,18 @@
   +padding(1.5)
   +font-size()
 
+.button-outline--small
+  @extend .button-outline
+  +padding(1.5)
+  +font-size()
+
 .button--tiny
   @extend .button
+  +padding(1)
+  +font-size()
+
+.button-outline--tiny
+  @extend .button-outline
   +padding(1)
   +font-size()
 
@@ -110,11 +204,25 @@
   padding-left: 0
   width: 100%
 
+.button-outline--expand
+  @extend .button-outline
+  padding-right: 0
+  padding-left: 0
+  width: 100%
+
 /** BUTTON RADIUS *
 .button--radius
   @extend .button
   +radius
 
+.button-outline--radius
+  @extend .button-outline
+  +radius
+
 .button--round
   @extend .button
+  +radius(1000px)
+
+.button-outline--round
+  @extend .button-outline
   +radius(1000px)

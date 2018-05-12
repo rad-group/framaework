@@ -12,17 +12,19 @@
   float: right !important
 
 .cl:before,
-.cl:after
+.cl:after,
   content: " "
   display: table
 
 .cl:after
   clear: both
 
+.clear
+  @extend .cl
+
 /* Clear mixin
 =clearfix
   zoom: 1
-
   &:before
     content: ''
     display: block
