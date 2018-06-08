@@ -2,6 +2,7 @@
 $grid-width-small: 800px
 $grid-width: 1024px
 $grid-width-large: 1220px
+$grid-width-huge: 1440px
 
 .grid-container
   width: 100%
@@ -19,6 +20,11 @@ $grid-width-large: 1220px
   @extend .grid-container
 
   max-width: $grid-width-large
+
+.grid-container--huge
+  @extend .grid-container
+
+  max-width: $grid-width-huge
 
 .grid-container--responsive
   @extend .grid-container
