@@ -7,22 +7,25 @@
 		<style>
 		body {
 			margin:0;
-			padding:10px 20px;
+			padding:0;
 			background:#fff;
 			color:#222;
 			}
-		h1, div, footer {
-			font-family:"Helvetica Neue", Arial, sans-serif;
+			hgroup {
+				padding: 24px 0 60px 0;
 			}
-		h1 {
-			margin:0 0 20px;
-			font-size:32px;
-			font-weight:normal;
+
+			h1 {
+				text-transform: uppercase;
+				font-weight: 700
 			}
-		h1 small {
-			font-size: 0.8em;
-			padding-left: 2em;
-		}
+
+			h2 {
+				color: #aaa;
+				font-size: 18px;
+				text-transform: uppercase;
+				font-weight: 700
+			}
 		.icons {
 			margin-bottom:40px;
 			-webkit-column-count:5;
@@ -46,11 +49,60 @@
 			width:32px;
 			text-align:center;
 			}
+
+			.usage {
+				padding: 30px 0 60px 0;
+			}
+
+			.usage h1 {
+				padding-bottom: 12px;
+			}
+
+			.usage pre {
+				display: inline-block;
+				vertical-align: middle;
+				min-width: 500px;
+			}
+
+			.usage pre code {
+				padding: 6px;
+			}
+
 		footer {
 			margin-top:40px;
 			font-size:14px;
 			color:#999;
 			}
+
+		.nav-menu {
+			background-color: #fff;
+			margin-bottom: 42px;
+			position: sticky;
+			top: 0;
+			box-shadow: 0 0 18px rgba(0,0,0,0.1)
+		}
+
+		.nav-menu__single {
+			padding: 12px 0;
+			transition: all .2s ease-in-out;
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			cursor: pointer;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 1px;
+			font-size: 12px;
+		}
+
+		.nav-menu__single.active {
+			background-color: #3c90be;
+			color: #fff;
+			pointer-events: none;
+		}
+
+		.nav-menu__single:hover {
+			background-color: #ddd;
+		}
 
 		/* Extra Light */
 
@@ -385,245 +437,287 @@
 		</style>
 	</head>
 	<body>
-		<h1>iconae-regular</h1>
+		<div class="grid-container--huge">
+			<hgroup class="txt-center">
+				<h1>Iconae</h1>
+				<h2>Multi-weights icon font</h2>
+			</hgroup>
+		</div>
 
-		<div class="icons" id="icons">
-			
-				<div class="icons__item" data-name="arrow-circle-down"><i class="iconae regular ae--arrow-circle-down"></i> ae--arrow-circle-down</div>
-			
-				<div class="icons__item" data-name="arrow-circle-left"><i class="iconae regular ae--arrow-circle-left"></i> ae--arrow-circle-left</div>
-			
-				<div class="icons__item" data-name="arrow-circle-right"><i class="iconae regular ae--arrow-circle-right"></i> ae--arrow-circle-right</div>
-			
-				<div class="icons__item" data-name="arrow-circle-up"><i class="iconae regular ae--arrow-circle-up"></i> ae--arrow-circle-up</div>
-			
-				<div class="icons__item" data-name="arrow-double-down"><i class="iconae regular ae--arrow-double-down"></i> ae--arrow-double-down</div>
-			
-				<div class="icons__item" data-name="arrow-double-left"><i class="iconae regular ae--arrow-double-left"></i> ae--arrow-double-left</div>
-			
-				<div class="icons__item" data-name="arrow-double-right"><i class="iconae regular ae--arrow-double-right"></i> ae--arrow-double-right</div>
-			
-				<div class="icons__item" data-name="arrow-double-up"><i class="iconae regular ae--arrow-double-up"></i> ae--arrow-double-up</div>
-			
-				<div class="icons__item" data-name="arrow-down-alias"><i class="iconae regular ae--arrow-down-alias"></i> ae--arrow-down-alias</div>
-			
-				<div class="icons__item" data-name="arrow-down"><i class="iconae regular ae--arrow-down"></i> ae--arrow-down</div>
-			
-				<div class="icons__item" data-name="arrow-left-alias"><i class="iconae regular ae--arrow-left-alias"></i> ae--arrow-left-alias</div>
-			
-				<div class="icons__item" data-name="arrow-left"><i class="iconae regular ae--arrow-left"></i> ae--arrow-left</div>
-			
-				<div class="icons__item" data-name="arrow-right-alias"><i class="iconae regular ae--arrow-right-alias"></i> ae--arrow-right-alias</div>
-			
-				<div class="icons__item" data-name="arrow-right"><i class="iconae regular ae--arrow-right"></i> ae--arrow-right</div>
-			
-				<div class="icons__item" data-name="arrow-small-down"><i class="iconae regular ae--arrow-small-down"></i> ae--arrow-small-down</div>
-			
-				<div class="icons__item" data-name="arrow-small-left"><i class="iconae regular ae--arrow-small-left"></i> ae--arrow-small-left</div>
-			
-				<div class="icons__item" data-name="arrow-small-right"><i class="iconae regular ae--arrow-small-right"></i> ae--arrow-small-right</div>
-			
-				<div class="icons__item" data-name="arrow-small-up"><i class="iconae regular ae--arrow-small-up"></i> ae--arrow-small-up</div>
-			
-				<div class="icons__item" data-name="arrow-up-alias"><i class="iconae regular ae--arrow-up-alias"></i> ae--arrow-up-alias</div>
-			
-				<div class="icons__item" data-name="arrow-up"><i class="iconae regular ae--arrow-up"></i> ae--arrow-up</div>
-			
-				<div class="icons__item" data-name="bell"><i class="iconae regular ae--bell"></i> ae--bell</div>
-			
-				<div class="icons__item" data-name="bin-opened"><i class="iconae regular ae--bin-opened"></i> ae--bin-opened</div>
-			
-				<div class="icons__item" data-name="bin"><i class="iconae regular ae--bin"></i> ae--bin</div>
-			
-				<div class="icons__item" data-name="calendar"><i class="iconae regular ae--calendar"></i> ae--calendar</div>
-			
-				<div class="icons__item" data-name="camera"><i class="iconae regular ae--camera"></i> ae--camera</div>
-			
-				<div class="icons__item" data-name="cart"><i class="iconae regular ae--cart"></i> ae--cart</div>
-			
-				<div class="icons__item" data-name="check"><i class="iconae regular ae--check"></i> ae--check</div>
-			
-				<div class="icons__item" data-name="circle-check"><i class="iconae regular ae--circle-check"></i> ae--circle-check</div>
-			
-				<div class="icons__item" data-name="circle-cross"><i class="iconae regular ae--circle-cross"></i> ae--circle-cross</div>
-			
-				<div class="icons__item" data-name="circle-minus"><i class="iconae regular ae--circle-minus"></i> ae--circle-minus</div>
-			
-				<div class="icons__item" data-name="circle-plus"><i class="iconae regular ae--circle-plus"></i> ae--circle-plus</div>
-			
-				<div class="icons__item" data-name="clock"><i class="iconae regular ae--clock"></i> ae--clock</div>
-			
-				<div class="icons__item" data-name="cloud"><i class="iconae regular ae--cloud"></i> ae--cloud</div>
-			
-				<div class="icons__item" data-name="copy"><i class="iconae regular ae--copy"></i> ae--copy</div>
-			
-				<div class="icons__item" data-name="cross"><i class="iconae regular ae--cross"></i> ae--cross</div>
-			
-				<div class="icons__item" data-name="dollar"><i class="iconae regular ae--dollar"></i> ae--dollar</div>
-			
-				<div class="icons__item" data-name="dots"><i class="iconae regular ae--dots"></i> ae--dots</div>
-			
-				<div class="icons__item" data-name="download"><i class="iconae regular ae--download"></i> ae--download</div>
-			
-				<div class="icons__item" data-name="exit"><i class="iconae regular ae--exit"></i> ae--exit</div>
-			
-				<div class="icons__item" data-name="eye"><i class="iconae regular ae--eye"></i> ae--eye</div>
-			
-				<div class="icons__item" data-name="facebook-square"><i class="iconae regular ae--facebook-square"></i> ae--facebook-square</div>
-			
-				<div class="icons__item" data-name="facebook"><i class="iconae regular ae--facebook"></i> ae--facebook</div>
-			
-				<div class="icons__item" data-name="file"><i class="iconae regular ae--file"></i> ae--file</div>
-			
-				<div class="icons__item" data-name="floppy"><i class="iconae regular ae--floppy"></i> ae--floppy</div>
-			
-				<div class="icons__item" data-name="flow-chart"><i class="iconae regular ae--flow-chart"></i> ae--flow-chart</div>
-			
-				<div class="icons__item" data-name="folder"><i class="iconae regular ae--folder"></i> ae--folder</div>
-			
-				<div class="icons__item" data-name="gear"><i class="iconae regular ae--gear"></i> ae--gear</div>
-			
-				<div class="icons__item" data-name="globe"><i class="iconae regular ae--globe"></i> ae--globe</div>
-			
-				<div class="icons__item" data-name="grab-grid"><i class="iconae regular ae--grab-grid"></i> ae--grab-grid</div>
-			
-				<div class="icons__item" data-name="grid"><i class="iconae regular ae--grid"></i> ae--grid</div>
-			
-				<div class="icons__item" data-name="hamburger"><i class="iconae regular ae--hamburger"></i> ae--hamburger</div>
-			
-				<div class="icons__item" data-name="heart"><i class="iconae regular ae--heart"></i> ae--heart</div>
-			
-				<div class="icons__item" data-name="home"><i class="iconae regular ae--home"></i> ae--home</div>
-			
-				<div class="icons__item" data-name="image"><i class="iconae regular ae--image"></i> ae--image</div>
-			
-				<div class="icons__item" data-name="instagram"><i class="iconae regular ae--instagram"></i> ae--instagram</div>
-			
-				<div class="icons__item" data-name="laptop"><i class="iconae regular ae--laptop"></i> ae--laptop</div>
-			
-				<div class="icons__item" data-name="like"><i class="iconae regular ae--like"></i> ae--like</div>
-			
-				<div class="icons__item" data-name="lock-open"><i class="iconae regular ae--lock-open"></i> ae--lock-open</div>
-			
-				<div class="icons__item" data-name="lock"><i class="iconae regular ae--lock"></i> ae--lock</div>
-			
-				<div class="icons__item" data-name="mac"><i class="iconae regular ae--mac"></i> ae--mac</div>
-			
-				<div class="icons__item" data-name="mail"><i class="iconae regular ae--mail"></i> ae--mail</div>
-			
-				<div class="icons__item" data-name="marker"><i class="iconae regular ae--marker"></i> ae--marker</div>
-			
-				<div class="icons__item" data-name="media"><i class="iconae regular ae--media"></i> ae--media</div>
-			
-				<div class="icons__item" data-name="message"><i class="iconae regular ae--message"></i> ae--message</div>
-			
-				<div class="icons__item" data-name="messages"><i class="iconae regular ae--messages"></i> ae--messages</div>
-			
-				<div class="icons__item" data-name="minus"><i class="iconae regular ae--minus"></i> ae--minus</div>
-			
-				<div class="icons__item" data-name="move"><i class="iconae regular ae--move"></i> ae--move</div>
-			
-				<div class="icons__item" data-name="note"><i class="iconae regular ae--note"></i> ae--note</div>
-			
-				<div class="icons__item" data-name="pages"><i class="iconae regular ae--pages"></i> ae--pages</div>
-			
-				<div class="icons__item" data-name="pause-circle"><i class="iconae regular ae--pause-circle"></i> ae--pause-circle</div>
-			
-				<div class="icons__item" data-name="pause"><i class="iconae regular ae--pause"></i> ae--pause</div>
-			
-				<div class="icons__item" data-name="pencil"><i class="iconae regular ae--pencil"></i> ae--pencil</div>
-			
-				<div class="icons__item" data-name="percentage"><i class="iconae regular ae--percentage"></i> ae--percentage</div>
-			
-				<div class="icons__item" data-name="phone"><i class="iconae regular ae--phone"></i> ae--phone</div>
-			
-				<div class="icons__item" data-name="pin"><i class="iconae regular ae--pin"></i> ae--pin</div>
-			
-				<div class="icons__item" data-name="play-circle"><i class="iconae regular ae--play-circle"></i> ae--play-circle</div>
-			
-				<div class="icons__item" data-name="play"><i class="iconae regular ae--play"></i> ae--play</div>
-			
-				<div class="icons__item" data-name="plug-in"><i class="iconae regular ae--plug-in"></i> ae--plug-in</div>
-			
-				<div class="icons__item" data-name="plug-off"><i class="iconae regular ae--plug-off"></i> ae--plug-off</div>
-			
-				<div class="icons__item" data-name="plus"><i class="iconae regular ae--plus"></i> ae--plus</div>
-			
-				<div class="icons__item" data-name="product-variable"><i class="iconae regular ae--product-variable"></i> ae--product-variable</div>
-			
-				<div class="icons__item" data-name="product"><i class="iconae regular ae--product"></i> ae--product</div>
-			
-				<div class="icons__item" data-name="products"><i class="iconae regular ae--products"></i> ae--products</div>
-			
-				<div class="icons__item" data-name="refresh"><i class="iconae regular ae--refresh"></i> ae--refresh</div>
-			
-				<div class="icons__item" data-name="returns"><i class="iconae regular ae--returns"></i> ae--returns</div>
-			
-				<div class="icons__item" data-name="ribbon"><i class="iconae regular ae--ribbon"></i> ae--ribbon</div>
-			
-				<div class="icons__item" data-name="search"><i class="iconae regular ae--search"></i> ae--search</div>
-			
-				<div class="icons__item" data-name="seo"><i class="iconae regular ae--seo"></i> ae--seo</div>
-			
-				<div class="icons__item" data-name="share"><i class="iconae regular ae--share"></i> ae--share</div>
-			
-				<div class="icons__item" data-name="shopping-bag"><i class="iconae regular ae--shopping-bag"></i> ae--shopping-bag</div>
-			
-				<div class="icons__item" data-name="smartphone"><i class="iconae regular ae--smartphone"></i> ae--smartphone</div>
-			
-				<div class="icons__item" data-name="smartwatch"><i class="iconae regular ae--smartwatch"></i> ae--smartwatch</div>
-			
-				<div class="icons__item" data-name="speedometer"><i class="iconae regular ae--speedometer"></i> ae--speedometer</div>
-			
-				<div class="icons__item" data-name="star"><i class="iconae regular ae--star"></i> ae--star</div>
-			
-				<div class="icons__item" data-name="stock"><i class="iconae regular ae--stock"></i> ae--stock</div>
-			
-				<div class="icons__item" data-name="tablet"><i class="iconae regular ae--tablet"></i> ae--tablet</div>
-			
-				<div class="icons__item" data-name="tag"><i class="iconae regular ae--tag"></i> ae--tag</div>
-			
-				<div class="icons__item" data-name="tags"><i class="iconae regular ae--tags"></i> ae--tags</div>
-			
-				<div class="icons__item" data-name="target"><i class="iconae regular ae--target"></i> ae--target</div>
-			
-				<div class="icons__item" data-name="truck"><i class="iconae regular ae--truck"></i> ae--truck</div>
-			
-				<div class="icons__item" data-name="tune"><i class="iconae regular ae--tune"></i> ae--tune</div>
-			
-				<div class="icons__item" data-name="twitter-square"><i class="iconae regular ae--twitter-square"></i> ae--twitter-square</div>
-			
-				<div class="icons__item" data-name="twitter"><i class="iconae regular ae--twitter"></i> ae--twitter</div>
-			
-				<div class="icons__item" data-name="unlike"><i class="iconae regular ae--unlike"></i> ae--unlike</div>
-			
-				<div class="icons__item" data-name="upload"><i class="iconae regular ae--upload"></i> ae--upload</div>
-			
-				<div class="icons__item" data-name="user"><i class="iconae regular ae--user"></i> ae--user</div>
-			
-				<div class="icons__item" data-name="youtube-play"><i class="iconae regular ae--youtube-play"></i> ae--youtube-play</div>
-			
-				<div class="icons__item" data-name="zoom-in"><i class="iconae regular ae--zoom-in"></i> ae--zoom-in</div>
-			
-				<div class="icons__item" data-name="zoom-out"><i class="iconae regular ae--zoom-out"></i> ae--zoom-out</div>
-			
+		<div class="nav-menu inline-li row--stuck">
+			<div class="nav-menu__single row__column tab-4 txt-center" data-weight="light">Light</div>
+			<div class="nav-menu__single active row__column tab-4 txt-center" data-weight="regular">Regular</div>
+			<div class="nav-menu__single row__column tab-4 txt-center" data-weight="filled">Filled</div>
+		</div>
+
+		<div class="grid-container--huge">
+			<div class="icons" id="icons">
+				
+					<div class="icons__item" data-name="arrow-circle-down"><i class="iconae regular ae--arrow-circle-down"></i> ae--arrow-circle-down</div>
+				
+					<div class="icons__item" data-name="arrow-circle-left"><i class="iconae regular ae--arrow-circle-left"></i> ae--arrow-circle-left</div>
+				
+					<div class="icons__item" data-name="arrow-circle-right"><i class="iconae regular ae--arrow-circle-right"></i> ae--arrow-circle-right</div>
+				
+					<div class="icons__item" data-name="arrow-circle-up"><i class="iconae regular ae--arrow-circle-up"></i> ae--arrow-circle-up</div>
+				
+					<div class="icons__item" data-name="arrow-double-down"><i class="iconae regular ae--arrow-double-down"></i> ae--arrow-double-down</div>
+				
+					<div class="icons__item" data-name="arrow-double-left"><i class="iconae regular ae--arrow-double-left"></i> ae--arrow-double-left</div>
+				
+					<div class="icons__item" data-name="arrow-double-right"><i class="iconae regular ae--arrow-double-right"></i> ae--arrow-double-right</div>
+				
+					<div class="icons__item" data-name="arrow-double-up"><i class="iconae regular ae--arrow-double-up"></i> ae--arrow-double-up</div>
+				
+					<div class="icons__item" data-name="arrow-down-alias"><i class="iconae regular ae--arrow-down-alias"></i> ae--arrow-down-alias</div>
+				
+					<div class="icons__item" data-name="arrow-down"><i class="iconae regular ae--arrow-down"></i> ae--arrow-down</div>
+				
+					<div class="icons__item" data-name="arrow-left-alias"><i class="iconae regular ae--arrow-left-alias"></i> ae--arrow-left-alias</div>
+				
+					<div class="icons__item" data-name="arrow-left"><i class="iconae regular ae--arrow-left"></i> ae--arrow-left</div>
+				
+					<div class="icons__item" data-name="arrow-right-alias"><i class="iconae regular ae--arrow-right-alias"></i> ae--arrow-right-alias</div>
+				
+					<div class="icons__item" data-name="arrow-right"><i class="iconae regular ae--arrow-right"></i> ae--arrow-right</div>
+				
+					<div class="icons__item" data-name="arrow-small-down"><i class="iconae regular ae--arrow-small-down"></i> ae--arrow-small-down</div>
+				
+					<div class="icons__item" data-name="arrow-small-left"><i class="iconae regular ae--arrow-small-left"></i> ae--arrow-small-left</div>
+				
+					<div class="icons__item" data-name="arrow-small-right"><i class="iconae regular ae--arrow-small-right"></i> ae--arrow-small-right</div>
+				
+					<div class="icons__item" data-name="arrow-small-up"><i class="iconae regular ae--arrow-small-up"></i> ae--arrow-small-up</div>
+				
+					<div class="icons__item" data-name="arrow-up-alias"><i class="iconae regular ae--arrow-up-alias"></i> ae--arrow-up-alias</div>
+				
+					<div class="icons__item" data-name="arrow-up"><i class="iconae regular ae--arrow-up"></i> ae--arrow-up</div>
+				
+					<div class="icons__item" data-name="bell"><i class="iconae regular ae--bell"></i> ae--bell</div>
+				
+					<div class="icons__item" data-name="bin-opened"><i class="iconae regular ae--bin-opened"></i> ae--bin-opened</div>
+				
+					<div class="icons__item" data-name="bin"><i class="iconae regular ae--bin"></i> ae--bin</div>
+				
+					<div class="icons__item" data-name="calendar"><i class="iconae regular ae--calendar"></i> ae--calendar</div>
+				
+					<div class="icons__item" data-name="camera"><i class="iconae regular ae--camera"></i> ae--camera</div>
+				
+					<div class="icons__item" data-name="cart"><i class="iconae regular ae--cart"></i> ae--cart</div>
+				
+					<div class="icons__item" data-name="check"><i class="iconae regular ae--check"></i> ae--check</div>
+				
+					<div class="icons__item" data-name="circle-check"><i class="iconae regular ae--circle-check"></i> ae--circle-check</div>
+				
+					<div class="icons__item" data-name="circle-cross"><i class="iconae regular ae--circle-cross"></i> ae--circle-cross</div>
+				
+					<div class="icons__item" data-name="circle-minus"><i class="iconae regular ae--circle-minus"></i> ae--circle-minus</div>
+				
+					<div class="icons__item" data-name="circle-plus"><i class="iconae regular ae--circle-plus"></i> ae--circle-plus</div>
+				
+					<div class="icons__item" data-name="clock"><i class="iconae regular ae--clock"></i> ae--clock</div>
+				
+					<div class="icons__item" data-name="cloud"><i class="iconae regular ae--cloud"></i> ae--cloud</div>
+				
+					<div class="icons__item" data-name="copy"><i class="iconae regular ae--copy"></i> ae--copy</div>
+				
+					<div class="icons__item" data-name="cross"><i class="iconae regular ae--cross"></i> ae--cross</div>
+				
+					<div class="icons__item" data-name="dollar"><i class="iconae regular ae--dollar"></i> ae--dollar</div>
+				
+					<div class="icons__item" data-name="dots"><i class="iconae regular ae--dots"></i> ae--dots</div>
+				
+					<div class="icons__item" data-name="download"><i class="iconae regular ae--download"></i> ae--download</div>
+				
+					<div class="icons__item" data-name="exit"><i class="iconae regular ae--exit"></i> ae--exit</div>
+				
+					<div class="icons__item" data-name="eye"><i class="iconae regular ae--eye"></i> ae--eye</div>
+				
+					<div class="icons__item" data-name="facebook-square"><i class="iconae regular ae--facebook-square"></i> ae--facebook-square</div>
+				
+					<div class="icons__item" data-name="facebook"><i class="iconae regular ae--facebook"></i> ae--facebook</div>
+				
+					<div class="icons__item" data-name="file"><i class="iconae regular ae--file"></i> ae--file</div>
+				
+					<div class="icons__item" data-name="floppy"><i class="iconae regular ae--floppy"></i> ae--floppy</div>
+				
+					<div class="icons__item" data-name="flow-chart"><i class="iconae regular ae--flow-chart"></i> ae--flow-chart</div>
+				
+					<div class="icons__item" data-name="folder"><i class="iconae regular ae--folder"></i> ae--folder</div>
+				
+					<div class="icons__item" data-name="gear"><i class="iconae regular ae--gear"></i> ae--gear</div>
+				
+					<div class="icons__item" data-name="globe"><i class="iconae regular ae--globe"></i> ae--globe</div>
+				
+					<div class="icons__item" data-name="grab-grid"><i class="iconae regular ae--grab-grid"></i> ae--grab-grid</div>
+				
+					<div class="icons__item" data-name="grid"><i class="iconae regular ae--grid"></i> ae--grid</div>
+				
+					<div class="icons__item" data-name="hamburger"><i class="iconae regular ae--hamburger"></i> ae--hamburger</div>
+				
+					<div class="icons__item" data-name="heart"><i class="iconae regular ae--heart"></i> ae--heart</div>
+				
+					<div class="icons__item" data-name="home"><i class="iconae regular ae--home"></i> ae--home</div>
+				
+					<div class="icons__item" data-name="image"><i class="iconae regular ae--image"></i> ae--image</div>
+				
+					<div class="icons__item" data-name="instagram"><i class="iconae regular ae--instagram"></i> ae--instagram</div>
+				
+					<div class="icons__item" data-name="laptop"><i class="iconae regular ae--laptop"></i> ae--laptop</div>
+				
+					<div class="icons__item" data-name="like"><i class="iconae regular ae--like"></i> ae--like</div>
+				
+					<div class="icons__item" data-name="lock-open"><i class="iconae regular ae--lock-open"></i> ae--lock-open</div>
+				
+					<div class="icons__item" data-name="lock"><i class="iconae regular ae--lock"></i> ae--lock</div>
+				
+					<div class="icons__item" data-name="mac"><i class="iconae regular ae--mac"></i> ae--mac</div>
+				
+					<div class="icons__item" data-name="mail"><i class="iconae regular ae--mail"></i> ae--mail</div>
+				
+					<div class="icons__item" data-name="marker"><i class="iconae regular ae--marker"></i> ae--marker</div>
+				
+					<div class="icons__item" data-name="media"><i class="iconae regular ae--media"></i> ae--media</div>
+				
+					<div class="icons__item" data-name="message"><i class="iconae regular ae--message"></i> ae--message</div>
+				
+					<div class="icons__item" data-name="messages"><i class="iconae regular ae--messages"></i> ae--messages</div>
+				
+					<div class="icons__item" data-name="minus"><i class="iconae regular ae--minus"></i> ae--minus</div>
+				
+					<div class="icons__item" data-name="move"><i class="iconae regular ae--move"></i> ae--move</div>
+				
+					<div class="icons__item" data-name="note"><i class="iconae regular ae--note"></i> ae--note</div>
+				
+					<div class="icons__item" data-name="pages"><i class="iconae regular ae--pages"></i> ae--pages</div>
+				
+					<div class="icons__item" data-name="pause-circle"><i class="iconae regular ae--pause-circle"></i> ae--pause-circle</div>
+				
+					<div class="icons__item" data-name="pause"><i class="iconae regular ae--pause"></i> ae--pause</div>
+				
+					<div class="icons__item" data-name="pencil"><i class="iconae regular ae--pencil"></i> ae--pencil</div>
+				
+					<div class="icons__item" data-name="percentage"><i class="iconae regular ae--percentage"></i> ae--percentage</div>
+				
+					<div class="icons__item" data-name="phone"><i class="iconae regular ae--phone"></i> ae--phone</div>
+				
+					<div class="icons__item" data-name="pin"><i class="iconae regular ae--pin"></i> ae--pin</div>
+				
+					<div class="icons__item" data-name="play-circle"><i class="iconae regular ae--play-circle"></i> ae--play-circle</div>
+				
+					<div class="icons__item" data-name="play"><i class="iconae regular ae--play"></i> ae--play</div>
+				
+					<div class="icons__item" data-name="plug-in"><i class="iconae regular ae--plug-in"></i> ae--plug-in</div>
+				
+					<div class="icons__item" data-name="plug-off"><i class="iconae regular ae--plug-off"></i> ae--plug-off</div>
+				
+					<div class="icons__item" data-name="plus"><i class="iconae regular ae--plus"></i> ae--plus</div>
+				
+					<div class="icons__item" data-name="product-variable"><i class="iconae regular ae--product-variable"></i> ae--product-variable</div>
+				
+					<div class="icons__item" data-name="product"><i class="iconae regular ae--product"></i> ae--product</div>
+				
+					<div class="icons__item" data-name="products"><i class="iconae regular ae--products"></i> ae--products</div>
+				
+					<div class="icons__item" data-name="refresh"><i class="iconae regular ae--refresh"></i> ae--refresh</div>
+				
+					<div class="icons__item" data-name="returns"><i class="iconae regular ae--returns"></i> ae--returns</div>
+				
+					<div class="icons__item" data-name="ribbon"><i class="iconae regular ae--ribbon"></i> ae--ribbon</div>
+				
+					<div class="icons__item" data-name="search"><i class="iconae regular ae--search"></i> ae--search</div>
+				
+					<div class="icons__item" data-name="seo"><i class="iconae regular ae--seo"></i> ae--seo</div>
+				
+					<div class="icons__item" data-name="share"><i class="iconae regular ae--share"></i> ae--share</div>
+				
+					<div class="icons__item" data-name="shopping-bag"><i class="iconae regular ae--shopping-bag"></i> ae--shopping-bag</div>
+				
+					<div class="icons__item" data-name="smartphone"><i class="iconae regular ae--smartphone"></i> ae--smartphone</div>
+				
+					<div class="icons__item" data-name="smartwatch"><i class="iconae regular ae--smartwatch"></i> ae--smartwatch</div>
+				
+					<div class="icons__item" data-name="speedometer"><i class="iconae regular ae--speedometer"></i> ae--speedometer</div>
+				
+					<div class="icons__item" data-name="star"><i class="iconae regular ae--star"></i> ae--star</div>
+				
+					<div class="icons__item" data-name="stock"><i class="iconae regular ae--stock"></i> ae--stock</div>
+				
+					<div class="icons__item" data-name="tablet"><i class="iconae regular ae--tablet"></i> ae--tablet</div>
+				
+					<div class="icons__item" data-name="tag"><i class="iconae regular ae--tag"></i> ae--tag</div>
+				
+					<div class="icons__item" data-name="tags"><i class="iconae regular ae--tags"></i> ae--tags</div>
+				
+					<div class="icons__item" data-name="target"><i class="iconae regular ae--target"></i> ae--target</div>
+				
+					<div class="icons__item" data-name="truck"><i class="iconae regular ae--truck"></i> ae--truck</div>
+				
+					<div class="icons__item" data-name="tune"><i class="iconae regular ae--tune"></i> ae--tune</div>
+				
+					<div class="icons__item" data-name="twitter-square"><i class="iconae regular ae--twitter-square"></i> ae--twitter-square</div>
+				
+					<div class="icons__item" data-name="twitter"><i class="iconae regular ae--twitter"></i> ae--twitter</div>
+				
+					<div class="icons__item" data-name="unlike"><i class="iconae regular ae--unlike"></i> ae--unlike</div>
+				
+					<div class="icons__item" data-name="upload"><i class="iconae regular ae--upload"></i> ae--upload</div>
+				
+					<div class="icons__item" data-name="user"><i class="iconae regular ae--user"></i> ae--user</div>
+				
+					<div class="icons__item" data-name="youtube-play"><i class="iconae regular ae--youtube-play"></i> ae--youtube-play</div>
+				
+					<div class="icons__item" data-name="zoom-in"><i class="iconae regular ae--zoom-in"></i> ae--zoom-in</div>
+				
+					<div class="icons__item" data-name="zoom-out"><i class="iconae regular ae--zoom-out"></i> ae--zoom-out</div>
+				
+			</div>
 		</div>
 
 		
 
-		<h1>Usage</h1>
-		<pre><code>&lt;i class=&quot;iconae regular ae--<span id="name">name</span>&quot;&gt;&lt;/i&gt;</code></pre>
-		
+		<div class="grid-container--huge">
+			<div class="usage">
+				<h1>Icons usage</h1>
+				<pre><code>&lt;i class=&quot;<span id="clipboard" class="js--code">iconae regular ae--name</span>&quot;&gt;&lt;/i&gt;</code></pre>
+				
+				<a style="display: inline-block; vertical-align: middle;" href="javascript:copyToClipboard('#clipboard');"><i class="iconae ae--copy regular"></i></a>
+			</div>
+		</div>
+
+		<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
 		<script>
-		(function() {
-			document.getElementById('icons').onclick = function(e) {
-				e = e || window.event;
-				var name = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name');
-				document.getElementById('name').innerHTML = name;
-				
-			}
-		})();
+		$(document).ready(function(){
+		  $('.nav-menu__single').click(function(){
+		    var weight = $(this).data('weight');
+
+		    $('.nav-menu__single').removeClass('active');
+		    $(this).addClass('active');
+
+		    $('.icons__item .iconae').removeClass('light');
+		    $('.icons__item .iconae').removeClass('regular');
+		    $('.icons__item .iconae').removeClass('filled');
+
+		    $('.icons__item .iconae').addClass(weight);
+		  });
+
+		  $('.icons__item').click(function(){
+		    var icon = $(this).find('.iconae').attr('class');
+		    $('.js--code').html(icon);
+		  });
+		});
+
+		function copyToClipboard(element) {
+		  var $temp = $("<input>");
+		  $("body").append($temp);
+		  $temp.val($(element).text()).select();
+		  document.execCommand("copy");
+		  $temp.remove();
+		}
 		</script>
 	</body>
 </html>

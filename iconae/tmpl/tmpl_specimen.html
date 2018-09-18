@@ -7,22 +7,25 @@
 		<style>
 		body {
 			margin:0;
-			padding:10px 20px;
+			padding:0;
 			background:#fff;
 			color:#222;
 			}
-		h1, div, footer {
-			font-family:"Helvetica Neue", Arial, sans-serif;
+			hgroup {
+				padding: 24px 0 60px 0;
 			}
-		h1 {
-			margin:0 0 20px;
-			font-size:32px;
-			font-weight:normal;
+
+			h1 {
+				text-transform: uppercase;
+				font-weight: 700
 			}
-		h1 small {
-			font-size: 0.8em;
-			padding-left: 2em;
-		}
+
+			h2 {
+				color: #aaa;
+				font-size: 18px;
+				text-transform: uppercase;
+				font-weight: 700
+			}
 		.icons {
 			margin-bottom:40px;
 			-webkit-column-count:5;
@@ -46,22 +49,84 @@
 			width:32px;
 			text-align:center;
 			}
+
+			.usage {
+				padding: 30px 0 60px 0;
+			}
+
+			.usage h1 {
+				padding-bottom: 12px;
+			}
+
+			.usage pre {
+				display: inline-block;
+				vertical-align: middle;
+				min-width: 500px;
+			}
+
+			.usage pre code {
+				padding: 6px;
+			}
+
 		footer {
 			margin-top:40px;
 			font-size:14px;
 			color:#999;
 			}
 
+		.nav-menu {
+			background-color: #fff;
+			margin-bottom: 42px;
+			position: sticky;
+			top: 0;
+			box-shadow: 0 0 18px rgba(0,0,0,0.1)
+		}
+
+		.nav-menu__single {
+			padding: 12px 0;
+			transition: all .2s ease-in-out;
+			-webkit-transition: all .2s ease-in-out;
+			-moz-transition: all .2s ease-in-out;
+			cursor: pointer;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 1px;
+			font-size: 12px;
+		}
+
+		.nav-menu__single.active {
+			background-color: #3c90be;
+			color: #fff;
+			pointer-events: none;
+		}
+
+		.nav-menu__single:hover {
+			background-color: #ddd;
+		}
+
 		<%= styles %>
 		</style>
 	</head>
 	<body>
-		<h1><%= fontFamilyName %><% if (version) { %><small>version <%= version %></small><% } %></h1>
+		<div class="grid-container--huge">
+			<hgroup class="txt-center">
+				<h1>Iconae</h1>
+				<h2>Multi-weights icon font</h2>
+			</hgroup>
+		</div>
 
-		<div class="icons" id="icons">
-			<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
-				<div class="icons__item" data-name="<%= glyph %>"><i class="<%= baseClass %> <%= classPrefix %><%= glyph %>"></i> <%= classPrefix %><%= glyph %></div>
-			<% } %>
+		<div class="nav-menu inline-li row--stuck">
+			<div class="nav-menu__single row__column tab-4 txt-center" data-weight="light">Light</div>
+			<div class="nav-menu__single active row__column tab-4 txt-center" data-weight="regular">Regular</div>
+			<div class="nav-menu__single row__column tab-4 txt-center" data-weight="filled">Filled</div>
+		</div>
+
+		<div class="grid-container--huge">
+			<div class="icons" id="icons">
+				<% for (var glyphIdx = 0; glyphIdx < glyphs.length; glyphIdx++) { var glyph = glyphs[glyphIdx] %>
+					<div class="icons__item" data-name="<%= glyph %>"><i class="<%= baseClass %> <%= classPrefix %><%= glyph %>"></i> <%= classPrefix %><%= glyph %></div>
+				<% } %>
+			</div>
 		</div>
 
 		<% if (addLigatures) { %>
@@ -72,21 +137,50 @@
 		</div>
 		<% } %>
 
-		<h1>Usage</h1>
-		<pre><code>&lt;i class=&quot;<%= baseClass ? baseClass + ' ' : '' %><%= classPrefix %><span id="name">name</span>&quot;&gt;&lt;/i&gt;</code></pre>
-		<% if (addLigatures) { %>
-		<pre><code>&lt;i class=&quot;ligature-icons&quot;&gt;<span id="name2">name</span>&lt;/i&gt;</code></pre>
-		<% } %>
+		<div class="grid-container--huge">
+			<div class="usage">
+				<h1>Icons usage</h1>
+				<pre><code>&lt;i class=&quot;<span id="clipboard" class="js--code"><%= baseClass ? baseClass + ' ' : '' %><%= classPrefix %>name</span>&quot;&gt;&lt;/i&gt;</code></pre>
+				<% if (addLigatures) { %>
+				<pre><code>&lt;i class=&quot;ligature-icons&quot;&gt;<span class="js--code">name</span>&lt;/i&gt;</code></pre>
+				<% } %>
+				<a style="display: inline-block; vertical-align: middle;" href="javascript:copyToClipboard('#clipboard');"><i class="iconae ae--copy regular"></i></a>
+			</div>
+		</div>
+
+		<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
 
 		<script>
-		(function() {
-			document.getElementById('icons').onclick = function(e) {
-				e = e || window.event;
-				var name = e.target.getAttribute('data-name') || e.target.parentNode.getAttribute('data-name');
-				document.getElementById('name').innerHTML = name;
-				<% if (addLigatures) { %>document.getElementById('name2').innerHTML = name;<% } %>
-			}
-		})();
+		$(document).ready(function(){
+		  $('.nav-menu__single').click(function(){
+		    var weight = $(this).data('weight');
+
+		    $('.nav-menu__single').removeClass('active');
+		    $(this).addClass('active');
+
+		    $('.icons__item .iconae').removeClass('light');
+		    $('.icons__item .iconae').removeClass('regular');
+		    $('.icons__item .iconae').removeClass('filled');
+
+		    $('.icons__item .iconae').addClass(weight);
+		  });
+
+		  $('.icons__item').click(function(){
+		    var icon = $(this).find('.iconae').attr('class');
+		    $('.js--code').html(icon);
+		  });
+		});
+
+		function copyToClipboard(element) {
+		  var $temp = $("<input>");
+		  $("body").append($temp);
+		  $temp.val($(element).text()).select();
+		  document.execCommand("copy");
+		  $temp.remove();
+		}
 		</script>
 	</body>
 </html>
