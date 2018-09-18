@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<g id="Livello_2">
+</g>
+<g id="Livello_1">
+	<g>
+		<path d="M475.4,184.4L393.3,47.5c-5.8-9.6-16.2-15.5-27.4-15.5H146.1c-11.2,0-21.7,5.9-27.4,15.5L36.6,184.4
+			c-3,5-4.6,10.7-4.6,16.5V448c0,17.7,14.3,32,32,32h384c17.7,0,32-14.3,32-32V200.9C480,195.1,478.4,189.4,475.4,184.4z M365.9,64
+			l76.8,128H272V64H365.9L365.9,64z M146.1,64H240v128H69.3L146.1,64z M64,448V224h384v224H64z"/>
+		<rect x="192" y="319.7" width="128" height="64"/>
+	</g>
+</g>
+</svg>
